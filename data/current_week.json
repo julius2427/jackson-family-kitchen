@@ -1,186 +1,1326 @@
 {
   "week_start": "2026-04-20",
   "week_end": "2026-04-26",
-  "generated_at": "2026-04-19T20:30:00Z",
+  "generated_at": "2026-04-19T20:02:15.773895+00:00",
   "meals": [
     {
       "day": "Monday",
       "date": "2026-04-20",
-      "name": "Sheet Pan Lemon Chicken & Broccoli",
-      "description": "One-pan dinner with bright lemony chicken.",
-      "prep_minutes": 10,
+      "name": "Kid-Friendly Honey Garlic Chicken Stir Fry",
+      "description": "A sweet and savory chicken stir fry packed with colorful vegetables, served over fluffy white rice. Total cook time is approximately 25 minutes.",
+      "prep_minutes": 15,
       "cook_minutes": 25,
       "servings": 4,
       "ingredients": [
-        {"name": "chicken breast", "amount": "1.5 lbs", "in_pantry": false},
-        {"name": "broccoli", "amount": "1 head", "in_pantry": false},
-        {"name": "lemons", "amount": "2", "in_pantry": false},
-        {"name": "olive oil", "amount": "3 tbsp", "in_pantry": true},
-        {"name": "garlic", "amount": "4 cloves", "in_pantry": false}
+        {
+          "name": "Boneless, skinless chicken thighs",
+          "amount": "1.5 lbs",
+          "in_pantry": false,
+          "kroger_product_name": "Heritage Farm\u00ae Boneless Skinless Chicken Thighs",
+          "kroger_upc": "0025313650000",
+          "kroger_price": 3.99,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Soy sauce",
+          "amount": "1/4 cup",
+          "in_pantry": false,
+          "kroger_product_name": "Kikkoman\u00ae Less Sodium Soy Sauce",
+          "kroger_upc": "0004139000105",
+          "kroger_price": 2.99,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Honey",
+          "amount": "3 tbsp",
+          "in_pantry": false,
+          "kroger_product_name": "Smart Way\u2122 Honey",
+          "kroger_upc": "0001111012316",
+          "kroger_price": 5.99,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Garlic cloves",
+          "amount": "4, minced",
+          "in_pantry": false,
+          "kroger_product_name": "Organic Garlic",
+          "kroger_upc": "0000000094608",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Fresh ginger",
+          "amount": "1 tbsp, grated",
+          "in_pantry": false,
+          "kroger_product_name": "Evolution Fresh\u00ae Organic Citrus Ginger Zest Cold-Pressed Vegetable and Fruit Juice Blend",
+          "kroger_upc": "0076235747444",
+          "kroger_price": 3.99,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Cornstarch",
+          "amount": "1 tbsp",
+          "in_pantry": false,
+          "kroger_product_name": "Comforts\u2122 Pure Cornstarch Baby Powder With Aloe Vera & Vitamin E",
+          "kroger_upc": "0001111038513",
+          "kroger_price": 2.39,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Broccoli florets",
+          "amount": "2 cups",
+          "in_pantry": false,
+          "kroger_product_name": "Birds Eye Baby Broccoli Florets, Frozen Vegetables",
+          "kroger_upc": "0001450000256",
+          "kroger_price": 2.29,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Carrots",
+          "amount": "2 medium, julienned",
+          "in_pantry": false,
+          "kroger_product_name": "Carrots",
+          "kroger_upc": "0000000004562",
+          "kroger_price": 1.69,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Yellow onion",
+          "amount": "1/2, sliced",
+          "in_pantry": false,
+          "kroger_product_name": "Simple Truth Organic\u00ae Yellow Onion 2 lb Bag",
+          "kroger_upc": "0001111060160",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Red bell pepper",
+          "amount": "1, sliced",
+          "in_pantry": false,
+          "kroger_product_name": "Fresh Red Bell Pepper",
+          "kroger_upc": "0000000004088",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Long-grain white rice",
+          "amount": "1.5 cups dry",
+          "in_pantry": false,
+          "kroger_product_name": "Mahatma Extra Long Grain White Rice, Uncooked Rice, 80 oz (2.27kg)",
+          "kroger_upc": "0001740010932",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Sesame oil",
+          "amount": "1 tsp",
+          "in_pantry": false,
+          "kroger_product_name": "Shirakiku 100% Pure Sesame Oil",
+          "kroger_upc": "0007441025051",
+          "kroger_price": 4.99,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Sesame seeds",
+          "amount": "1 tsp, for garnish",
+          "in_pantry": false,
+          "kroger_product_name": "Sun Luck\u00ae Toasted Sesame Seeds",
+          "kroger_upc": "0007613213012",
+          "kroger_price": 4.99,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Olive oil",
+          "amount": "2 tbsp",
+          "in_pantry": true
+        },
+        {
+          "name": "Salt",
+          "amount": "to taste",
+          "in_pantry": true
+        },
+        {
+          "name": "Pepper",
+          "amount": "to taste",
+          "in_pantry": true
+        },
+        {
+          "name": "Water",
+          "amount": "3 cups",
+          "in_pantry": true
+        }
       ],
       "instructions": [
-        "Preheat oven to 425°F and line a large sheet pan with parchment.",
-        "Cut broccoli into florets and chicken breasts into 1-inch pieces. Toss both with 3 tbsp olive oil, minced garlic, salt, and pepper.",
-        "Spread chicken and broccoli in a single layer on the sheet pan. Squeeze one lemon over the top.",
-        "Roast 20–25 minutes until chicken reaches 165°F and broccoli edges are crispy.",
-        "Finish with fresh lemon wedges and serve."
+        "Step 1: Cook the rice. Rinse 1.5 cups of long-grain white rice until water runs clear. Combine with 3 cups water and a pinch of salt in a medium saucepan. Bring to a boil, then reduce heat to low, cover, and simmer for 15-18 minutes until water is absorbed. Remove from heat and let stand, covered, for 5 minutes.",
+        "Step 2: Prepare chicken and sauce. Cut chicken thighs into 1-inch pieces. In a small bowl, whisk together soy sauce, honey, minced garlic, grated ginger, and cornstarch. Set aside.",
+        "Step 3: Stir-fry chicken and vegetables. Heat 1 tablespoon olive oil in a large skillet or wok over medium-high heat. Add chicken and cook, stirring occasionally, until browned and cooked through, about 5-7 minutes. Remove chicken from skillet and set aside.",
+        "Step 4: Cook vegetables. Add another 1 tablespoon olive oil to the skillet. Add broccoli, carrots, sliced yellow onion, and red bell pepper. Stir-fry for 5-7 minutes until vegetables are tender-crisp. Return chicken to the skillet.",
+        "Step 5: Combine and serve. Pour the prepared sauce over the chicken and vegetables. Stir constantly for 1-2 minutes until the sauce thickens and coats everything. Drizzle with sesame oil and sprinkle with sesame seeds before serving immediately over the cooked rice."
       ]
     },
     {
       "day": "Tuesday",
       "date": "2026-04-21",
-      "name": "Ground Beef Tacos",
-      "description": "Fast, kid-friendly weeknight favorite.",
+      "name": "Quick Skillet Beef Tacos with Creamy Queso",
+      "description": "Fast and flavorful ground beef tacos seasoned to perfection, topped with fresh veggies and pantry-staple sour cream and queso. Total cook time is approximately 20 minutes.",
       "prep_minutes": 10,
-      "cook_minutes": 15,
+      "cook_minutes": 20,
       "servings": 4,
       "ingredients": [
-        {"name": "ground beef", "amount": "1 lb", "in_pantry": false},
-        {"name": "taco shells", "amount": "1 box (12)", "in_pantry": false},
-        {"name": "shredded cheddar", "amount": "1 cup", "in_pantry": false},
-        {"name": "lettuce", "amount": "1 head", "in_pantry": false},
-        {"name": "tomatoes", "amount": "2", "in_pantry": false},
-        {"name": "taco seasoning", "amount": "1 packet", "in_pantry": false}
+        {
+          "name": "Ground beef",
+          "amount": "1 lb",
+          "in_pantry": false,
+          "kroger_product_name": "Private Selection\u00ae 80/20 Angus Ground Beef Tray 1 LB",
+          "kroger_upc": "0001111063522",
+          "kroger_price": 7.99,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Taco seasoning mix",
+          "amount": "1 packet (1 oz)",
+          "in_pantry": false,
+          "kroger_product_name": "Old El Paso\u2122 Original Flavor Taco Seasoning Mix",
+          "kroger_upc": "0004600028869",
+          "kroger_price": 1,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Water",
+          "amount": "1/4 cup",
+          "in_pantry": true
+        },
+        {
+          "name": "Small flour tortillas",
+          "amount": "12 count",
+          "in_pantry": false
+        },
+        {
+          "name": "Shredded lettuce",
+          "amount": "2 cups",
+          "in_pantry": false,
+          "kroger_product_name": "Kroger\u00ae Iceberg Shredded Lettuce Bagged Salad BIG DEAL!",
+          "kroger_upc": "0001111063086",
+          "kroger_price": 3.99,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Diced tomatoes",
+          "amount": "2 medium",
+          "in_pantry": false,
+          "kroger_product_name": "Kroger\u00ae Petite Diced Tomatoes",
+          "kroger_upc": "0001111011975",
+          "kroger_price": 1,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Red onion",
+          "amount": "1/4 cup, finely diced",
+          "in_pantry": false,
+          "kroger_product_name": "Kroger\u00ae Red Onion 3 lb Bag",
+          "kroger_upc": "0001111062959",
+          "kroger_price": 3.79,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Lime",
+          "amount": "1, cut into wedges",
+          "in_pantry": false,
+          "kroger_product_name": "Fresh Limes - Each",
+          "kroger_upc": "0000000004048",
+          "kroger_price": 0.69,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Sour cream",
+          "amount": "1/2 cup",
+          "in_pantry": true
+        },
+        {
+          "name": "Salsa con queso",
+          "amount": "1/2 cup",
+          "in_pantry": true
+        },
+        {
+          "name": "Olive oil",
+          "amount": "1 tsp",
+          "in_pantry": true
+        },
+        {
+          "name": "Salt",
+          "amount": "to taste",
+          "in_pantry": true
+        },
+        {
+          "name": "Pepper",
+          "amount": "to taste",
+          "in_pantry": true
+        }
       ],
       "instructions": [
-        "Heat a large skillet over medium-high. Brown 1 lb ground beef, breaking it up, about 7 minutes. Drain excess fat.",
-        "Add taco seasoning and 1/3 cup water. Simmer 3–4 minutes until thickened.",
-        "Meanwhile, warm taco shells in a 350°F oven for 5 minutes. Shred lettuce and dice tomatoes.",
-        "Assemble tacos with beef, cheese, lettuce, and tomatoes. Serve with salsa."
+        "Step 1: Brown the ground beef. Heat 1 teaspoon olive oil in a large skillet over medium-high heat. Add ground beef and cook, breaking it up with a spoon, until no longer pink, about 6-8 minutes. Drain any excess grease.",
+        "Step 2: Season the beef. Stir in the taco seasoning mix and 1/4 cup water. Bring to a simmer and cook for 2-3 minutes, stirring occasionally, until the sauce has thickened and coated the beef.",
+        "Step 3: Prepare toppings and tortillas. While the beef is simmering, warm the flour tortillas according to package instructions (e.g., in a microwave, oven, or dry skillet). Dice tomatoes and finely dice red onion; shred lettuce.",
+        "Step 4: Assemble the tacos. Spoon the seasoned ground beef into the warm tortillas. Top generously with shredded lettuce, diced tomatoes, diced red onion, a dollop of sour cream, and a drizzle of salsa con queso. Serve with lime wedges for squeezing."
       ]
     },
     {
       "day": "Wednesday",
       "date": "2026-04-22",
-      "name": "Spaghetti with Red Sauce & Garlic Bread",
-      "description": "Classic weeknight comfort meal.",
-      "prep_minutes": 5,
-      "cook_minutes": 25,
+      "name": "One-Pan Sausage & Egg Hash with Smoked Paprika",
+      "description": "A quick and easy sheet pan meal featuring savory sausage, crispy potatoes, and tender-crisp vegetables, topped with baked eggs. Total time under 30 minutes.",
+      "prep_minutes": 10,
+      "cook_minutes": 18,
       "servings": 4,
       "ingredients": [
-        {"name": "spaghetti", "amount": "1 lb", "in_pantry": false},
-        {"name": "marinara sauce", "amount": "24 oz jar", "in_pantry": false},
-        {"name": "Italian bread", "amount": "1 loaf", "in_pantry": false},
-        {"name": "butter", "amount": "4 tbsp", "in_pantry": true},
-        {"name": "garlic", "amount": "3 cloves", "in_pantry": false},
-        {"name": "parmesan", "amount": "1/2 cup", "in_pantry": false}
+        {
+          "name": "Breakfast sausage",
+          "amount": "1 lb, sliced or crumbled",
+          "in_pantry": false,
+          "kroger_product_name": "Kroger\u00ae Original Breakfast Sausage Links",
+          "kroger_upc": "0001111097293",
+          "kroger_price": 2.99,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Potatoes",
+          "amount": "1.5 lbs, diced into 1/2-inch cubes",
+          "in_pantry": false,
+          "kroger_product_name": "Kroger\u00ae Russet Potatoes",
+          "kroger_upc": "0001111091760",
+          "kroger_price": 2.99,
+          "kroger_source": "preference"
+        },
+        {
+          "name": "Yellow onion",
+          "amount": "1/2, chopped",
+          "in_pantry": false,
+          "kroger_product_name": "Simple Truth Organic\u00ae Yellow Onion 2 lb Bag",
+          "kroger_upc": "0001111060160",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Green bell pepper",
+          "amount": "1, chopped",
+          "in_pantry": false,
+          "kroger_product_name": "Fresh Green Bell Pepper",
+          "kroger_upc": "0000000054208",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Smoked paprika",
+          "amount": "1 tsp",
+          "in_pantry": false,
+          "kroger_product_name": "McCormick Gourmet Organic Smoked Paprika",
+          "kroger_upc": "0005210044339",
+          "kroger_price": 9.49,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Dried thyme",
+          "amount": "1/2 tsp",
+          "in_pantry": false,
+          "kroger_product_name": "Litehouse\u2122 Instantly Fresh Freeze Dried Thyme",
+          "kroger_upc": "0007766113978",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Olive oil",
+          "amount": "2 tbsp",
+          "in_pantry": true
+        },
+        {
+          "name": "Eggs",
+          "amount": "4 large",
+          "in_pantry": true
+        },
+        {
+          "name": "Fresh parsley",
+          "amount": "2 tbsp, chopped (for garnish)",
+          "in_pantry": false,
+          "kroger_product_name": "Parsley",
+          "kroger_upc": "0000000004899",
+          "kroger_price": 1.29,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Salt",
+          "amount": "to taste",
+          "in_pantry": true
+        },
+        {
+          "name": "Pepper",
+          "amount": "to taste",
+          "in_pantry": true
+        }
       ],
       "instructions": [
-        "Bring a large pot of salted water to a boil. Cook spaghetti according to package, usually 9 minutes.",
-        "Warm marinara sauce in a saucepan over medium-low heat.",
-        "Slice Italian bread lengthwise. Mix softened butter with minced garlic and spread on cut sides.",
-        "Broil bread on a sheet pan 2–3 minutes until golden.",
-        "Drain pasta, top with sauce, garnish with parmesan, and serve with garlic bread."
+        "Step 1: Preheat oven and prepare vegetables. Preheat your oven to 400\u00b0F (200\u00b0C). On a large baking sheet, toss the diced potatoes, chopped yellow onion, and chopped green bell pepper with 2 tablespoons olive oil, smoked paprika, dried thyme, salt, and pepper. Spread in a single layer.",
+        "Step 2: Roast sausage and vegetables. Add the sliced or crumbled breakfast sausage to the baking sheet, distributing it evenly among the vegetables. Roast for 15-20 minutes, stirring halfway through, until potatoes are tender and sausage is cooked through.",
+        "Step 3: Add eggs. Once the sausage and vegetables are cooked, make four small wells in the mixture on the baking sheet. Crack one egg into each well. Return the baking sheet to the oven and bake for an additional 8-10 minutes, or until egg whites are set and yolks are to your desired runniness.",
+        "Step 4: Garnish and serve. Carefully remove the baking sheet from the oven. Garnish with fresh chopped parsley and serve immediately."
       ]
     },
     {
       "day": "Thursday",
       "date": "2026-04-23",
-      "name": "Leftover night — no cooking",
-      "description": "Clear out Monday through Wednesday's leftovers.",
-      "prep_minutes": 0,
-      "cook_minutes": 0,
+      "name": "Garlic Honey Pork and Broccoli Rice Bowls",
+      "description": "Tender pork tenderloin and crisp broccoli coated in a savory garlic-honey glaze, served over rice for a delicious bowl-style meal. Total cook time is approximately 25 minutes.",
+      "prep_minutes": 15,
+      "cook_minutes": 25,
       "servings": 4,
-      "ingredients": [],
-      "instructions": []
+      "ingredients": [
+        {
+          "name": "Pork tenderloin",
+          "amount": "1 lb, cut into 1-inch pieces",
+          "in_pantry": false,
+          "kroger_product_name": "Kroger\u00ae Seasoned and Seared Pre-Sliced Pork Tenderloin",
+          "kroger_upc": "0001111065116",
+          "kroger_price": 9.99,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Soy sauce",
+          "amount": "1/4 cup",
+          "in_pantry": false,
+          "kroger_product_name": "Kikkoman\u00ae Less Sodium Soy Sauce",
+          "kroger_upc": "0004139000105",
+          "kroger_price": 2.99,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Honey",
+          "amount": "3 tbsp",
+          "in_pantry": false,
+          "kroger_product_name": "Smart Way\u2122 Honey",
+          "kroger_upc": "0001111012316",
+          "kroger_price": 5.99,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Garlic cloves",
+          "amount": "4, minced",
+          "in_pantry": false,
+          "kroger_product_name": "Organic Garlic",
+          "kroger_upc": "0000000094608",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Fresh ginger",
+          "amount": "1 tbsp, grated",
+          "in_pantry": false,
+          "kroger_product_name": "Evolution Fresh\u00ae Organic Citrus Ginger Zest Cold-Pressed Vegetable and Fruit Juice Blend",
+          "kroger_upc": "0076235747444",
+          "kroger_price": 3.99,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Cornstarch",
+          "amount": "1 tbsp",
+          "in_pantry": false,
+          "kroger_product_name": "Comforts\u2122 Pure Cornstarch Baby Powder With Aloe Vera & Vitamin E",
+          "kroger_upc": "0001111038513",
+          "kroger_price": 2.39,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Broccoli florets",
+          "amount": "2 cups",
+          "in_pantry": false,
+          "kroger_product_name": "Birds Eye Baby Broccoli Florets, Frozen Vegetables",
+          "kroger_upc": "0001450000256",
+          "kroger_price": 2.29,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Cooked long-grain white rice",
+          "amount": "4 cups",
+          "in_pantry": false
+        },
+        {
+          "name": "Green onions",
+          "amount": "2, sliced for garnish",
+          "in_pantry": false,
+          "kroger_product_name": "Green Onions",
+          "kroger_upc": "0000000004659",
+          "kroger_price": 1.79,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Olive oil",
+          "amount": "2 tbsp",
+          "in_pantry": true
+        },
+        {
+          "name": "Salt",
+          "amount": "to taste",
+          "in_pantry": true
+        },
+        {
+          "name": "Pepper",
+          "amount": "to taste",
+          "in_pantry": true
+        }
+      ],
+      "instructions": [
+        "Step 1: Prepare the sauce. In a small bowl, whisk together soy sauce, honey, minced garlic, grated ginger, and cornstarch. Set aside.",
+        "Step 2: Cook the pork. Heat 1 tablespoon olive oil in a large skillet or wok over medium-high heat. Add pork pieces and cook, stirring occasionally, until browned on all sides and cooked through, about 6-8 minutes. Remove pork from skillet and set aside.",
+        "Step 3: Cook broccoli. Add another 1 tablespoon olive oil to the skillet. Add broccoli florets and stir-fry for 5-7 minutes until tender-crisp. You can add a tablespoon of water and cover for a minute to steam them lightly if preferred.",
+        "Step 4: Combine and serve. Return the cooked pork to the skillet with the broccoli. Pour the prepared sauce over the pork and broccoli. Stir constantly for 1-2 minutes until the sauce thickens and coats everything. Serve immediately over cooked long-grain white rice, garnished with sliced green onions."
+      ]
     },
     {
       "day": "Friday",
       "date": "2026-04-24",
-      "name": "Sheet Pan Salmon with Roasted Potatoes",
-      "description": "Flaky salmon and crispy potatoes.",
+      "name": "Baked Lemon Herb Salmon with Roasted Asparagus",
+      "description": "Flaky salmon fillets baked with fresh herbs and lemon alongside tender roasted asparagus, a light and healthy meal. Total cook time is approximately 25 minutes.",
       "prep_minutes": 10,
-      "cook_minutes": 30,
+      "cook_minutes": 25,
       "servings": 4,
       "ingredients": [
-        {"name": "salmon fillets", "amount": "4 (6 oz each)", "in_pantry": false},
-        {"name": "baby potatoes", "amount": "1.5 lbs", "in_pantry": false},
-        {"name": "lemon", "amount": "1", "in_pantry": false},
-        {"name": "olive oil", "amount": "2 tbsp", "in_pantry": true},
-        {"name": "dried rosemary", "amount": "1 tsp", "in_pantry": false}
+        {
+          "name": "Salmon fillets",
+          "amount": "4 (6 oz each)",
+          "in_pantry": false,
+          "kroger_product_name": "Great American Seafood Farm Raised Atlantic Salmon Fillets",
+          "kroger_upc": "0082994409348",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Asparagus spears",
+          "amount": "1 bunch (about 1 lb), tough ends trimmed",
+          "in_pantry": false,
+          "kroger_product_name": "Birds Eye Steamfresh Asparagus Spears, Frozen Vegetables",
+          "kroger_upc": "0001450001351",
+          "kroger_price": 4.49,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Lemon",
+          "amount": "1, half sliced, half for juice",
+          "in_pantry": false,
+          "kroger_product_name": "Fresh Medium Lemon - Each",
+          "kroger_upc": "0000000004958",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Fresh dill",
+          "amount": "2 tbsp, chopped",
+          "in_pantry": false,
+          "kroger_product_name": "Oh Snap!\u00ae Dilly Bites\u00ae Fresh Dill Pickle Snack Pack",
+          "kroger_upc": "0007432912338",
+          "kroger_price": 1.39,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Garlic cloves",
+          "amount": "2, minced",
+          "in_pantry": false,
+          "kroger_product_name": "Organic Garlic",
+          "kroger_upc": "0000000094608",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Olive oil",
+          "amount": "3 tbsp",
+          "in_pantry": true
+        },
+        {
+          "name": "Salt",
+          "amount": "to taste",
+          "in_pantry": true
+        },
+        {
+          "name": "Pepper",
+          "amount": "to taste",
+          "in_pantry": true
+        }
       ],
       "instructions": [
-        "Preheat oven to 425°F. Halve baby potatoes and toss with olive oil, rosemary, salt, and pepper.",
-        "Spread potatoes on a sheet pan and roast for 15 minutes.",
-        "Push potatoes to one side, add salmon fillets skin-side down, brush with olive oil, squeeze lemon over top.",
-        "Roast 12–15 more minutes until salmon flakes easily with a fork (internal temp 145°F).",
-        "Serve with extra lemon wedges."
+        "Step 1: Preheat oven and prepare asparagus. Preheat your oven to 400\u00b0F (200\u00b0C). On a large baking sheet, toss the trimmed asparagus with 1 tablespoon olive oil, salt, and pepper. Spread in a single layer.",
+        "Step 2: Prepare salmon. Pat salmon fillets dry. In a small bowl, whisk together 2 tablespoons olive oil, the juice from half a lemon, chopped fresh dill, and minced garlic. Season salmon fillets with salt and pepper.",
+        "Step 3: Bake salmon and asparagus. Place the seasoned salmon fillets on the same baking sheet as the asparagus, pushing asparagus to one side if needed. Spoon or brush the lemon-herb mixture over the salmon. Top each fillet with a lemon slice from the remaining half.",
+        "Step 4: Cook and serve. Bake for 12-18 minutes, depending on the thickness of the salmon and desired doneness. Salmon should flake easily with a fork and reach an internal temperature of 145\u00b0F (63\u00b0C). Serve immediately."
       ]
     },
     {
       "day": "Saturday",
       "date": "2026-04-25",
-      "name": "Homemade Pizza Night",
-      "description": "Let the kids build their own pies.",
-      "prep_minutes": 15,
-      "cook_minutes": 12,
+      "name": "Slow Cooker BBQ Pulled Beef Sandwiches with Creamy Coleslaw",
+      "description": "Tender, flavorful pulled beef cooked low and slow in a tangy BBQ sauce, served on toasted buns with a crisp, creamy coleslaw. Total cook time is approximately 6-8 hours.",
+      "prep_minutes": 20,
+      "cook_minutes": 480,
       "servings": 4,
       "ingredients": [
-        {"name": "pizza dough", "amount": "2 balls", "in_pantry": false},
-        {"name": "pizza sauce", "amount": "1 jar", "in_pantry": false},
-        {"name": "shredded mozzarella", "amount": "16 oz", "in_pantry": false},
-        {"name": "pepperoni", "amount": "1 package", "in_pantry": false}
+        {
+          "name": "Boneless beef chuck roast",
+          "amount": "2-3 lbs",
+          "in_pantry": false,
+          "kroger_product_name": "Tyson Premium Quality Savory Homestyle Beef Chuck Roast",
+          "kroger_upc": "0002718202988",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Yellow onion",
+          "amount": "1 medium, sliced",
+          "in_pantry": false,
+          "kroger_product_name": "Simple Truth Organic\u00ae Yellow Onion 2 lb Bag",
+          "kroger_upc": "0001111060160",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "BBQ sauce",
+          "amount": "1.5 cups",
+          "in_pantry": false,
+          "kroger_product_name": "Kinder's Original BBQ Sauce 15.5 oz",
+          "kroger_upc": "0075579570000",
+          "kroger_price": 5.49,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Apple cider vinegar",
+          "amount": "2 tbsp",
+          "in_pantry": false,
+          "kroger_product_name": "Simple Truth Organic\u2122 Organic Raw Apple Cider Vinegar",
+          "kroger_upc": "0001111010765",
+          "kroger_price": 3.29,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Brown sugar",
+          "amount": "1 tbsp, packed",
+          "in_pantry": false,
+          "kroger_product_name": "Simple Truth Organic\u00ae Light Brown Sugar",
+          "kroger_upc": "0001111085325",
+          "kroger_price": 4.29,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Worcestershire sauce",
+          "amount": "1 tbsp",
+          "in_pantry": false,
+          "kroger_product_name": "Lea & Perrins The Original Worcestershire Sauce",
+          "kroger_upc": "0005160000004",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Garlic cloves",
+          "amount": "2, minced",
+          "in_pantry": false,
+          "kroger_product_name": "Organic Garlic",
+          "kroger_upc": "0000000094608",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Salt",
+          "amount": "1 tsp",
+          "in_pantry": true
+        },
+        {
+          "name": "Pepper",
+          "amount": "1/2 tsp",
+          "in_pantry": true
+        },
+        {
+          "name": "Hamburger buns",
+          "amount": "4",
+          "in_pantry": false,
+          "kroger_product_name": "Kroger\u00ae Rich N Honey Hamburger Buns",
+          "kroger_upc": "0001111011510",
+          "kroger_price": 1.99,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Green cabbage",
+          "amount": "1/2 head, shredded",
+          "in_pantry": false,
+          "kroger_product_name": "Green Cabbage",
+          "kroger_upc": "0000000004069",
+          "kroger_price": 0.99,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Carrots",
+          "amount": "2 medium, shredded",
+          "in_pantry": false,
+          "kroger_product_name": "Carrots",
+          "kroger_upc": "0000000004562",
+          "kroger_price": 1.69,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Mayonnaise",
+          "amount": "1/2 cup",
+          "in_pantry": false,
+          "kroger_product_name": "Hellmann's \u00ae Real Mayonnaise 30 Fl Oz",
+          "kroger_upc": "0004800121348",
+          "kroger_price": 6.79,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Dijon mustard",
+          "amount": "1 tbsp",
+          "in_pantry": false,
+          "kroger_product_name": "Simple Truth Organic\u00ae Dijon Mustard",
+          "kroger_upc": "0001111088739",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Sugar",
+          "amount": "1 tbsp",
+          "in_pantry": true
+        }
       ],
       "instructions": [
-        "Preheat oven to 475°F. If using a pizza stone, heat it in the oven.",
-        "Stretch each dough ball on a floured surface into a 12-inch round.",
-        "Transfer to a parchment-lined pizza peel or sheet pan. Spread sauce, sprinkle mozzarella, add pepperoni and any toppings.",
-        "Bake 10–12 minutes until crust is golden and cheese is bubbly.",
-        "Rest 2 minutes, slice, and serve."
+        "Step 1: Sear beef (optional but recommended). Season beef chuck roast generously with salt and pepper. Heat 1 tablespoon olive oil in a large skillet over medium-high heat. Sear beef on all sides until browned, about 3-4 minutes per side. Transfer beef to the slow cooker.",
+        "Step 2: Prepare slow cooker. Add sliced yellow onion and minced garlic around the beef in the slow cooker. In a medium bowl, whisk together BBQ sauce, apple cider vinegar, brown sugar, and Worcestershire sauce. Pour the sauce over the beef.",
+        "Step 3: Slow cook. Cover the slow cooker and cook on low for 6-8 hours, or on high for 3-4 hours, until the beef is fork-tender and easily shreds apart. Internal temperature should be 200-205\u00b0F (93-96\u00b0C).",
+        "Step 4: Make coleslaw and assemble. While beef is cooking, prepare coleslaw by combining shredded cabbage and carrots in a large bowl. In a separate small bowl, whisk together mayonnaise, Dijon mustard, sugar, salt, and pepper. Pour over cabbage mixture and toss to combine. When beef is done, remove from slow cooker, shred with two forks, and return to the sauce to coat. Serve the pulled beef on toasted hamburger buns with a side of creamy coleslaw."
       ]
     },
     {
       "day": "Sunday",
       "date": "2026-04-26",
-      "name": "Slow-Cooker Chili",
-      "description": "Hands-off Sunday meal, ready in the afternoon.",
-      "prep_minutes": 15,
-      "cook_minutes": 240,
+      "name": "Hearty Homemade Chicken and Vegetable Pot Pie",
+      "description": "A comforting pot pie filled with tender chicken and mixed vegetables in a creamy, savory sauce, all topped with a flaky, golden crust. Total cook time is approximately 60 minutes.",
+      "prep_minutes": 30,
+      "cook_minutes": 60,
       "servings": 4,
       "ingredients": [
-        {"name": "ground beef", "amount": "1 lb", "in_pantry": false},
-        {"name": "kidney beans", "amount": "2 cans (15 oz)", "in_pantry": false},
-        {"name": "black beans", "amount": "1 can (15 oz)", "in_pantry": false},
-        {"name": "canned diced tomatoes", "amount": "1 can (28 oz)", "in_pantry": false},
-        {"name": "yellow onion", "amount": "1", "in_pantry": false},
-        {"name": "chili powder", "amount": "2 tbsp", "in_pantry": false},
-        {"name": "cumin", "amount": "1 tsp", "in_pantry": false}
+        {
+          "name": "Boneless, skinless chicken breasts",
+          "amount": "1.5 lbs, cooked and shredded",
+          "in_pantry": false,
+          "kroger_product_name": "Heritage Farm\u00ae Boneless Skinless Chicken Breasts",
+          "kroger_upc": "0028334900000",
+          "kroger_price": 2.89,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Butter",
+          "amount": "1/2 cup (1 stick)",
+          "in_pantry": true
+        },
+        {
+          "name": "Yellow onion",
+          "amount": "1/2, chopped",
+          "in_pantry": false,
+          "kroger_product_name": "Simple Truth Organic\u00ae Yellow Onion 2 lb Bag",
+          "kroger_upc": "0001111060160",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Carrots",
+          "amount": "2 medium, diced",
+          "in_pantry": false,
+          "kroger_product_name": "Carrots",
+          "kroger_upc": "0000000004562",
+          "kroger_price": 1.69,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Celery stalks",
+          "amount": "2, diced",
+          "in_pantry": false,
+          "kroger_product_name": "Kroger\u00ae Carrots Celery And Broccoli Snack Tray With Ranch Dip",
+          "kroger_upc": "0001111091472",
+          "kroger_price": 2.49,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Flour",
+          "amount": "1/2 cup",
+          "in_pantry": true
+        },
+        {
+          "name": "Chicken broth",
+          "amount": "2 cups",
+          "in_pantry": false,
+          "kroger_product_name": "Kroger\u00ae 99% Fat Free Chicken Broth",
+          "kroger_upc": "0001111004969",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Whole milk",
+          "amount": "1 cup",
+          "in_pantry": true
+        },
+        {
+          "name": "Dried thyme",
+          "amount": "1 tsp",
+          "in_pantry": false,
+          "kroger_product_name": "Litehouse\u2122 Instantly Fresh Freeze Dried Thyme",
+          "kroger_upc": "0007766113978",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Frozen peas",
+          "amount": "1 cup",
+          "in_pantry": false,
+          "kroger_product_name": "Kroger\u00ae Frozen Sweet Green Peas",
+          "kroger_upc": "0001111089736",
+          "kroger_price": 1.25,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Pie crusts",
+          "amount": "2 store-bought, or homemade with 2.5 cups flour and 1 cup butter",
+          "in_pantry": false,
+          "kroger_product_name": "Kroger\u00ae Unroll and Bake Pie Crusts",
+          "kroger_upc": "0001111082377",
+          "kroger_price": null,
+          "kroger_source": "search"
+        },
+        {
+          "name": "Egg",
+          "amount": "1 large, beaten (for egg wash)",
+          "in_pantry": true
+        },
+        {
+          "name": "Salt",
+          "amount": "to taste",
+          "in_pantry": true
+        },
+        {
+          "name": "Pepper",
+          "amount": "to taste",
+          "in_pantry": true
+        }
       ],
       "instructions": [
-        "In a skillet over medium-high, brown 1 lb ground beef with diced onion, about 8 minutes. Drain.",
-        "Transfer beef and onion to a slow cooker. Add drained beans, diced tomatoes with liquid, chili powder, cumin, salt, and pepper.",
-        "Cook on LOW for 6 hours or HIGH for 3–4 hours.",
-        "Taste and adjust seasoning. Serve with sour cream, shredded cheese, and cornbread if desired."
+        "Step 1: Prepare chicken and preheat oven. Cook chicken breasts (e.g., by boiling or baking) until an internal temperature of 165\u00b0F (74\u00b0C) is reached, then shred. Preheat oven to 400\u00b0F (200\u00b0C).",
+        "Step 2: Make the filling base. In a large pot or Dutch oven, melt 1/2 cup butter over medium heat. Add chopped yellow onion, diced carrots, and diced celery. Cook, stirring occasionally, until vegetables are tender, about 8-10 minutes. Stir in 1/2 cup flour and cook for 1 minute, creating a roux.",
+        "Step 3: Add liquids and seasoning. Gradually whisk in chicken broth and whole milk until smooth. Bring to a simmer, stirring constantly, until the mixture thickens, about 5-7 minutes. Stir in dried thyme, shredded chicken, frozen peas, salt, and pepper. Remove from heat.",
+        "Step 4: Assemble and bake the pie. Pour the chicken and vegetable filling into a 9-inch pie dish. If using store-bought crusts, place one crust over the filling, trim edges, and crimp. Cut a few slits in the top for venting. Brush with beaten egg wash. If making from scratch, prepare a simple pie dough with 2.5 cups flour, 1 cup cold butter, and ice water, then roll out and place over filling.",
+        "Step 5: Bake. Bake for 30-40 minutes, or until the crust is golden brown and the filling is bubbly. If the crust browns too quickly, loosely tent with foil. Let stand for 10 minutes before serving."
       ]
     }
   ],
   "shopping_list": [
-    {"name": "chicken breast", "amount": "1.5 lbs", "for_meals": ["Monday"]},
-    {"name": "broccoli", "amount": "1 head", "for_meals": ["Monday"]},
-    {"name": "lemons", "amount": "3", "for_meals": ["Monday", "Friday"]},
-    {"name": "garlic", "amount": "7 cloves", "for_meals": ["Monday", "Wednesday"]},
-    {"name": "ground beef", "amount": "2 lbs", "for_meals": ["Tuesday", "Sunday"]},
-    {"name": "taco shells", "amount": "1 box", "for_meals": ["Tuesday"]},
-    {"name": "shredded cheddar", "amount": "1 cup", "for_meals": ["Tuesday"]},
-    {"name": "lettuce", "amount": "1 head", "for_meals": ["Tuesday"]},
-    {"name": "tomatoes", "amount": "2", "for_meals": ["Tuesday"]},
-    {"name": "taco seasoning", "amount": "1 packet", "for_meals": ["Tuesday"]},
-    {"name": "spaghetti", "amount": "1 lb", "for_meals": ["Wednesday"]},
-    {"name": "marinara sauce", "amount": "24 oz jar", "for_meals": ["Wednesday"]},
-    {"name": "Italian bread", "amount": "1 loaf", "for_meals": ["Wednesday"]},
-    {"name": "parmesan", "amount": "1/2 cup", "for_meals": ["Wednesday"]},
-    {"name": "salmon fillets", "amount": "4 (6 oz)", "for_meals": ["Friday"]},
-    {"name": "baby potatoes", "amount": "1.5 lbs", "for_meals": ["Friday"]},
-    {"name": "dried rosemary", "amount": "1 tsp", "for_meals": ["Friday"]},
-    {"name": "pizza dough", "amount": "2 balls", "for_meals": ["Saturday"]},
-    {"name": "pizza sauce", "amount": "1 jar", "for_meals": ["Saturday"]},
-    {"name": "shredded mozzarella", "amount": "16 oz", "for_meals": ["Saturday"]},
-    {"name": "pepperoni", "amount": "1 package", "for_meals": ["Saturday"]},
-    {"name": "kidney beans", "amount": "2 cans", "for_meals": ["Sunday"]},
-    {"name": "black beans", "amount": "1 can", "for_meals": ["Sunday"]},
-    {"name": "canned diced tomatoes", "amount": "1 can (28 oz)", "for_meals": ["Sunday"]},
-    {"name": "yellow onion", "amount": "1", "for_meals": ["Sunday"]},
-    {"name": "chili powder", "amount": "2 tbsp", "for_meals": ["Sunday"]},
-    {"name": "cumin", "amount": "1 tsp", "for_meals": ["Sunday"]}
-  ]
+    {
+      "name": "Boneless, skinless chicken thighs",
+      "amount": "1.5 lbs",
+      "for_meals": [
+        "Monday"
+      ],
+      "kroger_product_name": "Heritage Farm\u00ae Boneless Skinless Chicken Thighs",
+      "kroger_upc": "0025313650000",
+      "kroger_price": 3.99,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Soy sauce",
+      "amount": "1/2 cup",
+      "for_meals": [
+        "Monday",
+        "Thursday"
+      ],
+      "kroger_product_name": "Kikkoman\u00ae Less Sodium Soy Sauce",
+      "kroger_upc": "0004139000105",
+      "kroger_price": 2.99,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Honey",
+      "amount": "6 tbsp",
+      "for_meals": [
+        "Monday",
+        "Thursday"
+      ],
+      "kroger_product_name": "Smart Way\u2122 Honey",
+      "kroger_upc": "0001111012316",
+      "kroger_price": 5.99,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Garlic cloves",
+      "amount": "10, minced",
+      "for_meals": [
+        "Monday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "kroger_product_name": "Organic Garlic",
+      "kroger_upc": "0000000094608",
+      "kroger_price": null,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Fresh ginger",
+      "amount": "2 tbsp, grated",
+      "for_meals": [
+        "Monday",
+        "Thursday"
+      ],
+      "kroger_product_name": "Evolution Fresh\u00ae Organic Citrus Ginger Zest Cold-Pressed Vegetable and Fruit Juice Blend",
+      "kroger_upc": "0076235747444",
+      "kroger_price": 3.99,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Cornstarch",
+      "amount": "2 tbsp",
+      "for_meals": [
+        "Monday",
+        "Thursday"
+      ],
+      "kroger_product_name": "Comforts\u2122 Pure Cornstarch Baby Powder With Aloe Vera & Vitamin E",
+      "kroger_upc": "0001111038513",
+      "kroger_price": 2.39,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Broccoli florets",
+      "amount": "4 cups",
+      "for_meals": [
+        "Monday",
+        "Thursday"
+      ],
+      "kroger_product_name": "Birds Eye Baby Broccoli Florets, Frozen Vegetables",
+      "kroger_upc": "0001450000256",
+      "kroger_price": 2.29,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Carrots",
+      "amount": "6 medium (approx 1.5 lbs)",
+      "for_meals": [
+        "Monday",
+        "Saturday",
+        "Sunday"
+      ],
+      "kroger_product_name": "Carrots",
+      "kroger_upc": "0000000004562",
+      "kroger_price": 1.69,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Yellow onion",
+      "amount": "2 large",
+      "for_meals": [
+        "Monday",
+        "Wednesday",
+        "Saturday",
+        "Sunday"
+      ],
+      "kroger_product_name": "Simple Truth Organic\u00ae Yellow Onion 2 lb Bag",
+      "kroger_upc": "0001111060160",
+      "kroger_price": null,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Red bell pepper",
+      "amount": "1",
+      "for_meals": [
+        "Monday"
+      ],
+      "kroger_product_name": "Fresh Red Bell Pepper",
+      "kroger_upc": "0000000004088",
+      "kroger_price": null,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Long-grain white rice",
+      "amount": "1 large bag (e.g. 5 lbs)",
+      "for_meals": [
+        "Monday",
+        "Thursday"
+      ],
+      "kroger_product_name": "Mahatma Extra Long Grain White Rice, Uncooked Rice, 80 oz (2.27kg)",
+      "kroger_upc": "0001740010932",
+      "kroger_price": null,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Sesame oil",
+      "amount": "1 tsp",
+      "for_meals": [
+        "Monday"
+      ],
+      "kroger_product_name": "Shirakiku 100% Pure Sesame Oil",
+      "kroger_upc": "0007441025051",
+      "kroger_price": 4.99,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Sesame seeds",
+      "amount": "1 tsp",
+      "for_meals": [
+        "Monday"
+      ],
+      "kroger_product_name": "Sun Luck\u00ae Toasted Sesame Seeds",
+      "kroger_upc": "0007613213012",
+      "kroger_price": 4.99,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Ground beef",
+      "amount": "1 lb",
+      "for_meals": [
+        "Tuesday"
+      ],
+      "kroger_product_name": "Private Selection\u00ae 80/20 Angus Ground Beef Tray 1 LB",
+      "kroger_upc": "0001111063522",
+      "kroger_price": 7.99,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Taco seasoning mix",
+      "amount": "1 packet (1 oz)",
+      "for_meals": [
+        "Tuesday"
+      ],
+      "kroger_product_name": "Old El Paso\u2122 Original Flavor Taco Seasoning Mix",
+      "kroger_upc": "0004600028869",
+      "kroger_price": 1,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Small flour tortillas",
+      "amount": "12 count",
+      "for_meals": [
+        "Tuesday"
+      ]
+    },
+    {
+      "name": "Shredded lettuce",
+      "amount": "1 head romaine or iceberg",
+      "for_meals": [
+        "Tuesday"
+      ],
+      "kroger_product_name": "Kroger\u00ae Iceberg Shredded Lettuce Bagged Salad BIG DEAL!",
+      "kroger_upc": "0001111063086",
+      "kroger_price": 3.99,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Diced tomatoes",
+      "amount": "2 medium",
+      "for_meals": [
+        "Tuesday"
+      ],
+      "kroger_product_name": "Kroger\u00ae Petite Diced Tomatoes",
+      "kroger_upc": "0001111011975",
+      "kroger_price": 1,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Red onion",
+      "amount": "1 small",
+      "for_meals": [
+        "Tuesday"
+      ],
+      "kroger_product_name": "Kroger\u00ae Red Onion 3 lb Bag",
+      "kroger_upc": "0001111062959",
+      "kroger_price": 3.79,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Lime",
+      "amount": "1",
+      "for_meals": [
+        "Tuesday",
+        "Friday"
+      ],
+      "kroger_product_name": "Fresh Limes - Each",
+      "kroger_upc": "0000000004048",
+      "kroger_price": 0.69,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Breakfast sausage",
+      "amount": "1 lb",
+      "for_meals": [
+        "Wednesday"
+      ],
+      "kroger_product_name": "Kroger\u00ae Original Breakfast Sausage Links",
+      "kroger_upc": "0001111097293",
+      "kroger_price": 2.99,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Potatoes",
+      "amount": "1.5 lbs",
+      "for_meals": [
+        "Wednesday"
+      ],
+      "kroger_product_name": "Kroger\u00ae Russet Potatoes",
+      "kroger_upc": "0001111091760",
+      "kroger_price": 2.99,
+      "kroger_source": "preference"
+    },
+    {
+      "name": "Green bell pepper",
+      "amount": "1",
+      "for_meals": [
+        "Wednesday"
+      ],
+      "kroger_product_name": "Fresh Green Bell Pepper",
+      "kroger_upc": "0000000054208",
+      "kroger_price": null,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Smoked paprika",
+      "amount": "1 tsp",
+      "for_meals": [
+        "Wednesday"
+      ],
+      "kroger_product_name": "McCormick Gourmet Organic Smoked Paprika",
+      "kroger_upc": "0005210044339",
+      "kroger_price": 9.49,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Dried thyme",
+      "amount": "1.5 tsp",
+      "for_meals": [
+        "Wednesday",
+        "Sunday"
+      ],
+      "kroger_product_name": "Litehouse\u2122 Instantly Fresh Freeze Dried Thyme",
+      "kroger_upc": "0007766113978",
+      "kroger_price": null,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Fresh parsley",
+      "amount": "1 bunch",
+      "for_meals": [
+        "Wednesday"
+      ],
+      "kroger_product_name": "Parsley",
+      "kroger_upc": "0000000004899",
+      "kroger_price": 1.29,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Pork tenderloin",
+      "amount": "1 lb",
+      "for_meals": [
+        "Thursday"
+      ],
+      "kroger_product_name": "Kroger\u00ae Seasoned and Seared Pre-Sliced Pork Tenderloin",
+      "kroger_upc": "0001111065116",
+      "kroger_price": 9.99,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Green onions",
+      "amount": "1 bunch",
+      "for_meals": [
+        "Thursday"
+      ],
+      "kroger_product_name": "Green Onions",
+      "kroger_upc": "0000000004659",
+      "kroger_price": 1.79,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Salmon fillets",
+      "amount": "4 (6 oz each)",
+      "for_meals": [
+        "Friday"
+      ],
+      "kroger_product_name": "Great American Seafood Farm Raised Atlantic Salmon Fillets",
+      "kroger_upc": "0082994409348",
+      "kroger_price": null,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Asparagus spears",
+      "amount": "1 bunch (about 1 lb)",
+      "for_meals": [
+        "Friday"
+      ],
+      "kroger_product_name": "Birds Eye Steamfresh Asparagus Spears, Frozen Vegetables",
+      "kroger_upc": "0001450001351",
+      "kroger_price": 4.49,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Fresh dill",
+      "amount": "1 bunch",
+      "for_meals": [
+        "Friday"
+      ],
+      "kroger_product_name": "Oh Snap!\u00ae Dilly Bites\u00ae Fresh Dill Pickle Snack Pack",
+      "kroger_upc": "0007432912338",
+      "kroger_price": 1.39,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Boneless beef chuck roast",
+      "amount": "2-3 lbs",
+      "for_meals": [
+        "Saturday"
+      ],
+      "kroger_product_name": "Tyson Premium Quality Savory Homestyle Beef Chuck Roast",
+      "kroger_upc": "0002718202988",
+      "kroger_price": null,
+      "kroger_source": "search"
+    },
+    {
+      "name": "BBQ sauce",
+      "amount": "1.5 cups",
+      "for_meals": [
+        "Saturday"
+      ],
+      "kroger_product_name": "Kinder's Original BBQ Sauce 15.5 oz",
+      "kroger_upc": "0075579570000",
+      "kroger_price": 5.49,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Apple cider vinegar",
+      "amount": "2 tbsp",
+      "for_meals": [
+        "Saturday"
+      ],
+      "kroger_product_name": "Simple Truth Organic\u2122 Organic Raw Apple Cider Vinegar",
+      "kroger_upc": "0001111010765",
+      "kroger_price": 3.29,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Brown sugar",
+      "amount": "1 tbsp",
+      "for_meals": [
+        "Saturday"
+      ],
+      "kroger_product_name": "Simple Truth Organic\u00ae Light Brown Sugar",
+      "kroger_upc": "0001111085325",
+      "kroger_price": 4.29,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Worcestershire sauce",
+      "amount": "1 tbsp",
+      "for_meals": [
+        "Saturday"
+      ],
+      "kroger_product_name": "Lea & Perrins The Original Worcestershire Sauce",
+      "kroger_upc": "0005160000004",
+      "kroger_price": null,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Hamburger buns",
+      "amount": "4",
+      "for_meals": [
+        "Saturday"
+      ],
+      "kroger_product_name": "Kroger\u00ae Rich N Honey Hamburger Buns",
+      "kroger_upc": "0001111011510",
+      "kroger_price": 1.99,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Green cabbage",
+      "amount": "1/2 head",
+      "for_meals": [
+        "Saturday"
+      ],
+      "kroger_product_name": "Green Cabbage",
+      "kroger_upc": "0000000004069",
+      "kroger_price": 0.99,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Mayonnaise",
+      "amount": "1/2 cup",
+      "for_meals": [
+        "Saturday"
+      ],
+      "kroger_product_name": "Hellmann's \u00ae Real Mayonnaise 30 Fl Oz",
+      "kroger_upc": "0004800121348",
+      "kroger_price": 6.79,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Dijon mustard",
+      "amount": "1 tbsp",
+      "for_meals": [
+        "Saturday"
+      ],
+      "kroger_product_name": "Simple Truth Organic\u00ae Dijon Mustard",
+      "kroger_upc": "0001111088739",
+      "kroger_price": null,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Boneless, skinless chicken breasts",
+      "amount": "1.5 lbs",
+      "for_meals": [
+        "Sunday"
+      ],
+      "kroger_product_name": "Heritage Farm\u00ae Boneless Skinless Chicken Breasts",
+      "kroger_upc": "0028334900000",
+      "kroger_price": 2.89,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Celery stalks",
+      "amount": "2",
+      "for_meals": [
+        "Sunday"
+      ],
+      "kroger_product_name": "Kroger\u00ae Carrots Celery And Broccoli Snack Tray With Ranch Dip",
+      "kroger_upc": "0001111091472",
+      "kroger_price": 2.49,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Chicken broth",
+      "amount": "2 cups",
+      "for_meals": [
+        "Sunday"
+      ],
+      "kroger_product_name": "Kroger\u00ae 99% Fat Free Chicken Broth",
+      "kroger_upc": "0001111004969",
+      "kroger_price": null,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Frozen peas",
+      "amount": "1 cup",
+      "for_meals": [
+        "Sunday"
+      ],
+      "kroger_product_name": "Kroger\u00ae Frozen Sweet Green Peas",
+      "kroger_upc": "0001111089736",
+      "kroger_price": 1.25,
+      "kroger_source": "search"
+    },
+    {
+      "name": "Pie crusts",
+      "amount": "2 store-bought (or additional flour/butter if making from scratch beyond staples)",
+      "for_meals": [
+        "Sunday"
+      ],
+      "kroger_product_name": "Kroger\u00ae Unroll and Bake Pie Crusts",
+      "kroger_upc": "0001111082377",
+      "kroger_price": null,
+      "kroger_source": "search"
+    }
+  ],
+  "_kroger_resolved_count": 45,
+  "_kroger_missing_count": 2,
+  "cart_webhook_url": "https://script.google.com/macros/s/AKfycbyxaboTokRQZ6RQe9jOgIBPy8biw1q9b1t8I77XZWSxcIFyQpz64seqIZFqPD31C1aW/exec"
 }
