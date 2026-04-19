@@ -102,24 +102,6 @@
     margin: 0 0 14px;
   }
 
-  .meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin: 0 0 14px;
-  }
-  .meta .pill {
-    display: inline-flex;
-    align-items: center;
-    background: var(--accent-soft);
-    color: var(--accent);
-    font-size: 12px;
-    font-weight: 500;
-    padding: 3px 10px;
-    border-radius: 999px;
-    letter-spacing: 0.02em;
-  }
-
   .ingredients {
     list-style: none;
     padding: 0;
@@ -128,13 +110,48 @@
   }
   .ingredients li {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     padding: 6px 0;
     border-bottom: 1px solid rgba(43, 36, 32, 0.06);
+    gap: 8px;
   }
   .ingredients li:last-child { border-bottom: none; }
-  .ingredients .row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
-  .ingredients .name { display: flex; align-items: center; gap: 8px; }
+
+  /* checkbox styling */
+  .ingredients input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    border: 1.5px solid var(--pantry-missing);
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    background: #fff;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .ingredients input[type="checkbox"]:checked {
+    background: var(--pantry-missing);
+    border-color: var(--pantry-missing);
+  }
+  .ingredients input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 5px;
+    height: 9px;
+    border: 2px solid #fff;
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+  }
+  .ingredients li.have input[type="checkbox"] {
+    border-color: var(--pantry-good);
+  }
+
+  .ingredients .name { display: flex; align-items: center; gap: 8px; flex: 1; }
   .ingredients .dot {
     width: 7px; height: 7px; border-radius: 50%;
     display: inline-block;
@@ -142,86 +159,49 @@
   }
   .ingredients .dot.have { background: var(--pantry-good); }
   .ingredients .dot.need { background: var(--pantry-missing); }
-  .ingredients .amount { color: var(--muted); font-size: 13px; }
-  .ingredients .brand {
-    display: block;
-    margin-left: 15px;
-    margin-top: 2px;
-    color: var(--muted);
-    font-size: 12px;
-    line-height: 1.35;
-  }
-  .ingredients .brand .price {
-    color: var(--accent);
-    font-weight: 500;
-    margin-left: 4px;
-  }
+  .ingredients .amount { color: var(--muted); font-size: 13px; white-space: nowrap; }
 
-  .cart-button {
-    display: block;
-    width: 100%;
+  /* cart row at the bottom of each meal card */
+  .cart-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-top: 14px;
-    padding: 11px 14px;
+    flex-wrap: wrap;
+  }
+  .btn-cart {
     background: var(--accent);
     color: #fff;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
+    padding: 8px 14px;
     font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.02em;
+    font-weight: 500;
     cursor: pointer;
-    transition: background 0.15s, transform 0.05s;
-    font-family: inherit;
+    transition: opacity 0.15s;
   }
-  .cart-button:hover { background: #9f4722; }
-  .cart-button:active { transform: scale(0.99); }
-  .cart-button:disabled {
-    background: var(--pantry-good);
+  .btn-cart:disabled {
+    opacity: 0.4;
     cursor: default;
   }
-  .cart-button.pending { background: #7a6f65; cursor: wait; }
-  .cart-note {
-    margin-top: 8px;
-    font-size: 12px;
+  .btn-cart:not(:disabled):hover { opacity: 0.88; }
+  .btn-reset {
+    background: none;
+    border: none;
     color: var(--muted);
-    text-align: center;
-    min-height: 14px;
-  }
-
-  .instructions {
-    margin-top: 14px;
-    border-top: 1px solid rgba(43, 36, 32, 0.06);
-    padding-top: 12px;
-  }
-  .instructions summary {
-    cursor: pointer;
     font-size: 13px;
-    font-weight: 600;
-    color: var(--accent);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 6px;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
   }
-  .instructions summary::-webkit-details-marker { display: none; }
-  .instructions summary::after {
-    content: "▸";
-    font-size: 10px;
-    transition: transform 0.15s;
+  .btn-reset:hover { color: var(--ink); }
+  .cart-status {
+    font-size: 13px;
+    color: var(--muted);
+    margin-left: 2px;
   }
-  .instructions[open] summary::after { transform: rotate(90deg); }
-  .instructions ol {
-    margin: 12px 0 0;
-    padding-left: 22px;
-    font-size: 14px;
-    color: var(--ink);
-  }
-  .instructions ol li {
-    padding: 4px 0;
-    line-height: 1.55;
-  }
+  .cart-status.ok  { color: var(--pantry-good); }
+  .cart-status.err { color: var(--pantry-missing); }
 
   .shopping {
     margin-top: 34px;
@@ -243,28 +223,12 @@
     font-size: 15px;
   }
   .shopping li {
-    padding: 6px 0;
+    padding: 5px 0;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    gap: 10px;
-    border-bottom: 1px solid rgba(184, 83, 42, 0.12);
   }
-  .shopping li:last-child { border-bottom: none; }
-  .shopping li .for { color: var(--muted); font-size: 12px; white-space: nowrap; }
+  .shopping li .for { color: var(--muted); font-size: 12px; }
   .shopping .empty { color: var(--muted); font-style: italic; font-size: 14px; }
-  .shopping .brand {
-    display: block;
-    color: var(--muted);
-    font-size: 12px;
-    margin-top: 2px;
-    line-height: 1.35;
-  }
-  .shopping .brand .price {
-    color: var(--accent);
-    font-weight: 500;
-    margin-left: 4px;
-  }
 
   .empty-state {
     text-align: center;
@@ -296,9 +260,9 @@
 
 <script>
 (async function () {
-  const content = document.getElementById("content");
-  const dates = document.getElementById("dates");
-  const updated = document.getElementById("updated");
+  const content  = document.getElementById("content");
+  const datesEl  = document.getElementById("dates");
+  const updatedEl = document.getElementById("updated");
 
   function fmtDate(iso) {
     if (!iso) return "";
@@ -314,7 +278,6 @@
 
   let data;
   try {
-    // Cache-bust so the wife sees fresh pushes without a hard refresh
     const res = await fetch("data/current_week.json?v=" + Date.now());
     if (!res.ok) throw new Error("not ok");
     data = await res.json();
@@ -323,171 +286,157 @@
     return;
   }
 
-  dates.textContent = fmtDate(data.week_start) + " — " + fmtDate(data.week_end);
-  updated.textContent = fmtUpdated(data.generated_at);
-
-  function metaPills(m) {
-    const parts = [];
-    const total = (m.prep_minutes || 0) + (m.cook_minutes || 0);
-    if (total > 0) parts.push(`${total} min`);
-    else if (m.prep_minutes) parts.push(`${m.prep_minutes} min prep`);
-    else if (m.cook_minutes) parts.push(`${m.cook_minutes} min cook`);
-    if (m.servings) parts.push(`serves ${m.servings}`);
-    if (!parts.length) return "";
-    return `<div class="meta">${parts.map(p => `<span class="pill">${p}</span>`).join("")}</div>`;
-  }
-
-  function instructionsHtml(m) {
-    const steps = m.instructions || [];
-    if (!steps.length) return "";
-    return `
-      <details class="instructions">
-        <summary>Instructions</summary>
-        <ol>${steps.map(s => `<li>${s}</li>`).join("")}</ol>
-      </details>
-    `;
-  }
-
-  function fmtPrice(p) {
-    if (p === null || p === undefined || p === "") return "";
-    const n = Number(p);
-    if (Number.isFinite(n)) return "$" + n.toFixed(2);
-    return String(p);
-  }
-
-  function escapeHtml(s) {
-    return String(s == null ? "" : s)
-      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
-      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
-  }
-
-  function ingredientHtml(i) {
-    const brandLine = (!i.in_pantry && (i.kroger_product_name || i.kroger_price))
-      ? `<span class="brand">Kroger: ${escapeHtml(i.kroger_product_name || "")}${
-          i.kroger_price ? `<span class="price">${fmtPrice(i.kroger_price)}</span>` : ""
-        }</span>`
-      : "";
-    return `
-      <li>
-        <div class="row">
-          <span class="name">
-            <span class="dot ${i.in_pantry ? "have" : "need"}"></span>
-            ${escapeHtml(i.name)}
-          </span>
-          <span class="amount">${escapeHtml(i.amount || "")}</span>
-        </div>
-        ${brandLine}
-      </li>
-    `;
-  }
-
-  function cartButtonHtml(m, webhookUrl) {
-    // Only offer a button when we have things to actually add (need-to-buy ingredients)
-    // AND the webhook is configured. If not configured, stay quiet on the site.
-    const needList = (m.ingredients || []).filter(i => !i.in_pantry);
-    if (!needList.length) return "";
-    if (!webhookUrl) return "";
-    const label = `Add ${needList.length} to Kroger list`;
-    const payload = JSON.stringify({ day: m.day, recipe: m.name, items: needList.map(i => ({
-      name: i.name,
-      amount: i.amount || "",
-      upc: i.kroger_upc || null,
-      product_name: i.kroger_product_name || null,
-      price: i.kroger_price || null,
-    })) });
-    return `
-      <button class="cart-button" data-payload='${payload.replace(/'/g, "&#39;")}' data-url="${escapeHtml(webhookUrl)}">
-        ${label}
-      </button>
-      <div class="cart-note"></div>
-    `;
-  }
+  datesEl.textContent  = fmtDate(data.week_start) + " — " + fmtDate(data.week_end);
+  updatedEl.textContent = fmtUpdated(data.generated_at);
 
   const webhookUrl = data.cart_webhook_url || "";
 
-  const mealsHtml = (data.meals || []).map(m => `
-    <div class="meal">
-      <div class="day">
-        <span class="day-name">${escapeHtml(m.day)}</span>
-        <span class="day-date">${fmtDate(m.date)}</span>
-      </div>
-      <h2>${escapeHtml(m.name)}</h2>
-      ${m.description ? `<p class="desc">${escapeHtml(m.description)}</p>` : ""}
-      ${metaPills(m)}
-      <ul class="ingredients">
-        ${(m.ingredients || []).map(ingredientHtml).join("")}
-      </ul>
-      ${instructionsHtml(m)}
-      ${cartButtonHtml(m, webhookUrl)}
-    </div>
-  `).join("");
+  // ── Build meal cards ─────────────────────────────────────────────────────
+  const mealEls = (data.meals || []).map((m, mealIdx) => {
+    const needItems = (m.ingredients || []).filter(i => !i.in_pantry);
+    const haveItems = (m.ingredients || []).filter(i =>  i.in_pantry);
 
+    const ingHtml = [
+      // "Need" items get a checkbox, checked by default
+      ...needItems.map((i, k) => `
+        <li class="need">
+          <input type="checkbox" id="cb-${mealIdx}-${k}" checked
+            data-name="${esc(i.name)}"
+            data-amount="${esc(i.amount || "")}"
+            data-upc="${esc(i.kroger_upc || "")}"
+            data-product="${esc(i.kroger_product_name || "")}"
+            data-price="${esc(String(i.kroger_price || ""))}"
+          />
+          <span class="name">
+            <span class="dot need"></span>${esc(i.name)}
+          </span>
+          <span class="amount">${esc(i.amount || "")}</span>
+        </li>`),
+      // "Have" items are plain — no checkbox needed
+      ...haveItems.map(i => `
+        <li class="have">
+          <span class="name">
+            <span class="dot have"></span>${esc(i.name)}
+          </span>
+          <span class="amount">${esc(i.amount || "")}</span>
+        </li>`),
+    ].join("");
+
+    // Show the cart row only if there are need-items and a webhook is configured
+    const cartRow = (needItems.length && webhookUrl) ? `
+      <div class="cart-row" id="cart-row-${mealIdx}">
+        <button class="btn-cart" id="btn-cart-${mealIdx}">
+          Add <span id="ct-${mealIdx}">${needItems.length}</span> to Kroger list
+        </button>
+        <button class="btn-reset" id="btn-reset-${mealIdx}">reset</button>
+        <span class="cart-status" id="cart-status-${mealIdx}"></span>
+      </div>` : "";
+
+    return `
+      <div class="meal" id="meal-${mealIdx}">
+        <div class="day">
+          <span class="day-name">${esc(m.day)}</span>
+          <span class="day-date">${fmtDate(m.date)}</span>
+        </div>
+        <h2>${esc(m.name)}</h2>
+        ${m.description ? `<p class="desc">${esc(m.description)}</p>` : ""}
+        <ul class="ingredients" id="ing-${mealIdx}">${ingHtml}</ul>
+        ${cartRow}
+      </div>`;
+  });
+
+  // ── Shopping list ────────────────────────────────────────────────────────
   const shop = data.shopping_list || [];
   const shoppingHtml = `
     <div class="shopping">
       <h3>Need from the store</h3>
-      ${shop.length ? `<ul>${shop.map(s => {
-        const brandBit = s.kroger_product_name || s.kroger_price
-          ? `<span class="brand">${escapeHtml(s.kroger_product_name || "")}${s.kroger_price ? `<span class="price">${fmtPrice(s.kroger_price)}</span>` : ""}</span>`
-          : "";
-        return `
-        <li>
-          <div>
-            <div>${escapeHtml(s.name)}${s.amount ? " — " + escapeHtml(s.amount) : ""}</div>
-            ${brandBit}
-          </div>
-          <span class="for">${(s.for_meals || []).map(escapeHtml).join(", ")}</span>
-        </li>`;
-      }).join("")}</ul>` : `<div class="empty">Nothing — we've got everything on hand.</div>`}
-    </div>
-  `;
+      ${shop.length
+        ? `<ul>${shop.map(s => `
+            <li>
+              <span>${esc(s.name)}${s.amount ? " — " + esc(s.amount) : ""}</span>
+              <span class="for">${(s.for_meals || []).join(", ")}</span>
+            </li>`).join("")}</ul>`
+        : `<div class="empty">Nothing — we've got everything on hand.</div>`}
+    </div>`;
 
-  content.innerHTML = `<div class="meals">${mealsHtml}</div>${shoppingHtml}`;
+  content.innerHTML = `<div class="meals">${mealEls.join("")}</div>${shoppingHtml}`;
 
-  // Wire up the per-recipe "Add to Kroger list" buttons.
-  // Each button POSTs its payload to the Apps Script webhook; the webhook
-  // appends rows to a "Cart Queue" sheet, which sync_recipe_cart.py on the
-  // Mac pulls every few minutes and pushes into grocery.db.
-  document.querySelectorAll(".cart-button").forEach(btn => {
+  // ── Wire up checkbox + button logic ──────────────────────────────────────
+  (data.meals || []).forEach((m, mealIdx) => {
+    const needItems = (m.ingredients || []).filter(i => !i.in_pantry);
+    if (!needItems.length || !webhookUrl) return;
+
+    const ingList   = document.getElementById(`ing-${mealIdx}`);
+    const btn       = document.getElementById(`btn-cart-${mealIdx}`);
+    const ctSpan    = document.getElementById(`ct-${mealIdx}`);
+    const resetBtn  = document.getElementById(`btn-reset-${mealIdx}`);
+    const statusEl  = document.getElementById(`cart-status-${mealIdx}`);
+
+    function getChecked() {
+      return [...ingList.querySelectorAll("input[type=checkbox]:checked")];
+    }
+
+    function updateCount() {
+      const n = getChecked().length;
+      ctSpan.textContent = n;
+      btn.disabled = n === 0;
+    }
+
+    ingList.addEventListener("change", updateCount);
+
+    resetBtn.addEventListener("click", () => {
+      ingList.querySelectorAll("input[type=checkbox]").forEach(cb => cb.checked = true);
+      statusEl.textContent = "";
+      statusEl.className = "cart-status";
+      updateCount();
+    });
+
     btn.addEventListener("click", async () => {
-      const url = btn.dataset.url;
-      const note = btn.nextElementSibling; // .cart-note
-      if (!url) {
-        if (note) note.textContent = "Webhook not configured.";
-        return;
-      }
-      let payload;
-      try { payload = JSON.parse(btn.dataset.payload); }
-      catch (e) { if (note) note.textContent = "Bad payload."; return; }
+      const checked = getChecked();
+      if (!checked.length) return;
 
-      btn.classList.add("pending");
+      const items = checked.map(cb => ({
+        name:         cb.dataset.name,
+        amount:       cb.dataset.amount,
+        upc:          cb.dataset.upc,
+        product_name: cb.dataset.product,
+        price:        cb.dataset.price ? parseFloat(cb.dataset.price) : "",
+      }));
+
       btn.disabled = true;
-      const originalLabel = btn.textContent.trim();
-      btn.textContent = "Adding…";
-      if (note) note.textContent = "";
+      statusEl.textContent = "Adding…";
+      statusEl.className = "cart-status";
 
       try {
-        // Apps Script doPost with text/plain to avoid CORS preflight.
-        const res = await fetch(url, {
+        const res = await fetch(webhookUrl, {
           method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "text/plain;charset=utf-8" },
-          body: JSON.stringify(payload),
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ day: m.day, recipe: m.name, items }),
         });
-        // no-cors responses are opaque — we can't read the body, but if fetch
-        // didn't throw, the request hit the webhook. That's good enough here;
-        // the local sync job is the source of truth for what actually landed.
-        btn.classList.remove("pending");
-        btn.textContent = "Added ✓";
-        if (note) note.textContent = `Queued ${payload.items.length} item${payload.items.length === 1 ? "" : "s"}. Will sync to your grocery list within a few minutes.`;
+        const json = await res.json();
+        if (json.ok) {
+          statusEl.textContent = `✓ ${items.length} item${items.length !== 1 ? "s" : ""} added`;
+          statusEl.className = "cart-status ok";
+          // Uncheck added items so re-clicking doesn't double-add
+          checked.forEach(cb => { cb.checked = false; });
+          updateCount();
+        } else {
+          throw new Error(json.error || "unknown error");
+        }
       } catch (err) {
-        btn.classList.remove("pending");
+        statusEl.textContent = "Failed — try again";
+        statusEl.className = "cart-status err";
         btn.disabled = false;
-        btn.textContent = originalLabel;
-        if (note) note.textContent = "Couldn't reach the cart service — try again?";
       }
     });
   });
+
+  // ── Helpers ───────────────────────────────────────────────────────────────
+  function esc(str) {
+    return String(str ?? "")
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  }
 })();
 </script>
 </body>
