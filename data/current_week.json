@@ -1,0 +1,98 @@
+{
+  "week_start": "2026-04-20",
+  "week_end": "2026-04-26",
+  "generated_at": "2026-04-18T21:00:00Z",
+  "meals": [
+    {
+      "day": "Monday",
+      "date": "2026-04-20",
+      "name": "Sheet Pan Lemon Chicken & Broccoli",
+      "description": "One-pan dinner, about 35 minutes start to finish.",
+      "ingredients": [
+        {"name": "chicken breast", "amount": "1.5 lbs", "in_pantry": true},
+        {"name": "broccoli", "amount": "1 head", "in_pantry": true},
+        {"name": "lemons", "amount": "2", "in_pantry": false},
+        {"name": "olive oil", "amount": "3 tbsp", "in_pantry": true},
+        {"name": "garlic", "amount": "4 cloves", "in_pantry": true}
+      ]
+    },
+    {
+      "day": "Tuesday",
+      "date": "2026-04-21",
+      "name": "Taco Tuesday — Ground Beef Tacos",
+      "description": "Kid-approved, fast, uses pantry staples.",
+      "ingredients": [
+        {"name": "ground beef", "amount": "1 lb", "in_pantry": true},
+        {"name": "taco shells", "amount": "1 box", "in_pantry": true},
+        {"name": "cheddar cheese", "amount": "1 cup shredded", "in_pantry": true},
+        {"name": "lettuce", "amount": "1 head", "in_pantry": false},
+        {"name": "tomatoes", "amount": "2", "in_pantry": true}
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "date": "2026-04-22",
+      "name": "Pasta with Red Sauce & Garlic Bread",
+      "description": "Simple weeknight comfort food.",
+      "ingredients": [
+        {"name": "spaghetti", "amount": "1 lb", "in_pantry": true},
+        {"name": "canned tomatoes", "amount": "2 cans", "in_pantry": true},
+        {"name": "Italian bread", "amount": "1 loaf", "in_pantry": false},
+        {"name": "parmesan", "amount": "for serving", "in_pantry": true}
+      ]
+    },
+    {
+      "day": "Thursday",
+      "date": "2026-04-23",
+      "name": "Leftover night — no cooking",
+      "description": "Clear out the fridge.",
+      "ingredients": []
+    },
+    {
+      "day": "Friday",
+      "date": "2026-04-24",
+      "name": "Sheet Pan Salmon with Roasted Potatoes",
+      "description": "Fresh salmon, crispy potatoes, about 30 minutes.",
+      "ingredients": [
+        {"name": "salmon fillets", "amount": "4", "in_pantry": false},
+        {"name": "baby potatoes", "amount": "1.5 lbs", "in_pantry": true},
+        {"name": "lemons", "amount": "1", "in_pantry": false},
+        {"name": "rosemary", "amount": "2 sprigs", "in_pantry": true}
+      ]
+    },
+    {
+      "day": "Saturday",
+      "date": "2026-04-25",
+      "name": "Homemade Pizza Night",
+      "description": "Let the kids help build their own.",
+      "ingredients": [
+        {"name": "pizza dough", "amount": "2 balls", "in_pantry": false},
+        {"name": "pizza sauce", "amount": "1 jar", "in_pantry": true},
+        {"name": "mozzarella", "amount": "16 oz", "in_pantry": false},
+        {"name": "pepperoni", "amount": "1 package", "in_pantry": true}
+      ]
+    },
+    {
+      "day": "Sunday",
+      "date": "2026-04-26",
+      "name": "Slow-Cooker Chili",
+      "description": "Start in the morning, ready by dinner.",
+      "ingredients": [
+        {"name": "ground beef", "amount": "1 lb", "in_pantry": true},
+        {"name": "kidney beans", "amount": "2 cans", "in_pantry": true},
+        {"name": "black beans", "amount": "1 can", "in_pantry": true},
+        {"name": "canned tomatoes", "amount": "1 can", "in_pantry": true},
+        {"name": "onion", "amount": "1", "in_pantry": true},
+        {"name": "chili powder", "amount": "2 tbsp", "in_pantry": true}
+      ]
+    }
+  ],
+  "shopping_list": [
+    {"name": "lemons", "amount": "3", "for_meals": ["Monday", "Friday"]},
+    {"name": "lettuce", "amount": "1 head", "for_meals": ["Tuesday"]},
+    {"name": "Italian bread", "amount": "1 loaf", "for_meals": ["Wednesday"]},
+    {"name": "salmon fillets", "amount": "4", "for_meals": ["Friday"]},
+    {"name": "pizza dough", "amount": "2 balls", "for_meals": ["Saturday"]},
+    {"name": "mozzarella", "amount": "16 oz", "for_meals": ["Saturday"]}
+  ]
+}

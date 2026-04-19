@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#f7f3ec" />
+<title>This Week's Kitchen</title>
+<style>
+  :root {
+    --bg: #f7f3ec;
+    --card: #ffffff;
+    --ink: #2b2420;
+    --muted: #7a6f65;
+    --accent: #b8532a;
+    --accent-soft: #f2e4d8;
+    --pantry-good: #4a7a4a;
+    --pantry-missing: #b8532a;
+    --shadow: 0 2px 10px rgba(43, 36, 32, 0.06);
+    --radius: 14px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 24px 18px 60px;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 4px;
+    letter-spacing: -0.01em;
+  }
+  header .dates {
+    color: var(--muted);
+    font-size: 15px;
+  }
+  header .updated {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 6px;
+    font-variant: small-caps;
+    letter-spacing: 0.05em;
+  }
+
+  .meals {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .meal {
+    background: var(--card);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    box-shadow: var(--shadow);
+  }
+
+  .meal .day {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+  .meal .day-name {
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+  }
+  .meal .day-date {
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .meal h2 {
+    margin: 0 0 6px;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .meal .desc {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0 0 14px;
+  }
+
+  .ingredients {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+  }
+  .ingredients li {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(43, 36, 32, 0.06);
+  }
+  .ingredients li:last-child { border-bottom: none; }
+  .ingredients .name { display: flex; align-items: center; gap: 8px; }
+  .ingredients .dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    display: inline-block;
+  }
+  .ingredients .dot.have { background: var(--pantry-good); }
+  .ingredients .dot.need { background: var(--pantry-missing); }
+  .ingredients .amount { color: var(--muted); font-size: 13px; }
+
+  .shopping {
+    margin-top: 34px;
+    background: var(--accent-soft);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .shopping h3 {
+    margin: 0 0 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+  }
+  .shopping ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+  }
+  .shopping li {
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .shopping li .for { color: var(--muted); font-size: 12px; }
+  .shopping .empty { color: var(--muted); font-style: italic; font-size: 14px; }
+
+  .empty-state {
+    text-align: center;
+    color: var(--muted);
+    padding: 60px 20px;
+    font-size: 15px;
+  }
+
+  @media (max-width: 480px) {
+    .wrap { padding: 18px 14px 40px; }
+    header h1 { font-size: 24px; }
+    .meal { padding: 16px; }
+    .meal h2 { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>This Week's Kitchen</h1>
+      <div class="dates" id="dates">Loading…</div>
+      <div class="updated" id="updated"></div>
+    </header>
+
+    <div id="content">
+      <div class="empty-state">Loading this week's menu…</div>
+    </div>
+  </div>
+
+<script>
+(async function () {
+  const content = document.getElementById("content");
+  const dates = document.getElementById("dates");
+  const updated = document.getElementById("updated");
+
+  function fmtDate(iso) {
+    if (!iso) return "";
+    const d = new Date(iso + "T00:00:00");
+    return d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+  }
+  function fmtUpdated(iso) {
+    if (!iso) return "";
+    const d = new Date(iso);
+    return "updated " + d.toLocaleDateString(undefined, { month: "short", day: "numeric" }) +
+           " at " + d.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+  }
+
+  let data;
+  try {
+    // Cache-bust so the wife sees fresh pushes without a hard refresh
+    const res = await fetch("data/current_week.json?v=" + Date.now());
+    if (!res.ok) throw new Error("not ok");
+    data = await res.json();
+  } catch (e) {
+    content.innerHTML = '<div class="empty-state">No menu available yet. Check back after the next kitchen scan.</div>';
+    return;
+  }
+
+  dates.textContent = fmtDate(data.week_start) + " — " + fmtDate(data.week_end);
+  updated.textContent = fmtUpdated(data.generated_at);
+
+  const mealsHtml = (data.meals || []).map(m => `
+    <div class="meal">
+      <div class="day">
+        <span class="day-name">${m.day}</span>
+        <span class="day-date">${fmtDate(m.date)}</span>
+      </div>
+      <h2>${m.name}</h2>
+      ${m.description ? `<p class="desc">${m.description}</p>` : ""}
+      <ul class="ingredients">
+        ${(m.ingredients || []).map(i => `
+          <li>
+            <span class="name">
+              <span class="dot ${i.in_pantry ? "have" : "need"}"></span>
+              ${i.name}
+            </span>
+            <span class="amount">${i.amount || ""}</span>
+          </li>
+        `).join("")}
+      </ul>
+    </div>
+  `).join("");
+
+  const shop = data.shopping_list || [];
+  const shoppingHtml = `
+    <div class="shopping">
+      <h3>Need from the store</h3>
+      ${shop.length ? `<ul>${shop.map(s => `
+        <li>
+          <span>${s.name}${s.amount ? " — " + s.amount : ""}</span>
+          <span class="for">${(s.for_meals || []).join(", ")}</span>
+        </li>`).join("")}</ul>` : `<div class="empty">Nothing — we've got everything on hand.</div>`}
+    </div>
+  `;
+
+  content.innerHTML = `<div class="meals">${mealsHtml}</div>${shoppingHtml}`;
+})();
+</script>
+</body>
+</html>
