@@ -408,21 +408,20 @@
       statusEl.className = "cart-status";
 
       try {
-        const res = await fetch(webhookUrl, {
+        // Apps Script doesn't support CORS preflight — use no-cors + text/plain
+        // to bypass preflight entirely. The POST still lands in doPost() normally;
+        // we just can't read the response, so we confirm optimistically.
+        await fetch(webhookUrl, {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain" },
           body: JSON.stringify({ day: m.day, recipe: m.name, items }),
         });
-        const json = await res.json();
-        if (json.ok) {
-          statusEl.textContent = `✓ ${items.length} item${items.length !== 1 ? "s" : ""} added`;
-          statusEl.className = "cart-status ok";
-          // Uncheck added items so re-clicking doesn't double-add
-          checked.forEach(cb => { cb.checked = false; });
-          updateCount();
-        } else {
-          throw new Error(json.error || "unknown error");
-        }
+        statusEl.textContent = `✓ ${items.length} item${items.length !== 1 ? "s" : ""} queued`;
+        statusEl.className = "cart-status ok";
+        // Uncheck added items so re-clicking doesn't double-add
+        checked.forEach(cb => { cb.checked = false; });
+        updateCount();
       } catch (err) {
         statusEl.textContent = "Failed — try again";
         statusEl.className = "cart-status err";
