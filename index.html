@@ -133,14 +133,60 @@
     border-bottom: 1px solid rgba(43, 36, 32, 0.06);
   }
   .ingredients li:last-child { border-bottom: none; }
+  .ingredients .row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
   .ingredients .name { display: flex; align-items: center; gap: 8px; }
   .ingredients .dot {
     width: 7px; height: 7px; border-radius: 50%;
     display: inline-block;
+    flex-shrink: 0;
   }
   .ingredients .dot.have { background: var(--pantry-good); }
   .ingredients .dot.need { background: var(--pantry-missing); }
   .ingredients .amount { color: var(--muted); font-size: 13px; }
+  .ingredients .brand {
+    display: block;
+    margin-left: 15px;
+    margin-top: 2px;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.35;
+  }
+  .ingredients .brand .price {
+    color: var(--accent);
+    font-weight: 500;
+    margin-left: 4px;
+  }
+
+  .cart-button {
+    display: block;
+    width: 100%;
+    margin-top: 14px;
+    padding: 11px 14px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.05s;
+    font-family: inherit;
+  }
+  .cart-button:hover { background: #9f4722; }
+  .cart-button:active { transform: scale(0.99); }
+  .cart-button:disabled {
+    background: var(--pantry-good);
+    cursor: default;
+  }
+  .cart-button.pending { background: #7a6f65; cursor: wait; }
+  .cart-note {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--muted);
+    text-align: center;
+    min-height: 14px;
+  }
 
   .instructions {
     margin-top: 14px;
@@ -197,12 +243,28 @@
     font-size: 15px;
   }
   .shopping li {
-    padding: 5px 0;
+    padding: 6px 0;
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    border-bottom: 1px solid rgba(184, 83, 42, 0.12);
   }
-  .shopping li .for { color: var(--muted); font-size: 12px; }
+  .shopping li:last-child { border-bottom: none; }
+  .shopping li .for { color: var(--muted); font-size: 12px; white-space: nowrap; }
   .shopping .empty { color: var(--muted); font-style: italic; font-size: 14px; }
+  .shopping .brand {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 2px;
+    line-height: 1.35;
+  }
+  .shopping .brand .price {
+    color: var(--accent);
+    font-weight: 500;
+    margin-left: 4px;
+  }
 
   .empty-state {
     text-align: center;
@@ -286,27 +348,77 @@
     `;
   }
 
+  function fmtPrice(p) {
+    if (p === null || p === undefined || p === "") return "";
+    const n = Number(p);
+    if (Number.isFinite(n)) return "$" + n.toFixed(2);
+    return String(p);
+  }
+
+  function escapeHtml(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  function ingredientHtml(i) {
+    const brandLine = (!i.in_pantry && (i.kroger_product_name || i.kroger_price))
+      ? `<span class="brand">Kroger: ${escapeHtml(i.kroger_product_name || "")}${
+          i.kroger_price ? `<span class="price">${fmtPrice(i.kroger_price)}</span>` : ""
+        }</span>`
+      : "";
+    return `
+      <li>
+        <div class="row">
+          <span class="name">
+            <span class="dot ${i.in_pantry ? "have" : "need"}"></span>
+            ${escapeHtml(i.name)}
+          </span>
+          <span class="amount">${escapeHtml(i.amount || "")}</span>
+        </div>
+        ${brandLine}
+      </li>
+    `;
+  }
+
+  function cartButtonHtml(m, webhookUrl) {
+    // Only offer a button when we have things to actually add (need-to-buy ingredients)
+    // AND the webhook is configured. If not configured, stay quiet on the site.
+    const needList = (m.ingredients || []).filter(i => !i.in_pantry);
+    if (!needList.length) return "";
+    if (!webhookUrl) return "";
+    const label = `Add ${needList.length} to Kroger list`;
+    const payload = JSON.stringify({ day: m.day, recipe: m.name, items: needList.map(i => ({
+      name: i.name,
+      amount: i.amount || "",
+      upc: i.kroger_upc || null,
+      product_name: i.kroger_product_name || null,
+      price: i.kroger_price || null,
+    })) });
+    return `
+      <button class="cart-button" data-payload='${payload.replace(/'/g, "&#39;")}' data-url="${escapeHtml(webhookUrl)}">
+        ${label}
+      </button>
+      <div class="cart-note"></div>
+    `;
+  }
+
+  const webhookUrl = data.cart_webhook_url || "";
+
   const mealsHtml = (data.meals || []).map(m => `
     <div class="meal">
       <div class="day">
-        <span class="day-name">${m.day}</span>
+        <span class="day-name">${escapeHtml(m.day)}</span>
         <span class="day-date">${fmtDate(m.date)}</span>
       </div>
-      <h2>${m.name}</h2>
-      ${m.description ? `<p class="desc">${m.description}</p>` : ""}
+      <h2>${escapeHtml(m.name)}</h2>
+      ${m.description ? `<p class="desc">${escapeHtml(m.description)}</p>` : ""}
       ${metaPills(m)}
       <ul class="ingredients">
-        ${(m.ingredients || []).map(i => `
-          <li>
-            <span class="name">
-              <span class="dot ${i.in_pantry ? "have" : "need"}"></span>
-              ${i.name}
-            </span>
-            <span class="amount">${i.amount || ""}</span>
-          </li>
-        `).join("")}
+        ${(m.ingredients || []).map(ingredientHtml).join("")}
       </ul>
       ${instructionsHtml(m)}
+      ${cartButtonHtml(m, webhookUrl)}
     </div>
   `).join("");
 
@@ -314,15 +426,68 @@
   const shoppingHtml = `
     <div class="shopping">
       <h3>Need from the store</h3>
-      ${shop.length ? `<ul>${shop.map(s => `
+      ${shop.length ? `<ul>${shop.map(s => {
+        const brandBit = s.kroger_product_name || s.kroger_price
+          ? `<span class="brand">${escapeHtml(s.kroger_product_name || "")}${s.kroger_price ? `<span class="price">${fmtPrice(s.kroger_price)}</span>` : ""}</span>`
+          : "";
+        return `
         <li>
-          <span>${s.name}${s.amount ? " — " + s.amount : ""}</span>
-          <span class="for">${(s.for_meals || []).join(", ")}</span>
-        </li>`).join("")}</ul>` : `<div class="empty">Nothing — we've got everything on hand.</div>`}
+          <div>
+            <div>${escapeHtml(s.name)}${s.amount ? " — " + escapeHtml(s.amount) : ""}</div>
+            ${brandBit}
+          </div>
+          <span class="for">${(s.for_meals || []).map(escapeHtml).join(", ")}</span>
+        </li>`;
+      }).join("")}</ul>` : `<div class="empty">Nothing — we've got everything on hand.</div>`}
     </div>
   `;
 
   content.innerHTML = `<div class="meals">${mealsHtml}</div>${shoppingHtml}`;
+
+  // Wire up the per-recipe "Add to Kroger list" buttons.
+  // Each button POSTs its payload to the Apps Script webhook; the webhook
+  // appends rows to a "Cart Queue" sheet, which sync_recipe_cart.py on the
+  // Mac pulls every few minutes and pushes into grocery.db.
+  document.querySelectorAll(".cart-button").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      const url = btn.dataset.url;
+      const note = btn.nextElementSibling; // .cart-note
+      if (!url) {
+        if (note) note.textContent = "Webhook not configured.";
+        return;
+      }
+      let payload;
+      try { payload = JSON.parse(btn.dataset.payload); }
+      catch (e) { if (note) note.textContent = "Bad payload."; return; }
+
+      btn.classList.add("pending");
+      btn.disabled = true;
+      const originalLabel = btn.textContent.trim();
+      btn.textContent = "Adding…";
+      if (note) note.textContent = "";
+
+      try {
+        // Apps Script doPost with text/plain to avoid CORS preflight.
+        const res = await fetch(url, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(payload),
+        });
+        // no-cors responses are opaque — we can't read the body, but if fetch
+        // didn't throw, the request hit the webhook. That's good enough here;
+        // the local sync job is the source of truth for what actually landed.
+        btn.classList.remove("pending");
+        btn.textContent = "Added ✓";
+        if (note) note.textContent = `Queued ${payload.items.length} item${payload.items.length === 1 ? "" : "s"}. Will sync to your grocery list within a few minutes.`;
+      } catch (err) {
+        btn.classList.remove("pending");
+        btn.disabled = false;
+        btn.textContent = originalLabel;
+        if (note) note.textContent = "Couldn't reach the cart service — try again?";
+      }
+    });
+  });
 })();
 </script>
 </body>
