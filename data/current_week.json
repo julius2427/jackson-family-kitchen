@@ -1,98 +1,186 @@
 {
   "week_start": "2026-04-20",
   "week_end": "2026-04-26",
-  "generated_at": "2026-04-18T21:00:00Z",
+  "generated_at": "2026-04-19T20:30:00Z",
   "meals": [
     {
       "day": "Monday",
       "date": "2026-04-20",
       "name": "Sheet Pan Lemon Chicken & Broccoli",
-      "description": "One-pan dinner, about 35 minutes start to finish.",
+      "description": "One-pan dinner with bright lemony chicken.",
+      "prep_minutes": 10,
+      "cook_minutes": 25,
+      "servings": 4,
       "ingredients": [
-        {"name": "chicken breast", "amount": "1.5 lbs", "in_pantry": true},
-        {"name": "broccoli", "amount": "1 head", "in_pantry": true},
+        {"name": "chicken breast", "amount": "1.5 lbs", "in_pantry": false},
+        {"name": "broccoli", "amount": "1 head", "in_pantry": false},
         {"name": "lemons", "amount": "2", "in_pantry": false},
         {"name": "olive oil", "amount": "3 tbsp", "in_pantry": true},
-        {"name": "garlic", "amount": "4 cloves", "in_pantry": true}
+        {"name": "garlic", "amount": "4 cloves", "in_pantry": false}
+      ],
+      "instructions": [
+        "Preheat oven to 425°F and line a large sheet pan with parchment.",
+        "Cut broccoli into florets and chicken breasts into 1-inch pieces. Toss both with 3 tbsp olive oil, minced garlic, salt, and pepper.",
+        "Spread chicken and broccoli in a single layer on the sheet pan. Squeeze one lemon over the top.",
+        "Roast 20–25 minutes until chicken reaches 165°F and broccoli edges are crispy.",
+        "Finish with fresh lemon wedges and serve."
       ]
     },
     {
       "day": "Tuesday",
       "date": "2026-04-21",
-      "name": "Taco Tuesday — Ground Beef Tacos",
-      "description": "Kid-approved, fast, uses pantry staples.",
+      "name": "Ground Beef Tacos",
+      "description": "Fast, kid-friendly weeknight favorite.",
+      "prep_minutes": 10,
+      "cook_minutes": 15,
+      "servings": 4,
       "ingredients": [
-        {"name": "ground beef", "amount": "1 lb", "in_pantry": true},
-        {"name": "taco shells", "amount": "1 box", "in_pantry": true},
-        {"name": "cheddar cheese", "amount": "1 cup shredded", "in_pantry": true},
+        {"name": "ground beef", "amount": "1 lb", "in_pantry": false},
+        {"name": "taco shells", "amount": "1 box (12)", "in_pantry": false},
+        {"name": "shredded cheddar", "amount": "1 cup", "in_pantry": false},
         {"name": "lettuce", "amount": "1 head", "in_pantry": false},
-        {"name": "tomatoes", "amount": "2", "in_pantry": true}
+        {"name": "tomatoes", "amount": "2", "in_pantry": false},
+        {"name": "taco seasoning", "amount": "1 packet", "in_pantry": false}
+      ],
+      "instructions": [
+        "Heat a large skillet over medium-high. Brown 1 lb ground beef, breaking it up, about 7 minutes. Drain excess fat.",
+        "Add taco seasoning and 1/3 cup water. Simmer 3–4 minutes until thickened.",
+        "Meanwhile, warm taco shells in a 350°F oven for 5 minutes. Shred lettuce and dice tomatoes.",
+        "Assemble tacos with beef, cheese, lettuce, and tomatoes. Serve with salsa."
       ]
     },
     {
       "day": "Wednesday",
       "date": "2026-04-22",
-      "name": "Pasta with Red Sauce & Garlic Bread",
-      "description": "Simple weeknight comfort food.",
+      "name": "Spaghetti with Red Sauce & Garlic Bread",
+      "description": "Classic weeknight comfort meal.",
+      "prep_minutes": 5,
+      "cook_minutes": 25,
+      "servings": 4,
       "ingredients": [
-        {"name": "spaghetti", "amount": "1 lb", "in_pantry": true},
-        {"name": "canned tomatoes", "amount": "2 cans", "in_pantry": true},
+        {"name": "spaghetti", "amount": "1 lb", "in_pantry": false},
+        {"name": "marinara sauce", "amount": "24 oz jar", "in_pantry": false},
         {"name": "Italian bread", "amount": "1 loaf", "in_pantry": false},
-        {"name": "parmesan", "amount": "for serving", "in_pantry": true}
+        {"name": "butter", "amount": "4 tbsp", "in_pantry": true},
+        {"name": "garlic", "amount": "3 cloves", "in_pantry": false},
+        {"name": "parmesan", "amount": "1/2 cup", "in_pantry": false}
+      ],
+      "instructions": [
+        "Bring a large pot of salted water to a boil. Cook spaghetti according to package, usually 9 minutes.",
+        "Warm marinara sauce in a saucepan over medium-low heat.",
+        "Slice Italian bread lengthwise. Mix softened butter with minced garlic and spread on cut sides.",
+        "Broil bread on a sheet pan 2–3 minutes until golden.",
+        "Drain pasta, top with sauce, garnish with parmesan, and serve with garlic bread."
       ]
     },
     {
       "day": "Thursday",
       "date": "2026-04-23",
       "name": "Leftover night — no cooking",
-      "description": "Clear out the fridge.",
-      "ingredients": []
+      "description": "Clear out Monday through Wednesday's leftovers.",
+      "prep_minutes": 0,
+      "cook_minutes": 0,
+      "servings": 4,
+      "ingredients": [],
+      "instructions": []
     },
     {
       "day": "Friday",
       "date": "2026-04-24",
       "name": "Sheet Pan Salmon with Roasted Potatoes",
-      "description": "Fresh salmon, crispy potatoes, about 30 minutes.",
+      "description": "Flaky salmon and crispy potatoes.",
+      "prep_minutes": 10,
+      "cook_minutes": 30,
+      "servings": 4,
       "ingredients": [
-        {"name": "salmon fillets", "amount": "4", "in_pantry": false},
-        {"name": "baby potatoes", "amount": "1.5 lbs", "in_pantry": true},
-        {"name": "lemons", "amount": "1", "in_pantry": false},
-        {"name": "rosemary", "amount": "2 sprigs", "in_pantry": true}
+        {"name": "salmon fillets", "amount": "4 (6 oz each)", "in_pantry": false},
+        {"name": "baby potatoes", "amount": "1.5 lbs", "in_pantry": false},
+        {"name": "lemon", "amount": "1", "in_pantry": false},
+        {"name": "olive oil", "amount": "2 tbsp", "in_pantry": true},
+        {"name": "dried rosemary", "amount": "1 tsp", "in_pantry": false}
+      ],
+      "instructions": [
+        "Preheat oven to 425°F. Halve baby potatoes and toss with olive oil, rosemary, salt, and pepper.",
+        "Spread potatoes on a sheet pan and roast for 15 minutes.",
+        "Push potatoes to one side, add salmon fillets skin-side down, brush with olive oil, squeeze lemon over top.",
+        "Roast 12–15 more minutes until salmon flakes easily with a fork (internal temp 145°F).",
+        "Serve with extra lemon wedges."
       ]
     },
     {
       "day": "Saturday",
       "date": "2026-04-25",
       "name": "Homemade Pizza Night",
-      "description": "Let the kids help build their own.",
+      "description": "Let the kids build their own pies.",
+      "prep_minutes": 15,
+      "cook_minutes": 12,
+      "servings": 4,
       "ingredients": [
         {"name": "pizza dough", "amount": "2 balls", "in_pantry": false},
-        {"name": "pizza sauce", "amount": "1 jar", "in_pantry": true},
-        {"name": "mozzarella", "amount": "16 oz", "in_pantry": false},
-        {"name": "pepperoni", "amount": "1 package", "in_pantry": true}
+        {"name": "pizza sauce", "amount": "1 jar", "in_pantry": false},
+        {"name": "shredded mozzarella", "amount": "16 oz", "in_pantry": false},
+        {"name": "pepperoni", "amount": "1 package", "in_pantry": false}
+      ],
+      "instructions": [
+        "Preheat oven to 475°F. If using a pizza stone, heat it in the oven.",
+        "Stretch each dough ball on a floured surface into a 12-inch round.",
+        "Transfer to a parchment-lined pizza peel or sheet pan. Spread sauce, sprinkle mozzarella, add pepperoni and any toppings.",
+        "Bake 10–12 minutes until crust is golden and cheese is bubbly.",
+        "Rest 2 minutes, slice, and serve."
       ]
     },
     {
       "day": "Sunday",
       "date": "2026-04-26",
       "name": "Slow-Cooker Chili",
-      "description": "Start in the morning, ready by dinner.",
+      "description": "Hands-off Sunday meal, ready in the afternoon.",
+      "prep_minutes": 15,
+      "cook_minutes": 240,
+      "servings": 4,
       "ingredients": [
-        {"name": "ground beef", "amount": "1 lb", "in_pantry": true},
-        {"name": "kidney beans", "amount": "2 cans", "in_pantry": true},
-        {"name": "black beans", "amount": "1 can", "in_pantry": true},
-        {"name": "canned tomatoes", "amount": "1 can", "in_pantry": true},
-        {"name": "onion", "amount": "1", "in_pantry": true},
-        {"name": "chili powder", "amount": "2 tbsp", "in_pantry": true}
+        {"name": "ground beef", "amount": "1 lb", "in_pantry": false},
+        {"name": "kidney beans", "amount": "2 cans (15 oz)", "in_pantry": false},
+        {"name": "black beans", "amount": "1 can (15 oz)", "in_pantry": false},
+        {"name": "canned diced tomatoes", "amount": "1 can (28 oz)", "in_pantry": false},
+        {"name": "yellow onion", "amount": "1", "in_pantry": false},
+        {"name": "chili powder", "amount": "2 tbsp", "in_pantry": false},
+        {"name": "cumin", "amount": "1 tsp", "in_pantry": false}
+      ],
+      "instructions": [
+        "In a skillet over medium-high, brown 1 lb ground beef with diced onion, about 8 minutes. Drain.",
+        "Transfer beef and onion to a slow cooker. Add drained beans, diced tomatoes with liquid, chili powder, cumin, salt, and pepper.",
+        "Cook on LOW for 6 hours or HIGH for 3–4 hours.",
+        "Taste and adjust seasoning. Serve with sour cream, shredded cheese, and cornbread if desired."
       ]
     }
   ],
   "shopping_list": [
+    {"name": "chicken breast", "amount": "1.5 lbs", "for_meals": ["Monday"]},
+    {"name": "broccoli", "amount": "1 head", "for_meals": ["Monday"]},
     {"name": "lemons", "amount": "3", "for_meals": ["Monday", "Friday"]},
+    {"name": "garlic", "amount": "7 cloves", "for_meals": ["Monday", "Wednesday"]},
+    {"name": "ground beef", "amount": "2 lbs", "for_meals": ["Tuesday", "Sunday"]},
+    {"name": "taco shells", "amount": "1 box", "for_meals": ["Tuesday"]},
+    {"name": "shredded cheddar", "amount": "1 cup", "for_meals": ["Tuesday"]},
     {"name": "lettuce", "amount": "1 head", "for_meals": ["Tuesday"]},
+    {"name": "tomatoes", "amount": "2", "for_meals": ["Tuesday"]},
+    {"name": "taco seasoning", "amount": "1 packet", "for_meals": ["Tuesday"]},
+    {"name": "spaghetti", "amount": "1 lb", "for_meals": ["Wednesday"]},
+    {"name": "marinara sauce", "amount": "24 oz jar", "for_meals": ["Wednesday"]},
     {"name": "Italian bread", "amount": "1 loaf", "for_meals": ["Wednesday"]},
-    {"name": "salmon fillets", "amount": "4", "for_meals": ["Friday"]},
+    {"name": "parmesan", "amount": "1/2 cup", "for_meals": ["Wednesday"]},
+    {"name": "salmon fillets", "amount": "4 (6 oz)", "for_meals": ["Friday"]},
+    {"name": "baby potatoes", "amount": "1.5 lbs", "for_meals": ["Friday"]},
+    {"name": "dried rosemary", "amount": "1 tsp", "for_meals": ["Friday"]},
     {"name": "pizza dough", "amount": "2 balls", "for_meals": ["Saturday"]},
-    {"name": "mozzarella", "amount": "16 oz", "for_meals": ["Saturday"]}
+    {"name": "pizza sauce", "amount": "1 jar", "for_meals": ["Saturday"]},
+    {"name": "shredded mozzarella", "amount": "16 oz", "for_meals": ["Saturday"]},
+    {"name": "pepperoni", "amount": "1 package", "for_meals": ["Saturday"]},
+    {"name": "kidney beans", "amount": "2 cans", "for_meals": ["Sunday"]},
+    {"name": "black beans", "amount": "1 can", "for_meals": ["Sunday"]},
+    {"name": "canned diced tomatoes", "amount": "1 can (28 oz)", "for_meals": ["Sunday"]},
+    {"name": "yellow onion", "amount": "1", "for_meals": ["Sunday"]},
+    {"name": "chili powder", "amount": "2 tbsp", "for_meals": ["Sunday"]},
+    {"name": "cumin", "amount": "1 tsp", "for_meals": ["Sunday"]}
   ]
 }

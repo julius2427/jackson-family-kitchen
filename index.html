@@ -102,6 +102,24 @@
     margin: 0 0 14px;
   }
 
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0 0 14px;
+  }
+  .meta .pill {
+    display: inline-flex;
+    align-items: center;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+  }
+
   .ingredients {
     list-style: none;
     padding: 0;
@@ -123,6 +141,41 @@
   .ingredients .dot.have { background: var(--pantry-good); }
   .ingredients .dot.need { background: var(--pantry-missing); }
   .ingredients .amount { color: var(--muted); font-size: 13px; }
+
+  .instructions {
+    margin-top: 14px;
+    border-top: 1px solid rgba(43, 36, 32, 0.06);
+    padding-top: 12px;
+  }
+  .instructions summary {
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .instructions summary::-webkit-details-marker { display: none; }
+  .instructions summary::after {
+    content: "▸";
+    font-size: 10px;
+    transition: transform 0.15s;
+  }
+  .instructions[open] summary::after { transform: rotate(90deg); }
+  .instructions ol {
+    margin: 12px 0 0;
+    padding-left: 22px;
+    font-size: 14px;
+    color: var(--ink);
+  }
+  .instructions ol li {
+    padding: 4px 0;
+    line-height: 1.55;
+  }
 
   .shopping {
     margin-top: 34px;
@@ -211,6 +264,28 @@
   dates.textContent = fmtDate(data.week_start) + " — " + fmtDate(data.week_end);
   updated.textContent = fmtUpdated(data.generated_at);
 
+  function metaPills(m) {
+    const parts = [];
+    const total = (m.prep_minutes || 0) + (m.cook_minutes || 0);
+    if (total > 0) parts.push(`${total} min`);
+    else if (m.prep_minutes) parts.push(`${m.prep_minutes} min prep`);
+    else if (m.cook_minutes) parts.push(`${m.cook_minutes} min cook`);
+    if (m.servings) parts.push(`serves ${m.servings}`);
+    if (!parts.length) return "";
+    return `<div class="meta">${parts.map(p => `<span class="pill">${p}</span>`).join("")}</div>`;
+  }
+
+  function instructionsHtml(m) {
+    const steps = m.instructions || [];
+    if (!steps.length) return "";
+    return `
+      <details class="instructions">
+        <summary>Instructions</summary>
+        <ol>${steps.map(s => `<li>${s}</li>`).join("")}</ol>
+      </details>
+    `;
+  }
+
   const mealsHtml = (data.meals || []).map(m => `
     <div class="meal">
       <div class="day">
@@ -219,6 +294,7 @@
       </div>
       <h2>${m.name}</h2>
       ${m.description ? `<p class="desc">${m.description}</p>` : ""}
+      ${metaPills(m)}
       <ul class="ingredients">
         ${(m.ingredients || []).map(i => `
           <li>
@@ -230,6 +306,7 @@
           </li>
         `).join("")}
       </ul>
+      ${instructionsHtml(m)}
     </div>
   `).join("");
 
