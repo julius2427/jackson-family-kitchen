@@ -391,7 +391,11 @@
       mealsMap[m.name] = {
         name: m.name,
         desc: m.description || "",
-        ingredients: (m.ingredients || []).map(i => ({ name: i.name, amount: i.amount || "", in_pantry: !!i.in_pantry })),
+        ingredients: (m.ingredients || []).map(i => ({
+          name: i.name, amount: i.amount || "", in_pantry: !!i.in_pantry,
+          kroger_upc: i.kroger_upc || "", kroger_product_name: i.kroger_product_name || "",
+          kroger_price: i.kroger_price || "",
+        })),
         instructions: (m.instructions || []).map(s => s.replace(/^Step\s*\d+:\s*/i, "")),
       };
     });

@@ -76,15 +76,43 @@
   }
   .ingredients { list-style: none; padding: 0; margin: 0 0 16px; font-size: 14px; }
   .ingredients li {
-    display: flex; justify-content: space-between; align-items: center;
+    display: flex; align-items: center;
     padding: 5px 0; border-bottom: 1px solid rgba(43,36,32,0.06); gap: 8px;
   }
   .ingredients li:last-child { border-bottom: none; }
-  .ingredients .name { display: flex; align-items: center; gap: 8px; }
+  .ingredients input[type="checkbox"] {
+    appearance: none; -webkit-appearance: none;
+    width: 16px; height: 16px; min-width: 16px;
+    border: 1.5px solid var(--pantry-missing); border-radius: 4px;
+    cursor: pointer; position: relative; background: #fff;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .ingredients input[type="checkbox"]:checked { background: var(--pantry-missing); border-color: var(--pantry-missing); }
+  .ingredients input[type="checkbox"]:checked::after {
+    content: ""; position: absolute; left: 4px; top: 1px;
+    width: 5px; height: 9px; border: 2px solid #fff;
+    border-top: none; border-left: none; transform: rotate(45deg);
+  }
+  .ingredients .name { display: flex; align-items: center; gap: 8px; flex: 1; }
   .ingredients .dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
   .ingredients .dot.have { background: var(--pantry-good); }
   .ingredients .dot.need { background: var(--pantry-missing); }
   .ingredients .amount { color: var(--muted); font-size: 13px; white-space: nowrap; }
+
+  /* ── Cart row ── */
+  .cart-row { display: flex; align-items: center; gap: 10px; margin-top: 4px; margin-bottom: 16px; flex-wrap: wrap; }
+  .btn-cart {
+    background: var(--accent); color: #fff; border: none;
+    border-radius: 8px; padding: 8px 14px; font-size: 14px; font-weight: 500;
+    cursor: pointer; transition: opacity 0.15s;
+  }
+  .btn-cart:disabled { opacity: 0.4; cursor: default; }
+  .btn-cart:not(:disabled):hover { opacity: 0.88; }
+  .btn-reset { background: none; border: none; color: var(--muted); font-size: 13px; cursor: pointer; text-decoration: underline; padding: 0; }
+  .btn-reset:hover { color: var(--ink); }
+  .cart-status { font-size: 13px; color: var(--muted); margin-left: 2px; }
+  .cart-status.ok  { color: var(--pantry-good); }
+  .cart-status.err { color: var(--pantry-missing); }
 
   /* ── Instructions ── */
   .instructions-toggle {
@@ -140,6 +168,7 @@
 <script>
 (function () {
   const FAVES_KEY = "kitchen_favorites";
+  let webhookUrl = "";
 
   function getFaves() {
     try { return JSON.parse(localStorage.getItem(FAVES_KEY) || "{}"); } catch { return {}; }
@@ -182,18 +211,35 @@
       const needItems = ingredients.filter(i => !i.in_pantry);
       const haveItems = ingredients.filter(i =>  i.in_pantry);
 
+      const needHtml = needItems.map((i, k) => `
+        <li>
+          <input type="checkbox" id="fcb-${idx}-${k}" checked
+            data-name="${esc(i.name)}" data-amount="${esc(i.amount||"")}"
+            data-upc="${esc(i.kroger_upc||"")}" data-product="${esc(i.kroger_product_name||"")}"
+            data-price="${esc(String(i.kroger_price||""))}"/>
+          <span class="name"><span class="dot need"></span>${esc(i.name)}</span>
+          <span class="amount">${esc(i.amount||"")}</span>
+        </li>`).join("");
+
+      const haveHtml = haveItems.map(i => `
+        <li>
+          <span class="name"><span class="dot have"></span>${esc(i.name)}</span>
+          <span class="amount">${esc(i.amount||"")}</span>
+        </li>`).join("");
+
+      const cartRow = (needItems.length && webhookUrl) ? `
+        <div class="cart-row" id="fcart-row-${idx}">
+          <button class="btn-cart" id="fbtn-cart-${idx}">Add <span id="fct-${idx}">${needItems.length}</span> to Kroger list</button>
+          <button class="btn-reset" id="fbtn-reset-${idx}">reset</button>
+          <span class="cart-status" id="fcart-status-${idx}"></span>
+        </div>` : "";
+
       const ingHtml = ingredients.length ? `
         <p class="section-label">Ingredients</p>
-        <ul class="ingredients">
-          ${[...needItems, ...haveItems].map(i => `
-            <li>
-              <span class="name">
-                <span class="dot ${i.in_pantry ? "have" : "need"}"></span>
-                ${esc(i.name)}
-              </span>
-              <span class="amount">${esc(i.amount || "")}</span>
-            </li>`).join("")}
-        </ul>` : "";
+        <ul class="ingredients" id="fing-${idx}">
+          ${needHtml}${haveHtml}
+        </ul>
+        ${cartRow}` : "";
 
       const instHtml = instructions.length ? `
         <button class="instructions-toggle" id="ftog-${idx}">
@@ -227,6 +273,44 @@
       });
     });
 
+    // Wire cart checkboxes + buttons
+    entries.forEach((e, idx) => {
+      const needItems = (e.ingredients || []).filter(i => !i.in_pantry);
+      if (!needItems.length || !webhookUrl) return;
+      const ingList  = document.getElementById(`fing-${idx}`);
+      const btn      = document.getElementById(`fbtn-cart-${idx}`);
+      const ctSpan   = document.getElementById(`fct-${idx}`);
+      const resetBtn = document.getElementById(`fbtn-reset-${idx}`);
+      const statusEl = document.getElementById(`fcart-status-${idx}`);
+      if (!ingList || !btn) return;
+
+      const getChecked = () => [...ingList.querySelectorAll("input[type=checkbox]:checked")];
+      const updateCount = () => { const n = getChecked().length; ctSpan.textContent = n; btn.disabled = n === 0; };
+
+      ingList.addEventListener("change", updateCount);
+      resetBtn.addEventListener("click", () => {
+        ingList.querySelectorAll("input[type=checkbox]").forEach(c => c.checked = true);
+        statusEl.textContent = ""; statusEl.className = "cart-status"; updateCount();
+      });
+      btn.addEventListener("click", async () => {
+        const checked = getChecked(); if (!checked.length) return;
+        const items = checked.map(cb => ({
+          name: cb.dataset.name, amount: cb.dataset.amount,
+          upc: cb.dataset.upc, product_name: cb.dataset.product,
+          price: cb.dataset.price ? parseFloat(cb.dataset.price) : "",
+        }));
+        btn.disabled = true; statusEl.textContent = "Adding…"; statusEl.className = "cart-status";
+        try {
+          await fetch(webhookUrl, { method: "POST", mode: "no-cors", headers: {"Content-Type": "text/plain"}, body: JSON.stringify({recipe: e.name, items}) });
+          statusEl.textContent = `✓ ${items.length} item${items.length !== 1 ? "s" : ""} queued`;
+          statusEl.className = "cart-status ok";
+          checked.forEach(cb => cb.checked = false); updateCount();
+        } catch {
+          statusEl.textContent = "Failed — try again"; statusEl.className = "cart-status err"; btn.disabled = false;
+        }
+      });
+    });
+
     // Wire instruction toggles
     entries.forEach((_, idx) => {
       const tog  = document.getElementById(`ftog-${idx}`);
@@ -246,7 +330,12 @@
     }
   });
 
-  render();
+  // Fetch webhook URL from current week data, then render
+  fetch("data/current_week.json")
+    .then(r => r.json())
+    .then(d => { webhookUrl = d.cart_webhook_url || ""; })
+    .catch(() => {})
+    .finally(() => render());
 })();
 </script>
 </body>
