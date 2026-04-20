@@ -45,6 +45,12 @@
   .btn-refresh:hover { background: var(--accent); color: #fff; }
   .btn-refresh:disabled { opacity: 0.5; cursor: default; }
   .btn-refresh.spinning { opacity: 0.6; pointer-events: none; }
+  .btn-faves-link {
+    background: none; border: 1.5px solid var(--gold); color: var(--gold);
+    border-radius: 8px; padding: 6px 14px; font-size: 13px; font-weight: 500;
+    text-decoration: none; transition: background 0.15s, color 0.15s;
+  }
+  .btn-faves-link:hover { background: var(--gold); color: #fff; }
 
   /* ── Meals ── */
   .meals { display: flex; flex-direction: column; gap: 16px; }
@@ -179,6 +185,7 @@
     <div class="updated" id="updated"></div>
     <div class="header-actions">
       <button class="btn-refresh" id="btn-refresh">↻ Refresh</button>
+      <a class="btn-faves-link" href="favorites.html">★ Saved Recipes</a>
     </div>
   </header>
   <div id="content">
@@ -197,9 +204,9 @@
   }
   function saveFaves(f) { localStorage.setItem(FAVES_KEY, JSON.stringify(f)); }
   function isFave(name) { return !!getFaves()[name]; }
-  function toggleFave(name, desc) {
+  function toggleFave(name, mealData) {
     const f = getFaves();
-    if (f[name]) { delete f[name]; } else { f[name] = { name, desc, savedAt: Date.now() }; }
+    if (f[name]) { delete f[name]; } else { f[name] = { ...mealData, savedAt: Date.now() }; }
     saveFaves(f);
   }
 
@@ -378,11 +385,22 @@
       });
     });
 
+    // ── Build a quick lookup of full meal data by name ───────────────────────
+    const mealsMap = {};
+    (data.meals || []).forEach(m => {
+      mealsMap[m.name] = {
+        name: m.name,
+        desc: m.description || "",
+        ingredients: (m.ingredients || []).map(i => ({ name: i.name, amount: i.amount || "", in_pantry: !!i.in_pantry })),
+        instructions: (m.instructions || []).map(s => s.replace(/^Step\s*\d+:\s*/i, "")),
+      };
+    });
+
     // ── Wire favorite stars ──────────────────────────────────────────────────
     document.querySelectorAll(".btn-fav").forEach(btn => {
       btn.addEventListener("click", () => {
-        const { name, desc } = btn.dataset;
-        toggleFave(name, desc);
+        const { name } = btn.dataset;
+        toggleFave(name, mealsMap[name] || { name, desc: btn.dataset.desc || "" });
         const now = isFave(name);
         btn.classList.toggle("active", now);
         btn.textContent = now ? "★" : "☆";

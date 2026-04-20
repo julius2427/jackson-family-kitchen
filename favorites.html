@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#f7f3ec" />
+<title>Saved Recipes — Jackson Family Kitchen</title>
+<style>
+  :root {
+    --bg: #f7f3ec;
+    --card: #ffffff;
+    --ink: #2b2420;
+    --muted: #7a6f65;
+    --accent: #b8532a;
+    --accent-soft: #f2e4d8;
+    --pantry-good: #4a7a4a;
+    --pantry-missing: #b8532a;
+    --gold: #c8922a;
+    --shadow: 0 2px 10px rgba(43,36,32,0.06);
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg); color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 24px 18px 60px; }
+
+  /* ── Header ── */
+  header { text-align: center; margin-bottom: 28px; }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 5px;
+    color: var(--accent); font-size: 14px; text-decoration: none;
+    margin-bottom: 14px;
+  }
+  .back-link:hover { text-decoration: underline; }
+  header h1 { font-size: 28px; font-weight: 600; margin: 0 0 4px; letter-spacing: -0.01em; }
+  header .subtitle { color: var(--muted); font-size: 15px; }
+
+  .header-actions { display: flex; justify-content: center; gap: 10px; margin-top: 12px; }
+  .btn-clear-all {
+    background: none; border: 1.5px solid var(--muted); color: var(--muted);
+    border-radius: 8px; padding: 6px 14px; font-size: 13px; cursor: pointer;
+    transition: border-color 0.15s, color 0.15s;
+  }
+  .btn-clear-all:hover { border-color: var(--pantry-missing); color: var(--pantry-missing); }
+
+  /* ── Recipe cards ── */
+  .recipes { display: flex; flex-direction: column; gap: 20px; }
+
+  .recipe-card {
+    background: var(--card); border-radius: var(--radius);
+    padding: 20px 22px; box-shadow: var(--shadow);
+  }
+  .recipe-card-header {
+    display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 6px;
+  }
+  .recipe-card h2 { margin: 0; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; flex: 1; }
+  .recipe-card .saved-date { color: var(--muted); font-size: 12px; margin-bottom: 10px; }
+  .recipe-card .desc { color: var(--muted); font-size: 14px; margin: 0 0 16px; }
+
+  .btn-remove {
+    background: none; border: none; color: #ccc; font-size: 20px;
+    cursor: pointer; padding: 0; line-height: 1; flex-shrink: 0;
+    transition: color 0.15s;
+  }
+  .btn-remove:hover { color: var(--pantry-missing); }
+
+  /* ── Ingredients ── */
+  .section-label {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--muted); margin: 0 0 8px; font-weight: 600;
+  }
+  .ingredients { list-style: none; padding: 0; margin: 0 0 16px; font-size: 14px; }
+  .ingredients li {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 5px 0; border-bottom: 1px solid rgba(43,36,32,0.06); gap: 8px;
+  }
+  .ingredients li:last-child { border-bottom: none; }
+  .ingredients .name { display: flex; align-items: center; gap: 8px; }
+  .ingredients .dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+  .ingredients .dot.have { background: var(--pantry-good); }
+  .ingredients .dot.need { background: var(--pantry-missing); }
+  .ingredients .amount { color: var(--muted); font-size: 13px; white-space: nowrap; }
+
+  /* ── Instructions ── */
+  .instructions-toggle {
+    background: none; border: none; color: var(--muted); font-size: 13px;
+    cursor: pointer; padding: 0; display: flex; align-items: center; gap: 5px;
+  }
+  .instructions-toggle:hover { color: var(--ink); }
+  .instructions-toggle .arrow { font-size: 10px; transition: transform 0.2s; }
+  .instructions-toggle.open .arrow { transform: rotate(90deg); }
+  .instructions-list {
+    display: none; margin: 10px 0 0; padding: 0; list-style: none; font-size: 14px;
+    border-top: 1px solid rgba(43,36,32,0.07); padding-top: 10px;
+  }
+  .instructions-list.open { display: block; }
+  .instructions-list li {
+    padding: 5px 0 5px 22px; position: relative; color: var(--ink);
+    border-bottom: 1px solid rgba(43,36,32,0.05); line-height: 1.55;
+  }
+  .instructions-list li:last-child { border-bottom: none; }
+  .instructions-list li::before {
+    content: attr(data-step); position: absolute; left: 0;
+    font-weight: 600; color: var(--accent); font-size: 12px;
+  }
+
+  /* ── Empty state ── */
+  .empty-state {
+    text-align: center; color: var(--muted); padding: 60px 20px; font-size: 15px;
+  }
+  .empty-state a { color: var(--accent); text-decoration: none; }
+  .empty-state a:hover { text-decoration: underline; }
+
+  @media (max-width: 480px) {
+    .wrap { padding: 18px 14px 40px; }
+    header h1 { font-size: 24px; }
+    .recipe-card { padding: 16px; }
+    .recipe-card h2 { font-size: 18px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div><a class="back-link" href="index.html">← This week's menu</a></div>
+    <h1>★ Saved Recipes</h1>
+    <div class="subtitle" id="subtitle"></div>
+    <div class="header-actions" id="header-actions" style="display:none">
+      <button class="btn-clear-all" id="btn-clear-all">Clear all</button>
+    </div>
+  </header>
+  <div id="content"></div>
+</div>
+
+<script>
+(function () {
+  const FAVES_KEY = "kitchen_favorites";
+
+  function getFaves() {
+    try { return JSON.parse(localStorage.getItem(FAVES_KEY) || "{}"); } catch { return {}; }
+  }
+  function saveFaves(f) { localStorage.setItem(FAVES_KEY, JSON.stringify(f)); }
+
+  function fmtSaved(ts) {
+    if (!ts) return "";
+    return "Saved " + new Date(ts).toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
+  }
+
+  function esc(str) {
+    return String(str ?? "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+  }
+
+  function render() {
+    const content = document.getElementById("content");
+    const subtitle = document.getElementById("subtitle");
+    const actions = document.getElementById("header-actions");
+    const f = getFaves();
+    const entries = Object.values(f).sort((a, b) => b.savedAt - a.savedAt);
+
+    if (!entries.length) {
+      subtitle.textContent = "";
+      actions.style.display = "none";
+      content.innerHTML = `
+        <div class="empty-state">
+          No saved recipes yet.<br><br>
+          <a href="index.html">Go star some meals</a> from this week's menu.
+        </div>`;
+      return;
+    }
+
+    subtitle.textContent = `${entries.length} recipe${entries.length !== 1 ? "s" : ""} saved`;
+    actions.style.display = "flex";
+
+    const cards = entries.map((e, idx) => {
+      const ingredients = e.ingredients || [];
+      const instructions = e.instructions || [];
+      const needItems = ingredients.filter(i => !i.in_pantry);
+      const haveItems = ingredients.filter(i =>  i.in_pantry);
+
+      const ingHtml = ingredients.length ? `
+        <p class="section-label">Ingredients</p>
+        <ul class="ingredients">
+          ${[...needItems, ...haveItems].map(i => `
+            <li>
+              <span class="name">
+                <span class="dot ${i.in_pantry ? "have" : "need"}"></span>
+                ${esc(i.name)}
+              </span>
+              <span class="amount">${esc(i.amount || "")}</span>
+            </li>`).join("")}
+        </ul>` : "";
+
+      const instHtml = instructions.length ? `
+        <button class="instructions-toggle" id="ftog-${idx}">
+          <span class="arrow">▶</span> Instructions
+        </button>
+        <ol class="instructions-list" id="finst-${idx}">
+          ${instructions.map((s, i) => `<li data-step="${i+1}">${esc(s.replace(/^Step\s*\d+:\s*/i,""))}</li>`).join("")}
+        </ol>` : "";
+
+      return `
+        <div class="recipe-card" data-name="${esc(e.name)}">
+          <div class="recipe-card-header">
+            <h2>${esc(e.name)}</h2>
+            <button class="btn-remove" title="Remove">✕</button>
+          </div>
+          <div class="saved-date">${fmtSaved(e.savedAt)}</div>
+          ${e.desc ? `<p class="desc">${esc(e.desc)}</p>` : ""}
+          ${ingHtml}
+          ${instHtml}
+        </div>`;
+    }).join("");
+
+    content.innerHTML = `<div class="recipes">${cards}</div>`;
+
+    // Wire remove buttons
+    content.querySelectorAll(".btn-remove").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const name = btn.closest(".recipe-card").dataset.name;
+        const f2 = getFaves(); delete f2[name]; saveFaves(f2);
+        render();
+      });
+    });
+
+    // Wire instruction toggles
+    entries.forEach((_, idx) => {
+      const tog  = document.getElementById(`ftog-${idx}`);
+      const inst = document.getElementById(`finst-${idx}`);
+      if (!tog || !inst) return;
+      tog.addEventListener("click", () => {
+        const open = inst.classList.toggle("open");
+        tog.classList.toggle("open", open);
+      });
+    });
+  }
+
+  document.getElementById("btn-clear-all").addEventListener("click", () => {
+    if (confirm("Remove all saved recipes?")) {
+      saveFaves({});
+      render();
+    }
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
