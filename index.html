@@ -15,270 +15,153 @@
     --accent-soft: #f2e4d8;
     --pantry-good: #4a7a4a;
     --pantry-missing: #b8532a;
+    --gold: #c8922a;
     --shadow: 0 2px 10px rgba(43, 36, 32, 0.06);
     --radius: 14px;
   }
 
   * { box-sizing: border-box; }
-
   html, body {
-    margin: 0;
-    padding: 0;
-    background: var(--bg);
-    color: var(--ink);
+    margin: 0; padding: 0;
+    background: var(--bg); color: var(--ink);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
   }
 
-  .wrap {
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 24px 18px 60px;
-  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 24px 18px 60px; }
 
-  header {
-    text-align: center;
-    margin-bottom: 28px;
+  /* ── Header ── */
+  header { text-align: center; margin-bottom: 28px; }
+  header h1 { font-size: 28px; font-weight: 600; margin: 0 0 4px; letter-spacing: -0.01em; }
+  header .dates { color: var(--muted); font-size: 15px; }
+  header .updated { color: var(--muted); font-size: 12px; margin-top: 6px; font-variant: small-caps; letter-spacing: 0.05em; }
+  .header-actions { display: flex; justify-content: center; gap: 10px; margin-top: 12px; }
+  .btn-refresh {
+    background: none; border: 1.5px solid var(--accent); color: var(--accent);
+    border-radius: 8px; padding: 6px 14px; font-size: 13px; font-weight: 500;
+    cursor: pointer; transition: background 0.15s, color 0.15s;
   }
-  header h1 {
-    font-size: 28px;
-    font-weight: 600;
-    margin: 0 0 4px;
-    letter-spacing: -0.01em;
-  }
-  header .dates {
-    color: var(--muted);
-    font-size: 15px;
-  }
-  header .updated {
-    color: var(--muted);
-    font-size: 12px;
-    margin-top: 6px;
-    font-variant: small-caps;
-    letter-spacing: 0.05em;
-  }
+  .btn-refresh:hover { background: var(--accent); color: #fff; }
+  .btn-refresh:disabled { opacity: 0.5; cursor: default; }
+  .btn-refresh.spinning { opacity: 0.6; pointer-events: none; }
 
-  .meals {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
+  /* ── Meals ── */
+  .meals { display: flex; flex-direction: column; gap: 16px; }
+  .meal { background: var(--card); border-radius: var(--radius); padding: 18px 20px; box-shadow: var(--shadow); }
 
-  .meal {
-    background: var(--card);
-    border-radius: var(--radius);
-    padding: 18px 20px;
-    box-shadow: var(--shadow);
-  }
+  .meal-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; }
+  .meal-header-left { flex: 1; }
+  .meal .day { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+  .meal .day-name { font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); }
+  .meal .day-date { font-size: 13px; color: var(--muted); }
+  .meal h2 { margin: 0 0 6px; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; }
+  .meal .desc { color: var(--muted); font-size: 14px; margin: 0 0 14px; }
 
-  .meal .day {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 8px;
-  }
-  .meal .day-name {
-    font-weight: 600;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--accent);
-  }
-  .meal .day-date {
-    font-size: 13px;
-    color: var(--muted);
-  }
-
-  .meal h2 {
-    margin: 0 0 6px;
-    font-size: 20px;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-  }
-  .meal .desc {
-    color: var(--muted);
-    font-size: 14px;
-    margin: 0 0 14px;
-  }
-
-  .ingredients {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 14px;
-  }
-  .ingredients li {
-    display: flex;
-    align-items: center;
-    padding: 6px 0;
-    border-bottom: 1px solid rgba(43, 36, 32, 0.06);
-    gap: 8px;
-  }
-  .ingredients li:last-child { border-bottom: none; }
-
-  /* checkbox styling */
-  .ingredients input[type="checkbox"] {
-    appearance: none;
-    -webkit-appearance: none;
-    width: 16px;
-    height: 16px;
-    min-width: 16px;
-    border: 1.5px solid var(--pantry-missing);
-    border-radius: 4px;
-    cursor: pointer;
-    position: relative;
-    background: #fff;
-    transition: background 0.15s, border-color 0.15s;
-  }
-  .ingredients input[type="checkbox"]:checked {
-    background: var(--pantry-missing);
-    border-color: var(--pantry-missing);
-  }
-  .ingredients input[type="checkbox"]:checked::after {
-    content: "";
-    position: absolute;
-    left: 4px;
-    top: 1px;
-    width: 5px;
-    height: 9px;
-    border: 2px solid #fff;
-    border-top: none;
-    border-left: none;
-    transform: rotate(45deg);
-  }
-  .ingredients li.have input[type="checkbox"] {
-    border-color: var(--pantry-good);
-  }
-
-  .ingredients .name { display: flex; align-items: center; gap: 8px; flex: 1; }
-  .ingredients .dot {
-    width: 7px; height: 7px; border-radius: 50%;
-    display: inline-block;
+  /* ── Favorite star ── */
+  .btn-fav {
+    background: none; border: none; font-size: 22px; cursor: pointer;
+    line-height: 1; padding: 2px 0 0 8px; color: #ccc; transition: color 0.15s, transform 0.1s;
     flex-shrink: 0;
   }
+  .btn-fav:hover { color: var(--gold); transform: scale(1.15); }
+  .btn-fav.active { color: var(--gold); }
+
+  /* ── Ingredients ── */
+  .ingredients { list-style: none; padding: 0; margin: 0; font-size: 14px; }
+  .ingredients li {
+    display: flex; align-items: center; padding: 6px 0;
+    border-bottom: 1px solid rgba(43,36,32,0.06); gap: 8px;
+  }
+  .ingredients li:last-child { border-bottom: none; }
+  .ingredients input[type="checkbox"] {
+    appearance: none; -webkit-appearance: none;
+    width: 16px; height: 16px; min-width: 16px;
+    border: 1.5px solid var(--pantry-missing); border-radius: 4px;
+    cursor: pointer; position: relative; background: #fff;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .ingredients input[type="checkbox"]:checked { background: var(--pantry-missing); border-color: var(--pantry-missing); }
+  .ingredients input[type="checkbox"]:checked::after {
+    content: ""; position: absolute; left: 4px; top: 1px;
+    width: 5px; height: 9px; border: 2px solid #fff;
+    border-top: none; border-left: none; transform: rotate(45deg);
+  }
+  .ingredients .name { display: flex; align-items: center; gap: 8px; flex: 1; }
+  .ingredients .dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
   .ingredients .dot.have { background: var(--pantry-good); }
   .ingredients .dot.need { background: var(--pantry-missing); }
   .ingredients .amount { color: var(--muted); font-size: 13px; white-space: nowrap; }
 
-  /* cart row at the bottom of each meal card */
-  /* instructions toggle */
+  /* ── Cart row ── */
+  .cart-row { display: flex; align-items: center; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+  .btn-cart {
+    background: var(--accent); color: #fff; border: none;
+    border-radius: 8px; padding: 8px 14px; font-size: 14px; font-weight: 500;
+    cursor: pointer; transition: opacity 0.15s;
+  }
+  .btn-cart:disabled { opacity: 0.4; cursor: default; }
+  .btn-cart:not(:disabled):hover { opacity: 0.88; }
+  .btn-reset { background: none; border: none; color: var(--muted); font-size: 13px; cursor: pointer; text-decoration: underline; padding: 0; }
+  .btn-reset:hover { color: var(--ink); }
+  .cart-status { font-size: 13px; color: var(--muted); margin-left: 2px; }
+  .cart-status.ok  { color: var(--pantry-good); }
+  .cart-status.err { color: var(--pantry-missing); }
+
+  /* ── Instructions ── */
   .instructions-toggle {
-    background: none;
-    border: none;
-    color: var(--muted);
-    font-size: 13px;
-    cursor: pointer;
-    padding: 8px 0 0;
-    display: flex;
-    align-items: center;
-    gap: 5px;
+    background: none; border: none; color: var(--muted); font-size: 13px;
+    cursor: pointer; padding: 8px 0 0; display: flex; align-items: center; gap: 5px;
   }
   .instructions-toggle:hover { color: var(--ink); }
   .instructions-toggle .arrow { font-size: 10px; transition: transform 0.2s; }
   .instructions-toggle.open .arrow { transform: rotate(90deg); }
-
   .instructions-list {
-    display: none;
-    margin: 10px 0 0;
-    padding: 0;
-    list-style: none;
-    font-size: 14px;
-    border-top: 1px solid rgba(43,36,32,0.07);
-    padding-top: 10px;
+    display: none; margin: 10px 0 0; padding: 0; list-style: none; font-size: 14px;
+    border-top: 1px solid rgba(43,36,32,0.07); padding-top: 10px;
   }
   .instructions-list.open { display: block; }
   .instructions-list li {
-    padding: 5px 0 5px 20px;
-    position: relative;
-    color: var(--ink);
-    border-bottom: 1px solid rgba(43,36,32,0.05);
-    line-height: 1.55;
+    padding: 5px 0 5px 20px; position: relative; color: var(--ink);
+    border-bottom: 1px solid rgba(43,36,32,0.05); line-height: 1.55;
   }
   .instructions-list li:last-child { border-bottom: none; }
   .instructions-list li::before {
-    content: attr(data-step);
-    position: absolute;
-    left: 0;
-    font-weight: 600;
-    color: var(--accent);
-    font-size: 12px;
+    content: attr(data-step); position: absolute; left: 0;
+    font-weight: 600; color: var(--accent); font-size: 12px;
   }
 
-  .cart-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 14px;
-    flex-wrap: wrap;
-  }
-  .btn-cart {
-    background: var(--accent);
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 8px 14px;
-    font-size: 14px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: opacity 0.15s;
-  }
-  .btn-cart:disabled {
-    opacity: 0.4;
-    cursor: default;
-  }
-  .btn-cart:not(:disabled):hover { opacity: 0.88; }
-  .btn-reset {
-    background: none;
-    border: none;
-    color: var(--muted);
-    font-size: 13px;
-    cursor: pointer;
-    text-decoration: underline;
-    padding: 0;
-  }
-  .btn-reset:hover { color: var(--ink); }
-  .cart-status {
-    font-size: 13px;
-    color: var(--muted);
-    margin-left: 2px;
-  }
-  .cart-status.ok  { color: var(--pantry-good); }
-  .cart-status.err { color: var(--pantry-missing); }
-
-  .shopping {
-    margin-top: 34px;
-    background: var(--accent-soft);
-    border-radius: var(--radius);
-    padding: 18px 20px;
-  }
-  .shopping h3 {
-    margin: 0 0 10px;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    color: var(--accent);
-  }
-  .shopping ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 15px;
-  }
-  .shopping li {
-    padding: 5px 0;
-    display: flex;
-    justify-content: space-between;
-  }
+  /* ── Shopping list ── */
+  .shopping { margin-top: 34px; background: var(--accent-soft); border-radius: var(--radius); padding: 18px 20px; }
+  .shopping h3 { margin: 0 0 10px; font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent); }
+  .shopping ul { list-style: none; padding: 0; margin: 0; font-size: 15px; }
+  .shopping li { padding: 5px 0; display: flex; justify-content: space-between; }
   .shopping li .for { color: var(--muted); font-size: 12px; }
   .shopping .empty { color: var(--muted); font-style: italic; font-size: 14px; }
 
-  .empty-state {
-    text-align: center;
-    color: var(--muted);
-    padding: 60px 20px;
-    font-size: 15px;
+  /* ── Saved Favorites ── */
+  .favorites { margin-top: 34px; }
+  .favorites h3 {
+    font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--muted); margin: 0 0 12px; display: flex; align-items: center; gap: 8px;
   }
+  .favorites h3 span { color: var(--gold); }
+  .fav-cards { display: flex; flex-direction: column; gap: 10px; }
+  .fav-card {
+    background: var(--card); border-radius: var(--radius); padding: 14px 16px;
+    box-shadow: var(--shadow); display: flex; align-items: flex-start; gap: 10px;
+  }
+  .fav-card .fav-info { flex: 1; }
+  .fav-card .fav-name { font-weight: 600; font-size: 15px; }
+  .fav-card .fav-desc { color: var(--muted); font-size: 13px; margin-top: 2px; }
+  .fav-card .fav-remove {
+    background: none; border: none; color: #ccc; font-size: 18px;
+    cursor: pointer; padding: 0; line-height: 1; transition: color 0.15s;
+  }
+  .fav-card .fav-remove:hover { color: var(--pantry-missing); }
+  .fav-empty { color: var(--muted); font-style: italic; font-size: 14px; }
+
+  .empty-state { text-align: center; color: var(--muted); padding: 60px 20px; font-size: 15px; }
 
   @media (max-width: 480px) {
     .wrap { padding: 18px 14px 40px; }
@@ -289,214 +172,246 @@
 </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <h1>This Week's Kitchen</h1>
-      <div class="dates" id="dates">Loading…</div>
-      <div class="updated" id="updated"></div>
-    </header>
-
-    <div id="content">
-      <div class="empty-state">Loading this week's menu…</div>
+<div class="wrap">
+  <header>
+    <h1>This Week's Kitchen</h1>
+    <div class="dates" id="dates">Loading…</div>
+    <div class="updated" id="updated"></div>
+    <div class="header-actions">
+      <button class="btn-refresh" id="btn-refresh">↻ Refresh</button>
     </div>
+  </header>
+  <div id="content">
+    <div class="empty-state">Loading this week's menu…</div>
   </div>
+  <div id="favorites-section"></div>
+</div>
 
 <script>
-(async function () {
-  const content  = document.getElementById("content");
-  const datesEl  = document.getElementById("dates");
-  const updatedEl = document.getElementById("updated");
+(function () {
+  const FAVES_KEY = "kitchen_favorites";
 
+  // ── Favorites helpers ─────────────────────────────────────────────────────
+  function getFaves() {
+    try { return JSON.parse(localStorage.getItem(FAVES_KEY) || "{}"); } catch { return {}; }
+  }
+  function saveFaves(f) { localStorage.setItem(FAVES_KEY, JSON.stringify(f)); }
+  function isFave(name) { return !!getFaves()[name]; }
+  function toggleFave(name, desc) {
+    const f = getFaves();
+    if (f[name]) { delete f[name]; } else { f[name] = { name, desc, savedAt: Date.now() }; }
+    saveFaves(f);
+  }
+
+  // ── Favorites section renderer ────────────────────────────────────────────
+  function renderFavorites() {
+    const sec = document.getElementById("favorites-section");
+    const f = getFaves();
+    const entries = Object.values(f).sort((a, b) => b.savedAt - a.savedAt);
+    if (!entries.length) { sec.innerHTML = ""; return; }
+    sec.innerHTML = `
+      <div class="favorites">
+        <h3><span>★</span> Saved Recipes</h3>
+        <div class="fav-cards">
+          ${entries.map(e => `
+            <div class="fav-card" data-fav="${esc(e.name)}">
+              <div class="fav-info">
+                <div class="fav-name">${esc(e.name)}</div>
+                ${e.desc ? `<div class="fav-desc">${esc(e.desc)}</div>` : ""}
+              </div>
+              <button class="fav-remove" title="Remove">✕</button>
+            </div>`).join("")}
+        </div>
+      </div>`;
+    sec.querySelectorAll(".fav-remove").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const name = btn.closest(".fav-card").dataset.fav;
+        const f2 = getFaves(); delete f2[name]; saveFaves(f2);
+        // Sync the star button on the meal card if visible
+        document.querySelectorAll(`.btn-fav[data-name="${CSS.escape(name)}"]`).forEach(s => {
+          s.classList.remove("active"); s.textContent = "☆";
+        });
+        renderFavorites();
+      });
+    });
+  }
+
+  // ── Data + render ─────────────────────────────────────────────────────────
+  async function loadAndRender() {
+    const content   = document.getElementById("content");
+    const datesEl   = document.getElementById("dates");
+    const updatedEl = document.getElementById("updated");
+    const refreshBtn = document.getElementById("btn-refresh");
+
+    refreshBtn.disabled = true;
+    refreshBtn.classList.add("spinning");
+    refreshBtn.textContent = "↻ Refreshing…";
+
+    let data;
+    try {
+      const res = await fetch("data/current_week.json?v=" + Date.now());
+      if (!res.ok) throw new Error("not ok");
+      data = await res.json();
+    } catch {
+      content.innerHTML = '<div class="empty-state">No menu available yet. Check back after the next kitchen scan.</div>';
+      refreshBtn.disabled = false; refreshBtn.classList.remove("spinning"); refreshBtn.textContent = "↻ Refresh";
+      return;
+    }
+
+    datesEl.textContent  = fmtDate(data.week_start) + " — " + fmtDate(data.week_end);
+    updatedEl.textContent = fmtUpdated(data.generated_at);
+    const webhookUrl = data.cart_webhook_url || "";
+
+    // ── Meal cards ──────────────────────────────────────────────────────────
+    const mealEls = (data.meals || []).map((m, idx) => {
+      const needItems = (m.ingredients || []).filter(i => !i.in_pantry);
+      const haveItems = (m.ingredients || []).filter(i =>  i.in_pantry);
+      const faved = isFave(m.name);
+
+      const ingHtml = [
+        ...needItems.map((i, k) => `
+          <li class="need">
+            <input type="checkbox" id="cb-${idx}-${k}" checked
+              data-name="${esc(i.name)}" data-amount="${esc(i.amount||"")}"
+              data-upc="${esc(i.kroger_upc||"")}" data-product="${esc(i.kroger_product_name||"")}"
+              data-price="${esc(String(i.kroger_price||""))}"/>
+            <span class="name"><span class="dot need"></span>${esc(i.name)}</span>
+            <span class="amount">${esc(i.amount||"")}</span>
+          </li>`),
+        ...haveItems.map(i => `
+          <li class="have">
+            <span class="name"><span class="dot have"></span>${esc(i.name)}</span>
+            <span class="amount">${esc(i.amount||"")}</span>
+          </li>`),
+      ].join("");
+
+      const cartRow = (needItems.length && webhookUrl) ? `
+        <div class="cart-row" id="cart-row-${idx}">
+          <button class="btn-cart" id="btn-cart-${idx}">Add <span id="ct-${idx}">${needItems.length}</span> to Kroger list</button>
+          <button class="btn-reset" id="btn-reset-${idx}">reset</button>
+          <span class="cart-status" id="cart-status-${idx}"></span>
+        </div>` : "";
+
+      const instHtml = (m.instructions && m.instructions.length) ? `
+        <button class="instructions-toggle" id="tog-${idx}">
+          <span class="arrow">▶</span> Instructions
+        </button>
+        <ol class="instructions-list" id="inst-${idx}">
+          ${m.instructions.map((s, i) => `<li data-step="${i+1}">${esc(s.replace(/^Step\s*\d+:\s*/i,""))}</li>`).join("")}
+        </ol>` : "";
+
+      return `
+        <div class="meal" id="meal-${idx}">
+          <div class="day">
+            <span class="day-name">${esc(m.day)}</span>
+            <span class="day-date">${fmtDate(m.date)}</span>
+          </div>
+          <div class="meal-header">
+            <div class="meal-header-left">
+              <h2>${esc(m.name)}</h2>
+              ${m.description ? `<p class="desc">${esc(m.description)}</p>` : ""}
+            </div>
+            <button class="btn-fav ${faved?"active":""}" data-name="${esc(m.name)}" data-desc="${esc(m.description||"")}" title="Save recipe">${faved?"★":"☆"}</button>
+          </div>
+          <ul class="ingredients" id="ing-${idx}">${ingHtml}</ul>
+          ${cartRow}${instHtml}
+        </div>`;
+    });
+
+    // ── Shopping list ────────────────────────────────────────────────────────
+    const shop = data.shopping_list || [];
+    const shopHtml = `
+      <div class="shopping">
+        <h3>Need from the store</h3>
+        ${shop.length
+          ? `<ul>${shop.map(s=>`<li><span>${esc(s.name)}${s.amount?" — "+esc(s.amount):""}</span><span class="for">${(s.for_meals||[]).join(", ")}</span></li>`).join("")}</ul>`
+          : `<div class="empty">Nothing — we've got everything on hand.</div>`}
+      </div>`;
+
+    content.innerHTML = `<div class="meals">${mealEls.join("")}</div>${shopHtml}`;
+
+    // ── Wire cart checkboxes ─────────────────────────────────────────────────
+    (data.meals || []).forEach((m, idx) => {
+      const needItems = (m.ingredients || []).filter(i => !i.in_pantry);
+      if (!needItems.length || !webhookUrl) return;
+      const ingList  = document.getElementById(`ing-${idx}`);
+      const btn      = document.getElementById(`btn-cart-${idx}`);
+      const ctSpan   = document.getElementById(`ct-${idx}`);
+      const resetBtn = document.getElementById(`btn-reset-${idx}`);
+      const statusEl = document.getElementById(`cart-status-${idx}`);
+
+      const getChecked = () => [...ingList.querySelectorAll("input[type=checkbox]:checked")];
+      const updateCount = () => { const n=getChecked().length; ctSpan.textContent=n; btn.disabled=n===0; };
+
+      ingList.addEventListener("change", updateCount);
+      resetBtn.addEventListener("click", () => {
+        ingList.querySelectorAll("input[type=checkbox]").forEach(c => c.checked=true);
+        statusEl.textContent=""; statusEl.className="cart-status"; updateCount();
+      });
+      btn.addEventListener("click", async () => {
+        const checked = getChecked(); if (!checked.length) return;
+        const items = checked.map(cb => ({
+          name: cb.dataset.name, amount: cb.dataset.amount,
+          upc: cb.dataset.upc, product_name: cb.dataset.product,
+          price: cb.dataset.price ? parseFloat(cb.dataset.price) : "",
+        }));
+        btn.disabled=true; statusEl.textContent="Adding…"; statusEl.className="cart-status";
+        try {
+          await fetch(webhookUrl, { method:"POST", mode:"no-cors", headers:{"Content-Type":"text/plain"}, body:JSON.stringify({day:m.day,recipe:m.name,items}) });
+          statusEl.textContent=`✓ ${items.length} item${items.length!==1?"s":""} queued`;
+          statusEl.className="cart-status ok";
+          checked.forEach(cb => cb.checked=false); updateCount();
+        } catch {
+          statusEl.textContent="Failed — try again"; statusEl.className="cart-status err"; btn.disabled=false;
+        }
+      });
+    });
+
+    // ── Wire instructions toggles ────────────────────────────────────────────
+    (data.meals || []).forEach((_, idx) => {
+      const tog  = document.getElementById(`tog-${idx}`);
+      const inst = document.getElementById(`inst-${idx}`);
+      if (!tog || !inst) return;
+      tog.addEventListener("click", () => {
+        const open = inst.classList.toggle("open");
+        tog.classList.toggle("open", open);
+      });
+    });
+
+    // ── Wire favorite stars ──────────────────────────────────────────────────
+    document.querySelectorAll(".btn-fav").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const { name, desc } = btn.dataset;
+        toggleFave(name, desc);
+        const now = isFave(name);
+        btn.classList.toggle("active", now);
+        btn.textContent = now ? "★" : "☆";
+        renderFavorites();
+      });
+    });
+
+    refreshBtn.disabled=false; refreshBtn.classList.remove("spinning"); refreshBtn.textContent="↻ Refresh";
+    renderFavorites();
+  }
+
+  // ── Helpers ───────────────────────────────────────────────────────────────
   function fmtDate(iso) {
     if (!iso) return "";
-    const d = new Date(iso + "T00:00:00");
-    return d.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+    return new Date(iso+"T00:00:00").toLocaleDateString(undefined,{month:"short",day:"numeric"});
   }
   function fmtUpdated(iso) {
     if (!iso) return "";
     const d = new Date(iso);
-    return "updated " + d.toLocaleDateString(undefined, { month: "short", day: "numeric" }) +
-           " at " + d.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" });
+    return "updated "+d.toLocaleDateString(undefined,{month:"short",day:"numeric"})+" at "+d.toLocaleTimeString(undefined,{hour:"numeric",minute:"2-digit"});
   }
-
-  let data;
-  try {
-    const res = await fetch("data/current_week.json?v=" + Date.now());
-    if (!res.ok) throw new Error("not ok");
-    data = await res.json();
-  } catch (e) {
-    content.innerHTML = '<div class="empty-state">No menu available yet. Check back after the next kitchen scan.</div>';
-    return;
-  }
-
-  datesEl.textContent  = fmtDate(data.week_start) + " — " + fmtDate(data.week_end);
-  updatedEl.textContent = fmtUpdated(data.generated_at);
-
-  const webhookUrl = data.cart_webhook_url || "";
-
-  // ── Build meal cards ─────────────────────────────────────────────────────
-  const mealEls = (data.meals || []).map((m, mealIdx) => {
-    const needItems = (m.ingredients || []).filter(i => !i.in_pantry);
-    const haveItems = (m.ingredients || []).filter(i =>  i.in_pantry);
-
-    const ingHtml = [
-      // "Need" items get a checkbox, checked by default
-      ...needItems.map((i, k) => `
-        <li class="need">
-          <input type="checkbox" id="cb-${mealIdx}-${k}" checked
-            data-name="${esc(i.name)}"
-            data-amount="${esc(i.amount || "")}"
-            data-upc="${esc(i.kroger_upc || "")}"
-            data-product="${esc(i.kroger_product_name || "")}"
-            data-price="${esc(String(i.kroger_price || ""))}"
-          />
-          <span class="name">
-            <span class="dot need"></span>${esc(i.name)}
-          </span>
-          <span class="amount">${esc(i.amount || "")}</span>
-        </li>`),
-      // "Have" items are plain — no checkbox needed
-      ...haveItems.map(i => `
-        <li class="have">
-          <span class="name">
-            <span class="dot have"></span>${esc(i.name)}
-          </span>
-          <span class="amount">${esc(i.amount || "")}</span>
-        </li>`),
-    ].join("");
-
-    // Show the cart row only if there are need-items and a webhook is configured
-    const cartRow = (needItems.length && webhookUrl) ? `
-      <div class="cart-row" id="cart-row-${mealIdx}">
-        <button class="btn-cart" id="btn-cart-${mealIdx}">
-          Add <span id="ct-${mealIdx}">${needItems.length}</span> to Kroger list
-        </button>
-        <button class="btn-reset" id="btn-reset-${mealIdx}">reset</button>
-        <span class="cart-status" id="cart-status-${mealIdx}"></span>
-      </div>` : "";
-
-    return `
-      <div class="meal" id="meal-${mealIdx}">
-        <div class="day">
-          <span class="day-name">${esc(m.day)}</span>
-          <span class="day-date">${fmtDate(m.date)}</span>
-        </div>
-        <h2>${esc(m.name)}</h2>
-        ${m.description ? `<p class="desc">${esc(m.description)}</p>` : ""}
-        <ul class="ingredients" id="ing-${mealIdx}">${ingHtml}</ul>
-        ${cartRow}
-        ${(m.instructions && m.instructions.length) ? `
-        <button class="instructions-toggle" id="tog-${mealIdx}">
-          <span class="arrow">▶</span> Instructions
-        </button>
-        <ol class="instructions-list" id="inst-${mealIdx}">
-          ${m.instructions.map((step, i) => `<li data-step="${i + 1}">${esc(step.replace(/^Step\s*\d+:\s*/i, ""))}</li>`).join("")}
-        </ol>` : ""}
-      </div>`;
-  });
-
-  // ── Shopping list ────────────────────────────────────────────────────────
-  const shop = data.shopping_list || [];
-  const shoppingHtml = `
-    <div class="shopping">
-      <h3>Need from the store</h3>
-      ${shop.length
-        ? `<ul>${shop.map(s => `
-            <li>
-              <span>${esc(s.name)}${s.amount ? " — " + esc(s.amount) : ""}</span>
-              <span class="for">${(s.for_meals || []).join(", ")}</span>
-            </li>`).join("")}</ul>`
-        : `<div class="empty">Nothing — we've got everything on hand.</div>`}
-    </div>`;
-
-  content.innerHTML = `<div class="meals">${mealEls.join("")}</div>${shoppingHtml}`;
-
-  // ── Wire up checkbox + button logic ──────────────────────────────────────
-  (data.meals || []).forEach((m, mealIdx) => {
-    const needItems = (m.ingredients || []).filter(i => !i.in_pantry);
-    if (!needItems.length || !webhookUrl) return;
-
-    const ingList   = document.getElementById(`ing-${mealIdx}`);
-    const btn       = document.getElementById(`btn-cart-${mealIdx}`);
-    const ctSpan    = document.getElementById(`ct-${mealIdx}`);
-    const resetBtn  = document.getElementById(`btn-reset-${mealIdx}`);
-    const statusEl  = document.getElementById(`cart-status-${mealIdx}`);
-
-    function getChecked() {
-      return [...ingList.querySelectorAll("input[type=checkbox]:checked")];
-    }
-
-    function updateCount() {
-      const n = getChecked().length;
-      ctSpan.textContent = n;
-      btn.disabled = n === 0;
-    }
-
-    ingList.addEventListener("change", updateCount);
-
-    resetBtn.addEventListener("click", () => {
-      ingList.querySelectorAll("input[type=checkbox]").forEach(cb => cb.checked = true);
-      statusEl.textContent = "";
-      statusEl.className = "cart-status";
-      updateCount();
-    });
-
-    btn.addEventListener("click", async () => {
-      const checked = getChecked();
-      if (!checked.length) return;
-
-      const items = checked.map(cb => ({
-        name:         cb.dataset.name,
-        amount:       cb.dataset.amount,
-        upc:          cb.dataset.upc,
-        product_name: cb.dataset.product,
-        price:        cb.dataset.price ? parseFloat(cb.dataset.price) : "",
-      }));
-
-      btn.disabled = true;
-      statusEl.textContent = "Adding…";
-      statusEl.className = "cart-status";
-
-      try {
-        // Apps Script doesn't support CORS preflight — use no-cors + text/plain
-        // to bypass preflight entirely. The POST still lands in doPost() normally;
-        // we just can't read the response, so we confirm optimistically.
-        await fetch(webhookUrl, {
-          method: "POST",
-          mode: "no-cors",
-          headers: { "Content-Type": "text/plain" },
-          body: JSON.stringify({ day: m.day, recipe: m.name, items }),
-        });
-        statusEl.textContent = `✓ ${items.length} item${items.length !== 1 ? "s" : ""} queued`;
-        statusEl.className = "cart-status ok";
-        // Uncheck added items so re-clicking doesn't double-add
-        checked.forEach(cb => { cb.checked = false; });
-        updateCount();
-      } catch (err) {
-        statusEl.textContent = "Failed — try again";
-        statusEl.className = "cart-status err";
-        btn.disabled = false;
-      }
-    });
-  });
-
-  // ── Instructions toggles ─────────────────────────────────────────────────
-  (data.meals || []).forEach((m, mealIdx) => {
-    const tog  = document.getElementById(`tog-${mealIdx}`);
-    const inst = document.getElementById(`inst-${mealIdx}`);
-    if (!tog || !inst) return;
-    tog.addEventListener("click", () => {
-      const open = inst.classList.toggle("open");
-      tog.classList.toggle("open", open);
-    });
-  });
-
-  // ── Helpers ───────────────────────────────────────────────────────────────
   function esc(str) {
-    return String(str ?? "")
-      .replace(/&/g, "&amp;").replace(/</g, "&lt;")
-      .replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    return String(str??"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
   }
+
+  // ── Boot ──────────────────────────────────────────────────────────────────
+  document.getElementById("btn-refresh").addEventListener("click", loadAndRender);
+  loadAndRender();
+  renderFavorites();
 })();
 </script>
 </body>
