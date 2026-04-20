@@ -162,6 +162,49 @@
   .ingredients .amount { color: var(--muted); font-size: 13px; white-space: nowrap; }
 
   /* cart row at the bottom of each meal card */
+  /* instructions toggle */
+  .instructions-toggle {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 13px;
+    cursor: pointer;
+    padding: 8px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .instructions-toggle:hover { color: var(--ink); }
+  .instructions-toggle .arrow { font-size: 10px; transition: transform 0.2s; }
+  .instructions-toggle.open .arrow { transform: rotate(90deg); }
+
+  .instructions-list {
+    display: none;
+    margin: 10px 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+    border-top: 1px solid rgba(43,36,32,0.07);
+    padding-top: 10px;
+  }
+  .instructions-list.open { display: block; }
+  .instructions-list li {
+    padding: 5px 0 5px 20px;
+    position: relative;
+    color: var(--ink);
+    border-bottom: 1px solid rgba(43,36,32,0.05);
+    line-height: 1.55;
+  }
+  .instructions-list li:last-child { border-bottom: none; }
+  .instructions-list li::before {
+    content: attr(data-step);
+    position: absolute;
+    left: 0;
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 12px;
+  }
+
   .cart-row {
     display: flex;
     align-items: center;
@@ -342,6 +385,13 @@
         ${m.description ? `<p class="desc">${esc(m.description)}</p>` : ""}
         <ul class="ingredients" id="ing-${mealIdx}">${ingHtml}</ul>
         ${cartRow}
+        ${(m.instructions && m.instructions.length) ? `
+        <button class="instructions-toggle" id="tog-${mealIdx}">
+          <span class="arrow">▶</span> Instructions
+        </button>
+        <ol class="instructions-list" id="inst-${mealIdx}">
+          ${m.instructions.map((step, i) => `<li data-step="${i + 1}">${esc(step.replace(/^Step\s*\d+:\s*/i, ""))}</li>`).join("")}
+        </ol>` : ""}
       </div>`;
   });
 
@@ -427,6 +477,17 @@
         statusEl.className = "cart-status err";
         btn.disabled = false;
       }
+    });
+  });
+
+  // ── Instructions toggles ─────────────────────────────────────────────────
+  (data.meals || []).forEach((m, mealIdx) => {
+    const tog  = document.getElementById(`tog-${mealIdx}`);
+    const inst = document.getElementById(`inst-${mealIdx}`);
+    if (!tog || !inst) return;
+    tog.addEventListener("click", () => {
+      const open = inst.classList.toggle("open");
+      tog.classList.toggle("open", open);
     });
   });
 
