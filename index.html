@@ -87,7 +87,9 @@
     cursor: pointer; position: relative; background: #fff;
     transition: background 0.15s, border-color 0.15s;
   }
+  .ingredients li.have input[type="checkbox"] { border-color: var(--pantry-good); }
   .ingredients input[type="checkbox"]:checked { background: var(--pantry-missing); border-color: var(--pantry-missing); }
+  .ingredients li.have input[type="checkbox"]:checked { background: var(--pantry-good); border-color: var(--pantry-good); }
   .ingredients input[type="checkbox"]:checked::after {
     content: ""; position: absolute; left: 4px; top: 1px;
     width: 5px; height: 9px; border: 2px solid #fff;
@@ -272,27 +274,23 @@
     // ── Meal cards ──────────────────────────────────────────────────────────
     const mealEls = (data.meals || []).map((m, idx) => {
       const needItems = (m.ingredients || []).filter(i => !i.in_pantry);
-      const haveItems = (m.ingredients || []).filter(i =>  i.in_pantry);
       const faved = isFave(m.name);
 
-      const ingHtml = [
-        ...needItems.map((i, k) => `
-          <li class="need">
-            <input type="checkbox" id="cb-${idx}-${k}" checked
+      const ingHtml = (m.ingredients || []).map((i, k) => {
+        const inPantry = !!i.in_pantry;
+        return `
+          <li class="${inPantry ? "have" : "need"}">
+            <input type="checkbox" id="cb-${idx}-${k}" ${inPantry ? "" : "checked"}
               data-name="${esc(i.name)}" data-amount="${esc(i.amount||"")}"
               data-upc="${esc(i.kroger_upc||"")}" data-product="${esc(i.kroger_product_name||"")}"
-              data-price="${esc(String(i.kroger_price||""))}"/>
-            <span class="name"><span class="dot need"></span>${esc(i.name)}</span>
+              data-price="${esc(String(i.kroger_price||""))}"
+              data-in-pantry="${inPantry ? "1" : "0"}"/>
+            <span class="name"><span class="dot ${inPantry ? "have" : "need"}"></span>${esc(i.name)}</span>
             <span class="amount">${esc(i.amount||"")}</span>
-          </li>`),
-        ...haveItems.map(i => `
-          <li class="have">
-            <span class="name"><span class="dot have"></span>${esc(i.name)}</span>
-            <span class="amount">${esc(i.amount||"")}</span>
-          </li>`),
-      ].join("");
+          </li>`;
+      }).join("");
 
-      const cartRow = (needItems.length && webhookUrl) ? `
+      const cartRow = ((m.ingredients||[]).length && webhookUrl) ? `
         <div class="cart-row" id="cart-row-${idx}">
           <button class="btn-cart" id="btn-cart-${idx}">Add <span id="ct-${idx}">${needItems.length}</span> to Kroger list</button>
           <button class="btn-reset" id="btn-reset-${idx}">reset</button>
@@ -339,8 +337,7 @@
 
     // ── Wire cart checkboxes ─────────────────────────────────────────────────
     (data.meals || []).forEach((m, idx) => {
-      const needItems = (m.ingredients || []).filter(i => !i.in_pantry);
-      if (!needItems.length || !webhookUrl) return;
+      if (!webhookUrl || !(m.ingredients||[]).length) return;
       const ingList  = document.getElementById(`ing-${idx}`);
       const btn      = document.getElementById(`btn-cart-${idx}`);
       const ctSpan   = document.getElementById(`ct-${idx}`);
@@ -352,7 +349,8 @@
 
       ingList.addEventListener("change", updateCount);
       resetBtn.addEventListener("click", () => {
-        ingList.querySelectorAll("input[type=checkbox]").forEach(c => c.checked=true);
+        // Restore defaults: need items checked, pantry items unchecked
+        ingList.querySelectorAll("input[type=checkbox]").forEach(c => { c.checked = c.dataset.inPantry !== "1"; });
         statusEl.textContent=""; statusEl.className="cart-status"; updateCount();
       });
       btn.addEventListener("click", async () => {
