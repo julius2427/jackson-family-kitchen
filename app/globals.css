@@ -212,3 +212,14 @@ header .updated { color: var(--muted); font-size: 12px; margin-top: 6px; font-va
 .send-confirm ul li { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
 .send-confirm-actions { display: flex; gap: 10px; flex-wrap: wrap; }
 .btn-inline-link { background: none; border: none; color: var(--accent); font-size: 13px; cursor: pointer; padding: 0; text-decoration: underline; }
+
+/* ── Unmatched cart items ── */
+.cart-item-unmatched { border-left: 3px solid #e8873a; background: #fffaf5; }
+.cart-item-no-match { color: #c05c10; font-size: 13px; font-weight: 600; margin-top: 3px; }
+.btn-change-product-urgent { border-color: #e8873a !important; color: #c05c10 !important; font-weight: 600; }
+.btn-change-product-urgent:hover { background: #e8873a !important; color: #fff !important; }
+
+/* ── Add item bar ── */
+.add-item-bar { display: flex; gap: 10px; margin-top: 20px; }
+.add-item-bar input { flex: 1; border: 1.5px solid #ddd; border-radius: 8px; padding: 9px 13px; font-size: 14px; outline: none; background: var(--card); }
+.add-item-bar input:focus { border-color: var(--accent); }

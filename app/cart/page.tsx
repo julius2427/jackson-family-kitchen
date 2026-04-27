@@ -42,6 +42,8 @@ export default function CartPage() {
   const [searchLoading, setSearchLoading] = useState(false)
   const [clearConfirm, setClearConfirm] = useState(false)
   const [sendConfirm, setSendConfirm] = useState(false)
+  const [addQuery, setAddQuery] = useState("")
+  const [addLoading, setAddLoading] = useState(false)
 
   useEffect(() => {
     if (status === "unauthenticated") router.push("/auth/signin")
@@ -153,6 +155,24 @@ export default function CartPage() {
     setCandidates([])
   }
 
+  async function addCustomItem(e: React.FormEvent) {
+    e.preventDefault()
+    const name = addQuery.trim()
+    if (!name) return
+    setAddLoading(true)
+    try {
+      await fetch("/api/cart", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ items: [{ item_name: name, quantity: 1 }] }),
+      })
+      setAddQuery("")
+      await loadCart()
+    } finally {
+      setAddLoading(false)
+    }
+  }
+
   function openSearch(item: CartItem) {
     setSearchOpen(item.id)
     setSearchQuery(item.item_name)
@@ -230,14 +250,14 @@ export default function CartPage() {
       ) : (
         <div className="cart-items">
           {items.map(item => (
-            <div key={item.id} className="cart-item">
+            <div key={item.id} className={`cart-item${!item.kroger_upc ? " cart-item-unmatched" : ""}`}>
               <div className="cart-item-top">
                 <div>
                   <div className="cart-item-name">{item.item_name}</div>
                   {item.kroger_product_name ? (
                     <div className="cart-item-product">{item.kroger_product_name}</div>
                   ) : (
-                    <div className="cart-item-product" style={{ color: "var(--accent)" }}>No product matched — search to pick one</div>
+                    <div className="cart-item-no-match">⚠ No Kroger product — pick one before sending</div>
                   )}
                   {item.kroger_price && <div className="cart-item-price">${item.kroger_price.toFixed(2)}</div>}
                 </div>
@@ -248,8 +268,8 @@ export default function CartPage() {
                 <button className="qty-btn" onClick={() => updateQty(item, -1)}>−</button>
                 <span className="qty-display">{item.quantity}{item.unit ? ` ${item.unit}` : ""}</span>
                 <button className="qty-btn" onClick={() => updateQty(item, 1)}>+</button>
-                <button className="btn-change-product" onClick={() => searchOpen === item.id ? setSearchOpen(null) : openSearch(item)}>
-                  {searchOpen === item.id ? "Cancel" : "Change product"}
+                <button className={`btn-change-product${!item.kroger_upc ? " btn-change-product-urgent" : ""}`} onClick={() => searchOpen === item.id ? setSearchOpen(null) : openSearch(item)}>
+                  {searchOpen === item.id ? "Cancel" : item.kroger_upc ? "Change product" : "Select product"}
                 </button>
               </div>
 
@@ -281,6 +301,21 @@ export default function CartPage() {
             </div>
           ))}
         </div>
+      )}
+
+      {!loading && (
+        <form className="add-item-bar" onSubmit={addCustomItem}>
+          <input
+            type="text"
+            placeholder="Add an item to cart…"
+            value={addQuery}
+            onChange={e => setAddQuery(e.target.value)}
+            disabled={addLoading}
+          />
+          <button type="submit" className="btn btn-solid-accent" disabled={addLoading || !addQuery.trim()}>
+            {addLoading ? "Adding…" : "Add"}
+          </button>
+        </form>
       )}
     </div>
   )
