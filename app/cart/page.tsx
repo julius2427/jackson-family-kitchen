@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState, useCallback } from "react"
+import { useEffect, useState, useCallback, useRef } from "react"
 import { useSession } from "next-auth/react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
@@ -48,6 +48,9 @@ export default function CartPage() {
   const [sendConfirm, setSendConfirm] = useState(false)
   const [addQuery, setAddQuery] = useState("")
   const [addLoading, setAddLoading] = useState(false)
+  const [addCandidates, setAddCandidates] = useState<Candidate[]>([])
+  const [addSearchLoading, setAddSearchLoading] = useState(false)
+  const addDebounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     if (status === "unauthenticated") router.push("/auth/signin")
@@ -173,10 +176,53 @@ export default function CartPage() {
     setCandidates([])
   }
 
+  function handleAddQueryChange(value: string) {
+    setAddQuery(value)
+    if (addDebounceRef.current) clearTimeout(addDebounceRef.current)
+    if (value.length < 2) { setAddCandidates([]); return }
+    addDebounceRef.current = setTimeout(async () => {
+      setAddSearchLoading(true)
+      try {
+        const res = await fetch(`/api/preferences/candidates?q=${encodeURIComponent(value)}`)
+        const data = await res.json()
+        setAddCandidates(data.candidates ?? [])
+      } finally {
+        setAddSearchLoading(false)
+      }
+    }, 300)
+  }
+
+  async function selectAddCandidate(candidate: Candidate) {
+    setAddCandidates([])
+    setAddQuery("")
+    setAddLoading(true)
+    const regularPrice = candidate.regular_price ?? candidate.price
+    try {
+      await fetch("/api/cart", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          items: [{
+            item_name: candidate.name,
+            quantity: 1,
+            kroger_upc: candidate.upc,
+            kroger_product_name: candidate.name,
+            kroger_price: regularPrice,
+            kroger_promo_price: candidate.promo_price ?? null,
+          }],
+        }),
+      })
+      await loadCart()
+    } finally {
+      setAddLoading(false)
+    }
+  }
+
   async function addCustomItem(e: React.FormEvent) {
     e.preventDefault()
     const name = addQuery.trim()
     if (!name) return
+    setAddCandidates([])
     setAddLoading(true)
     try {
       await fetch("/api/cart", {
@@ -251,18 +297,43 @@ export default function CartPage() {
       )}
 
       {/* Add item — always visible at top */}
-      <form className="add-item-card" onSubmit={addCustomItem}>
-        <input
-          type="text"
-          placeholder="Add milk, bananas, paper towels…"
-          value={addQuery}
-          onChange={e => setAddQuery(e.target.value)}
-          disabled={addLoading}
-        />
-        <button type="submit" className="btn btn-solid-accent" disabled={addLoading || !addQuery.trim()}>
-          {addLoading ? "Adding…" : "Add"}
-        </button>
-      </form>
+      <div className="add-item-card">
+        <form className="add-item-row" onSubmit={addCustomItem}>
+          <input
+            type="text"
+            placeholder="Add milk, bananas, paper towels…"
+            value={addQuery}
+            onChange={e => handleAddQueryChange(e.target.value)}
+            disabled={addLoading}
+            autoComplete="off"
+          />
+          <button type="submit" className="btn btn-solid-accent" disabled={addLoading || !addQuery.trim()}>
+            {addLoading ? "Adding…" : "Add"}
+          </button>
+        </form>
+        {(addCandidates.length > 0 || addSearchLoading) && (
+          <div className="add-candidates">
+            {addSearchLoading && <div className="add-candidates-loading">Searching…</div>}
+            {addCandidates.map((c, i) => {
+              const onSale = c.promo_price != null && c.regular_price != null && c.promo_price < c.regular_price
+              return (
+                <button key={i} className="add-candidate" onClick={() => selectAddCandidate(c)}>
+                  <div className="add-candidate-name">
+                    {c.name}
+                    {onSale && <span className="sale-badge-sm">SALE</span>}
+                  </div>
+                  <div className="add-candidate-meta">{[c.brand, c.size].filter(Boolean).join(" · ")}</div>
+                  <div className="add-candidate-price">
+                    {onSale
+                      ? <><span className="sale">${c.promo_price!.toFixed(2)}</span> <span className="regular">${c.regular_price!.toFixed(2)}</span></>
+                      : c.price != null ? `$${c.price.toFixed(2)}` : ""}
+                  </div>
+                </button>
+              )
+            })}
+          </div>
+        )}
+      </div>
 
       {/* Cart items */}
       {loading ? (
