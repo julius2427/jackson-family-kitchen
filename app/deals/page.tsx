@@ -91,15 +91,19 @@ export default function DealsPage() {
 
   return (
     <div className="wrap">
-      <header>
-        <div><Link href="/" className="back-link">← This week&apos;s menu</Link></div>
-        <h1>🏷 Deals</h1>
-        <div className="header-actions">
-          <button className="btn btn-outline-accent" onClick={loadDeals} disabled={loading}>
-            {loading ? "↻ Refreshing…" : "↻ Refresh"}
-          </button>
+      <div className="page-header">
+        <div className="page-header-row">
+          <div>
+            <h1 className="page-header">Deals</h1>
+            <p className="page-subtext">Sale prices on your regular items at your Kroger store.</p>
+          </div>
+          <div className="page-actions">
+            <button className="btn btn-outline-accent" onClick={loadDeals} disabled={loading}>
+              {loading ? "↻ Refreshing…" : "↻ Refresh"}
+            </button>
+          </div>
         </div>
-      </header>
+      </div>
 
       {data?.categories && data.categories.length > 0 && (
         <div className="category-filters">

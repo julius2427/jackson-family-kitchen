@@ -71,20 +71,26 @@ export default function FavoritesPage() {
 
   return (
     <div className="wrap">
-      <header>
-        <div><Link href="/" className="back-link">← This week&apos;s menu</Link></div>
-        <h1>★ Saved Recipes</h1>
-        {entries.length > 0 && (
-          <div className="header-actions">
-            <button className="btn btn-outline-muted" onClick={clearAll}>Clear all</button>
+      <div className="page-header">
+        <div className="page-header-row">
+          <div>
+            <h1 className="page-header">Saved Recipes</h1>
+            <p className="page-subtext">Meals you&apos;ve starred from your weekly menu.</p>
           </div>
-        )}
-      </header>
+          {entries.length > 0 && (
+            <div className="page-actions">
+              <button className="btn btn-outline-muted" onClick={clearAll}>Clear all</button>
+            </div>
+          )}
+        </div>
+      </div>
 
       {entries.length === 0 ? (
-        <div className="empty-state">
-          No saved recipes yet.<br /><br />
-          <Link href="/">Go star some meals</Link> from this week&apos;s menu.
+        <div className="empty-card">
+          <div className="empty-card-icon">★</div>
+          <h3>No saved recipes yet</h3>
+          <p>Star meals from this week&apos;s menu to save them here for quick access and re-ordering.</p>
+          <Link href="/" className="btn btn-solid-accent">Go to this week&apos;s menu</Link>
         </div>
       ) : (
         <div className="recipes">

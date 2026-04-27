@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 import SessionProvider from "@/components/SessionProvider"
 import { CartProvider } from "@/lib/cartContext"
-import BottomNav from "@/components/BottomNav"
+import AppHeader from "@/components/AppHeader"
 import CartDrawer from "@/components/CartDrawer"
 
 export const metadata: Metadata = {
@@ -17,8 +17,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <SessionProvider>
           <CartProvider>
-            {children}
-            <BottomNav />
+            <AppHeader />
+            <main>{children}</main>
             <CartDrawer />
           </CartProvider>
         </SessionProvider>

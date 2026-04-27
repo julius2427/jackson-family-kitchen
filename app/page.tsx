@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState, useCallback } from "react"
-import { useSession, signOut } from "next-auth/react"
+import { useSession } from "next-auth/react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 
@@ -146,20 +146,19 @@ export default function HomePage() {
 
   return (
     <div className="wrap">
-      <header>
-        <h1>This Week&apos;s Kitchen</h1>
-        {data && <div className="dates">{fmtDate(data.week_start)} — {fmtDate(data.week_end)}</div>}
-        {data && <div className="updated">{fmtUpdated(data.generated_at)}</div>}
-        <div className="header-actions">
-          <button className="btn btn-outline-accent" onClick={loadWeek} disabled={loading}>
-            {loading ? "↻ Refreshing…" : "↻ Refresh"}
-          </button>
-          <Link href="/favorites" className="btn btn-outline-gold">★ Saved Recipes</Link>
-          <Link href="/deals" className="btn btn-outline-green">🏷 Deals</Link>
-          <Link href="/cart" className="btn btn-outline-muted">🛒 Cart</Link>
-          <button className="btn btn-outline-muted" onClick={() => signOut()}>Sign out</button>
+      <div className="page-header">
+        <div className="page-header-row">
+          <div>
+            <h1 className="page-header">This Week&apos;s Kitchen</h1>
+            {data && <p className="page-subtext">{fmtDate(data.week_start)} — {fmtDate(data.week_end)}{data.generated_at ? ` · ${fmtUpdated(data.generated_at)}` : ""}</p>}
+          </div>
+          <div className="page-actions">
+            <button className="btn btn-outline-accent" onClick={loadWeek} disabled={loading}>
+              {loading ? "↻ Refreshing…" : "↻ Refresh"}
+            </button>
+          </div>
         </div>
-      </header>
+      </div>
 
       {!data ? (
         <div className="empty-state">No menu available yet. Check back after the next kitchen scan.</div>

@@ -200,46 +200,38 @@ export default function CartPage() {
 
   return (
     <div className="wrap">
-      <header>
-        <div><Link href="/" className="back-link">← This week&apos;s menu</Link></div>
-        <h1>🛒 Pending Cart</h1>
-      </header>
-
-      {/* Kroger connection + send */}
-      <div className="cart-page-header">
-        <div>
-          {kroger === null ? null : kroger.connected ? (
-            <span className="kroger-status connected">✓ Kroger connected</span>
-          ) : (
-            <button className="btn btn-outline-accent" onClick={connectKroger}>Connect Kroger</button>
-          )}
-        </div>
-        <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
-          {sendStatus && (
-            <span className={sendStatus.ok === true ? "status-ok" : sendStatus.ok === false ? "status-err" : ""}>
-              {sendStatus.text}
-            </span>
-          )}
-          <button
-            className="btn btn-solid-green"
-            disabled={items.length === 0 || !kroger?.connected}
-            onClick={handleSendClick}
-          >
-            Send to Kroger{unmatchedItems.length > 0 && ` (${items.length - unmatchedItems.length}/${items.length})`}
-          </button>
-          {!clearConfirm ? (
-            <button className="btn btn-outline-muted" onClick={() => setClearConfirm(true)} disabled={items.length === 0}>
-              Clear all
+      {/* Page header */}
+      <div className="page-header">
+        <div className="page-header-row">
+          <div>
+            <h1 className="page-header">Pending Cart</h1>
+            <p className="page-subtext">Review items before sending to Kroger.</p>
+          </div>
+          <div className="page-actions">
+            {kroger?.connected
+              ? <span className="kroger-status connected">✓ Kroger connected</span>
+              : kroger !== null && <button className="btn btn-outline-accent" onClick={connectKroger}>Connect Kroger</button>
+            }
+            {sendStatus && (
+              <span className={sendStatus.ok === true ? "status-ok" : sendStatus.ok === false ? "status-err" : ""}>
+                {sendStatus.text}
+              </span>
+            )}
+            <button className="btn btn-solid-green" disabled={items.length === 0 || !kroger?.connected} onClick={handleSendClick}>
+              Send to Kroger{unmatchedItems.length > 0 && ` (${items.length - unmatchedItems.length}/${items.length})`}
             </button>
-          ) : (
-            <>
-              <button className="btn btn-solid-accent" onClick={clearCart}>Confirm clear</button>
-              <button className="btn btn-outline-muted" onClick={() => setClearConfirm(false)}>Cancel</button>
-            </>
-          )}
+            {!clearConfirm
+              ? <button className="btn btn-outline-muted" onClick={() => setClearConfirm(true)} disabled={items.length === 0}>Clear all</button>
+              : <>
+                  <button className="btn btn-solid-accent" onClick={clearCart}>Confirm clear</button>
+                  <button className="btn btn-outline-muted" onClick={() => setClearConfirm(false)}>Cancel</button>
+                </>
+            }
+          </div>
         </div>
       </div>
 
+      {/* Send confirmation */}
       {sendConfirm && (
         <div className="send-confirm">
           <p><strong>{unmatchedItems.length} item{unmatchedItems.length !== 1 ? "s" : ""} won&apos;t be sent</strong> — no Kroger product matched:</p>
@@ -258,25 +250,38 @@ export default function CartPage() {
         </div>
       )}
 
+      {/* Add item — always visible at top */}
+      <form className="add-item-card" onSubmit={addCustomItem}>
+        <input
+          type="text"
+          placeholder="Add milk, bananas, paper towels…"
+          value={addQuery}
+          onChange={e => setAddQuery(e.target.value)}
+          disabled={addLoading}
+        />
+        <button type="submit" className="btn btn-solid-accent" disabled={addLoading || !addQuery.trim()}>
+          {addLoading ? "Adding…" : "Add"}
+        </button>
+      </form>
+
+      {/* Cart items */}
       {loading ? (
         <div className="empty-state">Loading cart…</div>
       ) : items.length === 0 ? (
         <div className="empty-state">
-          Your cart is empty.<br /><br />
-          <Link href="/">Add items from this week&apos;s menu →</Link>
+          Cart is empty — add items above or from <Link href="/">this week&apos;s menu</Link>.
         </div>
       ) : (
         <div className="cart-items">
           {items.map(item => (
             <div key={item.id} className={`cart-item${!item.kroger_upc ? " cart-item-unmatched" : ""}`}>
-              <div className="cart-item-top">
-                <div>
+              <div className="cart-item-header">
+                <div style={{ flex: 1, minWidth: 0 }}>
                   <div className="cart-item-name">{item.item_name}</div>
-                  {item.kroger_product_name ? (
-                    <div className="cart-item-product">{item.kroger_product_name}</div>
-                  ) : (
-                    <div className="cart-item-no-match">⚠ No Kroger product — pick one before sending</div>
-                  )}
+                  {item.kroger_product_name
+                    ? <div className="cart-item-product">{item.kroger_product_name}</div>
+                    : <div className="cart-item-no-match">⚠ No Kroger product — pick one before sending</div>
+                  }
                   <div className="cart-item-price-row">
                     {item.kroger_promo_price != null ? (
                       <>
@@ -296,7 +301,10 @@ export default function CartPage() {
                 <button className="qty-btn" onClick={() => updateQty(item, -1)}>−</button>
                 <span className="qty-display">{item.quantity}{item.unit ? ` ${item.unit}` : ""}</span>
                 <button className="qty-btn" onClick={() => updateQty(item, 1)}>+</button>
-                <button className={`btn-change-product${!item.kroger_upc ? " btn-change-product-urgent" : ""}`} onClick={() => searchOpen === item.id ? setSearchOpen(null) : openSearch(item)}>
+                <button
+                  className={`btn-change-product${!item.kroger_upc ? " btn-change-product-urgent" : ""}`}
+                  onClick={() => searchOpen === item.id ? setSearchOpen(null) : openSearch(item)}
+                >
                   {searchOpen === item.id ? "Cancel" : item.kroger_upc ? "Change product" : "Select product"}
                 </button>
               </div>
@@ -346,21 +354,6 @@ export default function CartPage() {
             </div>
           ))}
         </div>
-      )}
-
-      {!loading && (
-        <form className="add-item-bar" onSubmit={addCustomItem}>
-          <input
-            type="text"
-            placeholder="Add an item to cart…"
-            value={addQuery}
-            onChange={e => setAddQuery(e.target.value)}
-            disabled={addLoading}
-          />
-          <button type="submit" className="btn btn-solid-accent" disabled={addLoading || !addQuery.trim()}>
-            {addLoading ? "Adding…" : "Add"}
-          </button>
-        </form>
       )}
     </div>
   )
