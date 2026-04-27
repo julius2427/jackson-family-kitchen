@@ -155,6 +155,7 @@ export default function HomePage() {
             {loading ? "↻ Refreshing…" : "↻ Refresh"}
           </button>
           <Link href="/favorites" className="btn btn-outline-gold">★ Saved Recipes</Link>
+          <Link href="/deals" className="btn btn-outline-green">🏷 Deals</Link>
           <Link href="/cart" className="btn btn-outline-muted">🛒 Cart</Link>
           <button className="btn btn-outline-muted" onClick={() => signOut()}>Sign out</button>
         </div>

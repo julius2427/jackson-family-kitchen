@@ -14,6 +14,7 @@ interface CartItem {
   kroger_upc: string | null
   kroger_product_name: string | null
   kroger_price: number | null
+  kroger_promo_price: number | null
   kroger_match_confidence: number | null
 }
 
@@ -23,6 +24,9 @@ interface Candidate {
   size: string
   upc: string
   price: number | null
+  regular_price: number | null
+  promo_price: number | null
+  category: string | null
   score: number
 }
 
@@ -136,20 +140,34 @@ export default function CartPage() {
   }
 
   async function selectCandidate(item: CartItem, candidate: Candidate) {
+    const effectivePrice = candidate.promo_price ?? candidate.regular_price ?? candidate.price
+    const regularPrice = candidate.regular_price ?? candidate.price
     await Promise.all([
       fetch(`/api/cart/${item.id}`, {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ kroger_upc: candidate.upc, kroger_product_name: candidate.name, kroger_price: candidate.price }),
+        body: JSON.stringify({
+          kroger_upc: candidate.upc,
+          kroger_product_name: candidate.name,
+          kroger_price: regularPrice,
+          kroger_promo_price: candidate.promo_price ?? null,
+        }),
       }),
       fetch(`/api/preferences/${encodeURIComponent(item.normalized_name)}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ display_name: item.item_name, upc: candidate.upc, product_name: candidate.name, price: candidate.price }),
+        body: JSON.stringify({
+          display_name: item.item_name,
+          upc: candidate.upc,
+          product_name: candidate.name,
+          price: regularPrice,
+          promo_price: candidate.promo_price ?? null,
+          category: candidate.category ?? null,
+        }),
       }),
     ])
     setItems(prev => prev.map(i => i.id === item.id
-      ? { ...i, kroger_upc: candidate.upc, kroger_product_name: candidate.name, kroger_price: candidate.price }
+      ? { ...i, kroger_upc: candidate.upc, kroger_product_name: candidate.name, kroger_price: regularPrice, kroger_promo_price: candidate.promo_price ?? null }
       : i))
     setSearchOpen(null)
     setCandidates([])
@@ -259,7 +277,17 @@ export default function CartPage() {
                   ) : (
                     <div className="cart-item-no-match">⚠ No Kroger product — pick one before sending</div>
                   )}
-                  {item.kroger_price && <div className="cart-item-price">${item.kroger_price.toFixed(2)}</div>}
+                  <div className="cart-item-price-row">
+                    {item.kroger_promo_price != null ? (
+                      <>
+                        <span className="cart-item-price sale">${item.kroger_promo_price.toFixed(2)}</span>
+                        {item.kroger_price != null && <span className="cart-item-price-regular">${item.kroger_price.toFixed(2)}</span>}
+                        <span className="sale-badge">ON SALE</span>
+                      </>
+                    ) : item.kroger_price != null ? (
+                      <span className="cart-item-price">${item.kroger_price.toFixed(2)}</span>
+                    ) : null}
+                  </div>
                 </div>
                 <button className="btn-remove-item" onClick={() => removeItem(item.id)}>✕</button>
               </div>
@@ -285,15 +313,32 @@ export default function CartPage() {
                   {searchLoading && <div style={{ fontSize: 13, color: "var(--muted)", marginTop: 6 }}>Searching…</div>}
                   {candidates.length > 0 && (
                     <div className="candidate-list">
-                      {candidates.map((c, ci) => (
-                        <div key={ci} className="candidate" onClick={() => selectCandidate(item, c)}>
-                          <div>
-                            <div className="candidate-name">{c.name}</div>
-                            <div className="candidate-meta">{[c.brand, c.size].filter(Boolean).join(" · ")}</div>
+                      {candidates.map((c, ci) => {
+                        const onSale = c.promo_price != null && c.regular_price != null && c.promo_price < c.regular_price
+                        const savings = onSale ? (c.regular_price! - c.promo_price!).toFixed(2) : null
+                        return (
+                          <div key={ci} className={`candidate${onSale ? " candidate-on-sale" : ""}`} onClick={() => selectCandidate(item, c)}>
+                            <div>
+                              <div className="candidate-name">
+                                {c.name}
+                                {onSale && <span className="sale-badge-sm">SALE</span>}
+                              </div>
+                              <div className="candidate-meta">{[c.brand, c.size].filter(Boolean).join(" · ")}</div>
+                            </div>
+                            <div className="candidate-price-col">
+                              {onSale ? (
+                                <>
+                                  <span className="candidate-price sale">${c.promo_price!.toFixed(2)}</span>
+                                  <span className="candidate-price-regular">${c.regular_price!.toFixed(2)}</span>
+                                  <span className="candidate-savings">save ${savings}</span>
+                                </>
+                              ) : (
+                                <span className="candidate-price">{c.price != null ? `$${c.price.toFixed(2)}` : "—"}</span>
+                              )}
+                            </div>
                           </div>
-                          <div className="candidate-price">{c.price != null ? `$${c.price.toFixed(2)}` : "—"}</div>
-                        </div>
-                      ))}
+                        )
+                      })}
                     </div>
                   )}
                 </div>
