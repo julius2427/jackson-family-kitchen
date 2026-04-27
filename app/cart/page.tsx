@@ -41,6 +41,7 @@ export default function CartPage() {
   const [candidates, setCandidates] = useState<Candidate[]>([])
   const [searchLoading, setSearchLoading] = useState(false)
   const [clearConfirm, setClearConfirm] = useState(false)
+  const [sendConfirm, setSendConfirm] = useState(false)
 
   useEffect(() => {
     if (status === "unauthenticated") router.push("/auth/signin")
@@ -97,7 +98,18 @@ export default function CartPage() {
     setClearConfirm(false)
   }
 
-  async function sendToKroger() {
+  const unmatchedItems = items.filter(i => !i.kroger_upc)
+
+  function handleSendClick() {
+    if (unmatchedItems.length > 0) {
+      setSendConfirm(true)
+    } else {
+      doSendToKroger()
+    }
+  }
+
+  async function doSendToKroger() {
+    setSendConfirm(false)
     setSendStatus({ text: "Sending to Kroger…" })
     try {
       const res = await fetch("/api/cart/send", { method: "POST" })
@@ -173,9 +185,9 @@ export default function CartPage() {
           <button
             className="btn btn-solid-green"
             disabled={items.length === 0 || !kroger?.connected}
-            onClick={sendToKroger}
+            onClick={handleSendClick}
           >
-            Send to Kroger
+            Send to Kroger{unmatchedItems.length > 0 && ` (${items.length - unmatchedItems.length}/${items.length})`}
           </button>
           {!clearConfirm ? (
             <button className="btn btn-outline-muted" onClick={() => setClearConfirm(true)} disabled={items.length === 0}>
@@ -189,6 +201,24 @@ export default function CartPage() {
           )}
         </div>
       </div>
+
+      {sendConfirm && (
+        <div className="send-confirm">
+          <p><strong>{unmatchedItems.length} item{unmatchedItems.length !== 1 ? "s" : ""} won&apos;t be sent</strong> — no Kroger product matched:</p>
+          <ul>
+            {unmatchedItems.map(i => (
+              <li key={i.id}>
+                {i.item_name}
+                <button className="btn-inline-link" onClick={() => { setSendConfirm(false); openSearch(i) }}>fix →</button>
+              </li>
+            ))}
+          </ul>
+          <div className="send-confirm-actions">
+            <button className="btn btn-outline-muted" onClick={() => setSendConfirm(false)}>Go back &amp; fix</button>
+            <button className="btn btn-solid-green" onClick={doSendToKroger}>Send {items.length - unmatchedItems.length} matched items anyway</button>
+          </div>
+        </div>
+      )}
 
       {loading ? (
         <div className="empty-state">Loading cart…</div>

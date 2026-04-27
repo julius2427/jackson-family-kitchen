@@ -204,3 +204,11 @@ header .updated { color: var(--muted); font-size: 12px; margin-top: 6px; font-va
   .recipe-card { padding: 16px; }
   .recipe-card h2 { font-size: 18px; }
 }
+
+/* ── Send confirmation panel ── */
+.send-confirm { background: #fff8f0; border: 1.5px solid #f5c89a; border-radius: 12px; padding: 16px 20px; margin-bottom: 20px; }
+.send-confirm p { margin: 0 0 10px; font-size: 14px; }
+.send-confirm ul { margin: 0 0 14px; padding-left: 18px; font-size: 14px; color: var(--ink); }
+.send-confirm ul li { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.send-confirm-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.btn-inline-link { background: none; border: none; color: var(--accent); font-size: 13px; cursor: pointer; padding: 0; text-decoration: underline; }
