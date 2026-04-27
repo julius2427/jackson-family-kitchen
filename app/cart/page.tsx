@@ -68,8 +68,12 @@ export default function CartPage() {
 
   async function connectKroger() {
     const res = await fetch("/api/kroger/url")
-    const { url } = await res.json()
-    window.location.href = url
+    const data = await res.json()
+    if (!data.url) {
+      alert("Failed to get Kroger auth URL: " + (data.error ?? "unknown error"))
+      return
+    }
+    window.location.href = data.url
   }
 
   async function updateQty(item: CartItem, delta: number) {
