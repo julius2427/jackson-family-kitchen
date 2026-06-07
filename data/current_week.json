@@ -1,87 +1,31 @@
 {
   "week_start": "2026-06-08",
   "week_end": "2026-06-14",
-  "generated_at": "2026-06-07T12:03:44.129370+00:00",
+  "generated_at": "2026-06-07T15:00:00+00:00",
   "meals": [
     {
       "day": "Monday",
       "date": "2026-06-08",
       "name": "Sweet and Sour Chicken Stir Fry with Rice",
-      "description": "A quick and flavorful Asian-inspired stir fry with tender chicken, bell peppers, pineapple, and a tangy homemade sauce, served over fluffy white rice. Total cook time is approximately 35 minutes.",
+      "description": "A quick, one-wok stir fry with tender chicken, bell peppers, pineapple, and a tangy homemade sauce, served over rice. Total cook time is approximately 35 minutes.",
       "prep_minutes": 15,
       "cook_minutes": 20,
       "servings": 4,
       "ingredients": [
-        {
-          "name": "boneless, skinless chicken breasts",
-          "amount": "1.5 lbs",
-          "in_pantry": false
-        },
-        {
-          "name": "white rice",
-          "amount": "1.5 cups",
-          "in_pantry": false
-        },
-        {
-          "name": "red bell pepper",
-          "amount": "1 large",
-          "in_pantry": false
-        },
-        {
-          "name": "green bell pepper",
-          "amount": "1 large",
-          "in_pantry": false
-        },
-        {
-          "name": "yellow onion",
-          "amount": "1 medium",
-          "in_pantry": false
-        },
-        {
-          "name": "canned pineapple chunks",
-          "amount": "1 (15-oz) can",
-          "in_pantry": false
-        },
-        {
-          "name": "vegetable oil",
-          "amount": "2 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "soy sauce",
-          "amount": "1/4 cup",
-          "in_pantry": true
-        },
-        {
-          "name": "rice vinegar",
-          "amount": "2 tbsp",
-          "in_pantry": false
-        },
-        {
-          "name": "sugar",
-          "amount": "2 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "ketchup",
-          "amount": "2 tbsp",
-          "in_pantry": false
-        },
-        {
-          "name": "corn starch",
-          "amount": "1 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "garlic powder",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "sesame oil",
-          "amount": "1/2 tsp",
-          "in_pantry": true
-        }
+        { "name": "boneless, skinless chicken breasts", "amount": "1.5 lbs", "in_pantry": false },
+        { "name": "white rice", "amount": "1.5 cups", "in_pantry": false },
+        { "name": "red bell pepper", "amount": "1 large", "in_pantry": false },
+        { "name": "green bell pepper", "amount": "1 large", "in_pantry": false },
+        { "name": "yellow onion", "amount": "1 medium", "in_pantry": false },
+        { "name": "canned pineapple chunks", "amount": "1 (15-oz) can", "in_pantry": false },
+        { "name": "vegetable oil", "amount": "2 tbsp", "in_pantry": true },
+        { "name": "soy sauce", "amount": "1/4 cup", "in_pantry": true },
+        { "name": "rice vinegar", "amount": "2 tbsp", "in_pantry": false },
+        { "name": "sugar", "amount": "2 tbsp", "in_pantry": true },
+        { "name": "ketchup", "amount": "2 tbsp", "in_pantry": false },
+        { "name": "corn starch", "amount": "1 tbsp", "in_pantry": true },
+        { "name": "garlic powder", "amount": "1 tsp", "in_pantry": true },
+        { "name": "sesame oil", "amount": "1/2 tsp", "in_pantry": true }
       ],
       "instructions": [
         "Cook white rice according to package directions. Set aside.",
@@ -95,402 +39,158 @@
     {
       "day": "Tuesday",
       "date": "2026-06-09",
-      "name": "Skillet Ground Beef and Rice with Zucchini",
-      "description": "A comforting and quick one-pan meal featuring seasoned ground beef, tender rice, and zucchini, all cooked together in a savory tomato sauce. Total cook time is approximately 25 minutes.",
+      "name": "Beef Tacos",
+      "description": "An easy, build-your-own taco night with seasoned ground beef and all the fixings. Fast, fun, and a guaranteed crowd-pleaser. Total cook time is approximately 25 minutes.",
       "prep_minutes": 10,
       "cook_minutes": 15,
       "servings": 4,
       "ingredients": [
-        {
-          "name": "ground beef",
-          "amount": "1 lb",
-          "in_pantry": false
-        },
-        {
-          "name": "yellow onion",
-          "amount": "1 small",
-          "in_pantry": false
-        },
-        {
-          "name": "zucchini",
-          "amount": "2 medium",
-          "in_pantry": false
-        },
-        {
-          "name": "diced tomatoes",
-          "amount": "1 (14.5-oz) can",
-          "in_pantry": true
-        },
-        {
-          "name": "beef broth",
-          "amount": "2 cups",
-          "in_pantry": true
-        },
-        {
-          "name": "white rice",
-          "amount": "1 cup",
-          "in_pantry": false
-        },
-        {
-          "name": "cumin",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "chili powder",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "garlic powder",
-          "amount": "1/2 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "olive oil",
-          "amount": "1 tbsp",
-          "in_pantry": true
-        }
+        { "name": "ground beef", "amount": "1 lb", "in_pantry": false },
+        { "name": "taco seasoning", "amount": "2 tbsp", "in_pantry": false },
+        { "name": "taco shells or tortillas", "amount": "12", "in_pantry": false },
+        { "name": "shredded cheddar cheese", "amount": "1.5 cups", "in_pantry": false },
+        { "name": "lettuce", "amount": "1 head (iceberg or romaine)", "in_pantry": false },
+        { "name": "roma tomatoes", "amount": "2", "in_pantry": false },
+        { "name": "sour cream", "amount": "1 cup", "in_pantry": false },
+        { "name": "salsa", "amount": "1 (16-oz) jar", "in_pantry": false },
+        { "name": "olive oil", "amount": "1 tbsp", "in_pantry": true }
       ],
       "instructions": [
-        "In a large skillet, heat olive oil over medium-high heat. Add ground beef and onion, breaking up the beef with a spoon, and cook until beef is browned and onion is softened, about 5-7 minutes. Drain any excess fat.",
-        "Stir in the cumin, chili powder, and garlic powder, cooking for 1 minute until fragrant.",
-        "Add diced tomatoes (undrained), beef broth, and white rice to the skillet. Bring to a boil, then reduce heat to low, cover, and simmer for 10 minutes.",
-        "Stir in the chopped zucchini, cover again, and cook for another 5-8 minutes, or until rice is tender and zucchini is cooked through. If liquid is absorbed and rice is still too firm, add a splash more broth or water. Serve hot."
+        "Heat olive oil in a skillet over medium-high heat. Add the ground beef and cook, breaking it up, until browned, about 6-7 minutes. Drain excess fat.",
+        "Stir in the taco seasoning and 1/3 cup water. Simmer 3-4 minutes until thickened.",
+        "While the beef cooks, shred the lettuce, dice the tomatoes, and warm the taco shells or tortillas according to package directions.",
+        "Set everything out and let everyone build their own tacos with beef, cheddar, lettuce, tomato, sour cream, and salsa."
       ]
     },
     {
       "day": "Wednesday",
       "date": "2026-06-10",
-      "name": "Slow Cooker French Dip Sandwiches",
-      "description": "Flavorful, tender beef roast slow-cooked in a savory broth, then shredded and served on toasted hoagie rolls with melted provolone cheese, perfect for dipping. Total cook time is approximately 6-8 hours (slow cooker).",
-      "prep_minutes": 15,
-      "cook_minutes": 360,
+      "name": "Creamy Garlic Chicken Pasta",
+      "description": "A weeknight favorite that cooks in a single pot: seared chicken and penne simmered in a creamy garlic-parmesan sauce, finished with spinach. Total cook time is approximately 35 minutes.",
+      "prep_minutes": 10,
+      "cook_minutes": 25,
       "servings": 4,
       "ingredients": [
-        {
-          "name": "boneless beef chuck roast",
-          "amount": "3 lbs",
-          "in_pantry": false
-        },
-        {
-          "name": "beef broth",
-          "amount": "4 cups",
-          "in_pantry": true
-        },
-        {
-          "name": "beef consomme",
-          "amount": "1 (10.5-oz) can",
-          "in_pantry": true
-        },
-        {
-          "name": "worcestershire sauce",
-          "amount": "2 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "garlic powder",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "dried thyme",
-          "amount": "1 tsp",
-          "in_pantry": false
-        },
-        {
-          "name": "yellow onion",
-          "amount": "1 large",
-          "in_pantry": false
-        },
-        {
-          "name": "hoagie rolls",
-          "amount": "4",
-          "in_pantry": false
-        },
-        {
-          "name": "provolone cheese slices",
-          "amount": "8",
-          "in_pantry": false
-        },
-        {
-          "name": "olive oil",
-          "amount": "1 tbsp",
-          "in_pantry": true
-        }
+        { "name": "boneless, skinless chicken breasts", "amount": "1 lb", "in_pantry": false },
+        { "name": "penne pasta", "amount": "10 oz", "in_pantry": true },
+        { "name": "chicken broth", "amount": "3 cups", "in_pantry": false },
+        { "name": "heavy cream", "amount": "1 cup", "in_pantry": false },
+        { "name": "parmesan cheese", "amount": "3/4 cup grated", "in_pantry": false },
+        { "name": "garlic", "amount": "3 cloves", "in_pantry": false },
+        { "name": "baby spinach", "amount": "2 cups", "in_pantry": false },
+        { "name": "italian seasoning", "amount": "1 tsp", "in_pantry": true },
+        { "name": "garlic powder", "amount": "1 tsp", "in_pantry": true },
+        { "name": "butter", "amount": "2 tbsp", "in_pantry": true },
+        { "name": "olive oil", "amount": "1 tbsp", "in_pantry": true }
       ],
       "instructions": [
-        "Cut chuck roast into 2-3 large pieces. Season generously with salt and pepper. Heat olive oil in a large skillet over medium-high heat and sear the beef pieces for 2-3 minutes per side until browned. Transfer seared beef to the slow cooker.",
-        "Slice the yellow onion into thin rings and scatter over the beef in the slow cooker. In a separate bowl, whisk together beef broth, beef consomme, Worcestershire sauce, garlic powder, and dried thyme. Pour the liquid mixture over the beef and onions in the slow cooker.",
-        "Cover and cook on LOW for 6-8 hours or on HIGH for 3-4 hours, until the beef is fork-tender and easily shreds.",
-        "Once cooked, remove beef from the slow cooker and shred using two forks. Return shredded beef to the broth in the slow cooker to keep it warm and moist. To serve, lightly toast hoagie rolls, fill with shredded beef, and top with provolone cheese. You can broil the sandwiches briefly to melt the cheese if desired. Serve with a small bowl of the cooking liquid (au jus) for dipping."
+        "Cut chicken into bite-sized pieces and season with garlic powder, salt, and pepper. Heat olive oil in a large pot or deep skillet over medium-high heat and cook the chicken 5-6 minutes until browned. Remove and set aside.",
+        "Reduce heat to medium. Melt the butter, add the minced garlic, and cook 30 seconds. Pour in the chicken broth and Italian seasoning and bring to a simmer.",
+        "Add the penne, stir, cover, and simmer 12-14 minutes, stirring occasionally, until the pasta is tender and most of the liquid is absorbed.",
+        "Stir in the heavy cream and parmesan until creamy. Return the chicken, add the spinach, and stir until the spinach wilts and everything is heated through. Serve."
       ]
     },
     {
       "day": "Thursday",
       "date": "2026-06-11",
-      "name": "Sheet Pan Honey Garlic Pork Chops with Roasted Carrots & Potatoes",
-      "description": "A delicious and easy sheet pan meal featuring tender pork chops coated in a sweet and savory honey garlic glaze, roasted alongside carrots and potatoes. Total cook time is approximately 40 minutes.",
-      "prep_minutes": 15,
-      "cook_minutes": 25,
+      "name": "Baked Sausage, Peppers & Potatoes",
+      "description": "A hands-off oven dinner: smoked sausage, potatoes, peppers, and onion all roasted together on one pan until browned and tender. Throw it in and relax. Total cook time is approximately 45 minutes.",
+      "prep_minutes": 10,
+      "cook_minutes": 35,
       "servings": 4,
       "ingredients": [
-        {
-          "name": "boneless pork chops",
-          "amount": "4 (approx. 1-inch thick)",
-          "in_pantry": false
-        },
-        {
-          "name": "baby carrots",
-          "amount": "1 lb",
-          "in_pantry": false
-        },
-        {
-          "name": "red potatoes",
-          "amount": "1.5 lbs",
-          "in_pantry": false
-        },
-        {
-          "name": "honey",
-          "amount": "1/4 cup",
-          "in_pantry": false
-        },
-        {
-          "name": "soy sauce",
-          "amount": "2 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "garlic powder",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "apple cider vinegar",
-          "amount": "1 tbsp",
-          "in_pantry": false
-        },
-        {
-          "name": "corn starch",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "olive oil",
-          "amount": "2 tbsp",
-          "in_pantry": true
-        }
+        { "name": "smoked sausage", "amount": "14 oz", "in_pantry": false },
+        { "name": "baby potatoes", "amount": "1.5 lbs", "in_pantry": false },
+        { "name": "red bell pepper", "amount": "1 large", "in_pantry": false },
+        { "name": "yellow onion", "amount": "1 medium", "in_pantry": false },
+        { "name": "italian seasoning", "amount": "1 tsp", "in_pantry": true },
+        { "name": "garlic powder", "amount": "1 tsp", "in_pantry": true },
+        { "name": "paprika", "amount": "1 tsp", "in_pantry": true },
+        { "name": "olive oil", "amount": "2 tbsp", "in_pantry": true }
       ],
       "instructions": [
-        "Preheat oven to 400\u00b0F (200\u00b0C). Line a large sheet pan with parchment paper for easy cleanup. Wash and chop red potatoes into 1-inch pieces.",
-        "In a large bowl, toss the chopped potatoes and baby carrots with 1 tablespoon of olive oil, salt, and pepper. Spread them in a single layer on one half of the prepared sheet pan.",
-        "In a small bowl, whisk together honey, soy sauce, garlic powder, apple cider vinegar, and corn starch to create the honey garlic sauce. Place pork chops on the other half of the sheet pan and brush generously with about half of the honey garlic sauce.",
-        "Roast for 15 minutes. Flip pork chops, stir vegetables, and brush the remaining sauce over the pork chops. Return to the oven and roast for another 10-15 minutes, or until pork chops reach an internal temperature of 145\u00b0F (63\u00b0C) and vegetables are tender. Let pork rest for a few minutes before serving."
+        "Preheat oven to 425°F (220°C) and line a large sheet pan with foil or parchment. Halve the baby potatoes, slice the sausage into coins, and cut the pepper and onion into chunks.",
+        "Pile everything on the sheet pan. Drizzle with olive oil and sprinkle with Italian seasoning, garlic powder, paprika, salt, and pepper. Toss to coat and spread in a single layer.",
+        "Roast for 30-35 minutes, tossing once halfway through, until the potatoes are fork-tender and the sausage is browned at the edges. Serve hot."
       ]
     },
     {
       "day": "Friday",
       "date": "2026-06-12",
-      "name": "Quick Chicken & Veggie Pasta",
-      "description": "A speedy and healthy pasta dish featuring tender chicken breast, colorful bell peppers, zucchini, and a rich tomato-based sauce, all tossed with penne pasta. Total cook time is approximately 25 minutes.",
+      "name": "Beef & Broccoli Stir-Fry",
+      "description": "Faster and tastier than takeout: tender beef and crisp broccoli in a glossy garlic-ginger sauce. Serve over rice. Total cook time is approximately 30 minutes.",
       "prep_minutes": 10,
-      "cook_minutes": 15,
+      "cook_minutes": 20,
       "servings": 4,
       "ingredients": [
-        {
-          "name": "boneless, skinless chicken breasts",
-          "amount": "1 lb",
-          "in_pantry": false
-        },
-        {
-          "name": "penne pasta",
-          "amount": "8 oz",
-          "in_pantry": true
-        },
-        {
-          "name": "classico pasta sauce",
-          "amount": "1 (24-oz) jar",
-          "in_pantry": true
-        },
-        {
-          "name": "red bell pepper",
-          "amount": "1 large",
-          "in_pantry": false
-        },
-        {
-          "name": "zucchini",
-          "amount": "1 medium",
-          "in_pantry": false
-        },
-        {
-          "name": "yellow onion",
-          "amount": "1 small",
-          "in_pantry": false
-        },
-        {
-          "name": "garlic powder",
-          "amount": "1/2 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "dried oregano",
-          "amount": "1/2 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "olive oil",
-          "amount": "1 tbsp",
-          "in_pantry": true
-        }
+        { "name": "sirloin or flank steak", "amount": "1 lb", "in_pantry": false },
+        { "name": "broccoli florets", "amount": "1 lb", "in_pantry": false },
+        { "name": "white rice", "amount": "1.5 cups", "in_pantry": false },
+        { "name": "garlic", "amount": "3 cloves", "in_pantry": false },
+        { "name": "fresh ginger", "amount": "1 tbsp", "in_pantry": false },
+        { "name": "brown sugar", "amount": "2 tbsp", "in_pantry": false },
+        { "name": "soy sauce", "amount": "1/3 cup", "in_pantry": true },
+        { "name": "corn starch", "amount": "1 tbsp", "in_pantry": true },
+        { "name": "sesame oil", "amount": "1 tsp", "in_pantry": true },
+        { "name": "vegetable oil", "amount": "2 tbsp", "in_pantry": true }
       ],
       "instructions": [
-        "Cook penne pasta according to package directions until al dente. Drain and set aside, reserving 1/2 cup of pasta water.",
-        "Dice chicken breast into 1-inch pieces. Chop bell pepper, zucchini, and onion into similar-sized pieces.",
-        "Heat olive oil in a large skillet or Dutch oven over medium-high heat. Add chicken and cook for 5-7 minutes until lightly browned and cooked through. Remove chicken from the skillet and set aside.",
-        "Add bell pepper, zucchini, and onion to the skillet. Saut\u00e9 for 5-7 minutes until vegetables are tender-crisp. Stir in garlic powder and dried oregano, cooking for 30 seconds until fragrant.",
-        "Return chicken to the skillet. Pour in the pasta sauce and reserved pasta water. Bring to a simmer, then add the cooked penne pasta. Toss everything together until well combined and heated through. Serve immediately."
+        "Cook white rice according to package directions. Thinly slice the steak against the grain. In a small bowl, whisk together the soy sauce, brown sugar, corn starch, sesame oil, minced garlic, grated ginger, and 1/3 cup water to make the sauce.",
+        "Heat 1 tablespoon vegetable oil in a large skillet over high heat. Add the beef in a single layer and sear 2-3 minutes until browned. Remove and set aside.",
+        "Add the remaining oil and the broccoli with a splash of water. Stir-fry 4-5 minutes until bright green and tender-crisp.",
+        "Return the beef, pour in the sauce, and toss 1-2 minutes until the sauce thickens and coats everything. Serve over the rice."
       ]
     },
     {
       "day": "Saturday",
       "date": "2026-06-13",
-      "name": "Creamy Baked Mac and Cheese with Ham",
-      "description": "A classic, comforting baked macaroni and cheese made extra hearty with diced ham, featuring a rich, cheesy sauce and a golden-brown top. Total cook time is approximately 60 minutes.",
-      "prep_minutes": 20,
-      "cook_minutes": 40,
+      "name": "Smothered Pork Chops & Gravy",
+      "description": "Comfort food, fast: pan-seared pork chops smothered in a rich onion gravy. Great over rice. Total cook time is approximately 35 minutes.",
+      "prep_minutes": 10,
+      "cook_minutes": 25,
       "servings": 4,
       "ingredients": [
-        {
-          "name": "cavatappi pasta",
-          "amount": "12 oz",
-          "in_pantry": true
-        },
-        {
-          "name": "diced cooked ham",
-          "amount": "1.5 cups",
-          "in_pantry": false
-        },
-        {
-          "name": "milk",
-          "amount": "3 cups",
-          "in_pantry": false
-        },
-        {
-          "name": "sharp cheddar cheese",
-          "amount": "2.5 cups shredded",
-          "in_pantry": false
-        },
-        {
-          "name": "gruyere cheese",
-          "amount": "0.5 cup shredded",
-          "in_pantry": false
-        },
-        {
-          "name": "butter",
-          "amount": "1/4 cup",
-          "in_pantry": true
-        },
-        {
-          "name": "all-purpose flour",
-          "amount": "1/4 cup",
-          "in_pantry": true
-        },
-        {
-          "name": "dijon mustard",
-          "amount": "1 tsp",
-          "in_pantry": false
-        },
-        {
-          "name": "nutmeg",
-          "amount": "pinch",
-          "in_pantry": false
-        },
-        {
-          "name": "panko bread crumbs",
-          "amount": "1/2 cup",
-          "in_pantry": true
-        }
+        { "name": "boneless pork chops", "amount": "4 (approx. 3/4-inch thick)", "in_pantry": false },
+        { "name": "yellow onion", "amount": "1 large", "in_pantry": false },
+        { "name": "chicken broth", "amount": "1.5 cups", "in_pantry": false },
+        { "name": "white rice", "amount": "1.5 cups", "in_pantry": false },
+        { "name": "all-purpose flour", "amount": "1/4 cup", "in_pantry": true },
+        { "name": "garlic powder", "amount": "1 tsp", "in_pantry": true },
+        { "name": "paprika", "amount": "1 tsp", "in_pantry": true },
+        { "name": "butter", "amount": "2 tbsp", "in_pantry": true },
+        { "name": "olive oil", "amount": "1 tbsp", "in_pantry": true }
       ],
       "instructions": [
-        "Preheat oven to 375\u00b0F (190\u00b0C). Cook cavatappi pasta according to package directions until al dente. Drain and set aside.",
-        "In a large saucepan or Dutch oven, melt butter over medium heat. Whisk in flour and cook for 1-2 minutes, stirring constantly, to create a roux. Gradually whisk in the milk until smooth and thickened, about 5 minutes.",
-        "Remove from heat and stir in 2 cups of the shredded cheddar cheese and all the Gruyere cheese until melted and smooth. Stir in Dijon mustard, nutmeg, salt, and pepper. Add the cooked pasta and diced ham to the cheese sauce and stir to combine.",
-        "Pour the mixture into a 9x13-inch baking dish. Top with the remaining 1/2 cup shredded cheddar cheese and panko bread crumbs.",
-        "Bake for 20-25 minutes, or until bubbly and the top is golden brown. Let rest for 5 minutes before serving."
+        "Cook white rice according to package directions. Pat the pork chops dry and season both sides with garlic powder, paprika, salt, and pepper, then lightly dredge in about half the flour.",
+        "Heat olive oil in a large skillet over medium-high heat. Sear the pork chops 3-4 minutes per side until golden. Remove and set aside.",
+        "Add the butter and thinly sliced onion to the skillet and cook 4-5 minutes until softened. Sprinkle in the remaining flour and stir 1 minute, then slowly whisk in the chicken broth until smooth and thickened.",
+        "Return the pork chops to the skillet, spoon gravy over them, reduce heat to low, and simmer 8-10 minutes until cooked through (145°F). Serve over the rice with plenty of gravy."
       ]
     },
     {
       "day": "Sunday",
       "date": "2026-06-14",
       "name": "Sheet Pan Shrimp Fajitas",
-      "description": "Quick and easy sheet pan fajitas with juicy shrimp, colorful bell peppers, and onions, all seasoned to perfection and served with warm tortillas and fresh lime. Total cook time is approximately 45 minutes.",
+      "description": "Quick and easy sheet pan fajitas with juicy shrimp, colorful bell peppers, and onions, seasoned to perfection and served with warm tortillas and fresh lime. Total cook time is approximately 45 minutes.",
       "prep_minutes": 20,
       "cook_minutes": 25,
       "servings": 4,
       "ingredients": [
-        {
-          "name": "large shrimp",
-          "amount": "1.5 lbs, peeled and deveined",
-          "in_pantry": false
-        },
-        {
-          "name": "red bell pepper",
-          "amount": "1 large",
-          "in_pantry": false
-        },
-        {
-          "name": "yellow bell pepper",
-          "amount": "1 large",
-          "in_pantry": false
-        },
-        {
-          "name": "yellow onion",
-          "amount": "1 large",
-          "in_pantry": false
-        },
-        {
-          "name": "tortillas",
-          "amount": "8-12 (corn or flour)",
-          "in_pantry": false
-        },
-        {
-          "name": "limes",
-          "amount": "2",
-          "in_pantry": false
-        },
-        {
-          "name": "olive oil",
-          "amount": "2 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "chili powder",
-          "amount": "1.5 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "cumin",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "garlic powder",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "paprika",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "dried oregano",
-          "amount": "1/2 tsp",
-          "in_pantry": true
-        }
+        { "name": "large shrimp", "amount": "1.5 lbs, peeled and deveined", "in_pantry": false },
+        { "name": "red bell pepper", "amount": "1 large", "in_pantry": false },
+        { "name": "yellow bell pepper", "amount": "1 large", "in_pantry": false },
+        { "name": "yellow onion", "amount": "1 large", "in_pantry": false },
+        { "name": "tortillas", "amount": "8-12 (corn or flour)", "in_pantry": false },
+        { "name": "limes", "amount": "2", "in_pantry": false },
+        { "name": "olive oil", "amount": "2 tbsp", "in_pantry": true },
+        { "name": "chili powder", "amount": "1.5 tsp", "in_pantry": true },
+        { "name": "cumin", "amount": "1 tsp", "in_pantry": true },
+        { "name": "garlic powder", "amount": "1 tsp", "in_pantry": true },
+        { "name": "paprika", "amount": "1 tsp", "in_pantry": true },
+        { "name": "dried oregano", "amount": "1/2 tsp", "in_pantry": true }
       ],
       "instructions": [
-        "Preheat oven to 400\u00b0F (200\u00b0C). Line a large sheet pan with parchment paper. Slice bell peppers and onion into thin strips.",
+        "Preheat oven to 400°F (200°C). Line a large sheet pan with parchment paper. Slice bell peppers and onion into thin strips.",
         "In a large bowl, combine the sliced bell peppers and onion with 1 tablespoon of olive oil, 1 tsp chili powder, 1/2 tsp cumin, 1/2 tsp garlic powder, 1/2 tsp paprika, and 1/4 tsp oregano. Toss to coat evenly. Spread vegetables in a single layer on the prepared sheet pan.",
         "Roast the vegetables for 15 minutes. While vegetables are roasting, pat the shrimp dry. In the same bowl, combine the shrimp with the remaining 1 tablespoon olive oil, 1/2 tsp chili powder, 1/2 tsp cumin, 1/2 tsp garlic powder, 1/2 tsp paprika, and 1/4 tsp oregano. Toss to coat.",
         "After 15 minutes, remove the sheet pan from the oven. Add the seasoned shrimp to the sheet pan, tossing gently with the vegetables. Return to the oven and roast for another 8-10 minutes, or until the shrimp are pink and cooked through and the vegetables are tender. Warm tortillas according to package directions.",
@@ -499,218 +199,38 @@
     }
   ],
   "shopping_list": [
-    {
-      "name": "boneless, skinless chicken breasts",
-      "amount": "2.5 lbs",
-      "for_meals": [
-        "Monday",
-        "Friday"
-      ]
-    },
-    {
-      "name": "white rice",
-      "amount": "2.5 cups",
-      "for_meals": [
-        "Monday",
-        "Tuesday"
-      ]
-    },
-    {
-      "name": "red bell pepper",
-      "amount": "3 large",
-      "for_meals": [
-        "Monday",
-        "Friday",
-        "Sunday"
-      ]
-    },
-    {
-      "name": "green bell pepper",
-      "amount": "1 large",
-      "for_meals": [
-        "Monday"
-      ]
-    },
-    {
-      "name": "yellow onion",
-      "amount": "4 large",
-      "for_meals": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Friday",
-        "Sunday"
-      ]
-    },
-    {
-      "name": "canned pineapple chunks",
-      "amount": "1 (15-oz) can",
-      "for_meals": [
-        "Monday"
-      ]
-    },
-    {
-      "name": "rice vinegar",
-      "amount": "2 tbsp",
-      "for_meals": [
-        "Monday"
-      ]
-    },
-    {
-      "name": "ketchup",
-      "amount": "2 tbsp",
-      "for_meals": [
-        "Monday"
-      ]
-    },
-    {
-      "name": "ground beef",
-      "amount": "1 lb",
-      "for_meals": [
-        "Tuesday"
-      ]
-    },
-    {
-      "name": "zucchini",
-      "amount": "3 medium",
-      "for_meals": [
-        "Tuesday",
-        "Friday"
-      ]
-    },
-    {
-      "name": "boneless beef chuck roast",
-      "amount": "3 lbs",
-      "for_meals": [
-        "Wednesday"
-      ]
-    },
-    {
-      "name": "dried thyme",
-      "amount": "1 tsp",
-      "for_meals": [
-        "Wednesday"
-      ]
-    },
-    {
-      "name": "hoagie rolls",
-      "amount": "4",
-      "for_meals": [
-        "Wednesday"
-      ]
-    },
-    {
-      "name": "provolone cheese slices",
-      "amount": "8",
-      "for_meals": [
-        "Wednesday"
-      ]
-    },
-    {
-      "name": "boneless pork chops",
-      "amount": "4 (approx. 1-inch thick)",
-      "for_meals": [
-        "Thursday"
-      ]
-    },
-    {
-      "name": "baby carrots",
-      "amount": "1 lb",
-      "for_meals": [
-        "Thursday"
-      ]
-    },
-    {
-      "name": "red potatoes",
-      "amount": "1.5 lbs",
-      "for_meals": [
-        "Thursday"
-      ]
-    },
-    {
-      "name": "honey",
-      "amount": "1/4 cup",
-      "for_meals": [
-        "Thursday"
-      ]
-    },
-    {
-      "name": "apple cider vinegar",
-      "amount": "1 tbsp",
-      "for_meals": [
-        "Thursday"
-      ]
-    },
-    {
-      "name": "diced cooked ham",
-      "amount": "1.5 cups",
-      "for_meals": [
-        "Saturday"
-      ]
-    },
-    {
-      "name": "milk",
-      "amount": "3 cups",
-      "for_meals": [
-        "Saturday"
-      ]
-    },
-    {
-      "name": "sharp cheddar cheese",
-      "amount": "2.5 cups shredded",
-      "for_meals": [
-        "Saturday"
-      ]
-    },
-    {
-      "name": "gruyere cheese",
-      "amount": "0.5 cup shredded",
-      "for_meals": [
-        "Saturday"
-      ]
-    },
-    {
-      "name": "dijon mustard",
-      "amount": "1 tsp",
-      "for_meals": [
-        "Saturday"
-      ]
-    },
-    {
-      "name": "nutmeg",
-      "amount": "pinch",
-      "for_meals": [
-        "Saturday"
-      ]
-    },
-    {
-      "name": "large shrimp",
-      "amount": "1.5 lbs, peeled and deveined",
-      "for_meals": [
-        "Sunday"
-      ]
-    },
-    {
-      "name": "yellow bell pepper",
-      "amount": "1 large",
-      "for_meals": [
-        "Sunday"
-      ]
-    },
-    {
-      "name": "tortillas",
-      "amount": "8-12 (corn or flour)",
-      "for_meals": [
-        "Sunday"
-      ]
-    },
-    {
-      "name": "limes",
-      "amount": "2",
-      "for_meals": [
-        "Sunday"
-      ]
-    }
+    { "name": "boneless, skinless chicken breasts", "amount": "2.5 lbs", "for_meals": ["Monday", "Wednesday"] },
+    { "name": "ground beef", "amount": "1 lb", "for_meals": ["Tuesday"] },
+    { "name": "sirloin or flank steak", "amount": "1 lb", "for_meals": ["Friday"] },
+    { "name": "smoked sausage", "amount": "14 oz", "for_meals": ["Thursday"] },
+    { "name": "boneless pork chops", "amount": "4 (approx. 3/4-inch thick)", "for_meals": ["Saturday"] },
+    { "name": "large shrimp", "amount": "1.5 lbs, peeled and deveined", "for_meals": ["Sunday"] },
+    { "name": "white rice", "amount": "4.5 cups", "for_meals": ["Monday", "Friday", "Saturday"] },
+    { "name": "red bell pepper", "amount": "3 large", "for_meals": ["Monday", "Thursday", "Sunday"] },
+    { "name": "green bell pepper", "amount": "1 large", "for_meals": ["Monday"] },
+    { "name": "yellow bell pepper", "amount": "1 large", "for_meals": ["Sunday"] },
+    { "name": "yellow onion", "amount": "4 (mixed sizes)", "for_meals": ["Monday", "Thursday", "Saturday", "Sunday"] },
+    { "name": "broccoli florets", "amount": "1 lb", "for_meals": ["Friday"] },
+    { "name": "baby potatoes", "amount": "1.5 lbs", "for_meals": ["Thursday"] },
+    { "name": "baby spinach", "amount": "2 cups", "for_meals": ["Wednesday"] },
+    { "name": "lettuce", "amount": "1 head (iceberg or romaine)", "for_meals": ["Tuesday"] },
+    { "name": "roma tomatoes", "amount": "2", "for_meals": ["Tuesday"] },
+    { "name": "garlic", "amount": "6 cloves (1 head)", "for_meals": ["Wednesday", "Friday"] },
+    { "name": "fresh ginger", "amount": "1 tbsp (small knob)", "for_meals": ["Friday"] },
+    { "name": "chicken broth", "amount": "4.5 cups", "for_meals": ["Wednesday", "Saturday"] },
+    { "name": "heavy cream", "amount": "1 cup", "for_meals": ["Wednesday"] },
+    { "name": "parmesan cheese", "amount": "3/4 cup grated", "for_meals": ["Wednesday"] },
+    { "name": "shredded cheddar cheese", "amount": "1.5 cups", "for_meals": ["Tuesday"] },
+    { "name": "sour cream", "amount": "1 cup", "for_meals": ["Tuesday"] },
+    { "name": "salsa", "amount": "1 (16-oz) jar", "for_meals": ["Tuesday"] },
+    { "name": "taco seasoning", "amount": "2 tbsp", "for_meals": ["Tuesday"] },
+    { "name": "taco shells or tortillas", "amount": "12", "for_meals": ["Tuesday"] },
+    { "name": "brown sugar", "amount": "2 tbsp", "for_meals": ["Friday"] },
+    { "name": "canned pineapple chunks", "amount": "1 (15-oz) can", "for_meals": ["Monday"] },
+    { "name": "rice vinegar", "amount": "2 tbsp", "for_meals": ["Monday"] },
+    { "name": "ketchup", "amount": "2 tbsp", "for_meals": ["Monday"] },
+    { "name": "tortillas", "amount": "8-12 (corn or flour)", "for_meals": ["Sunday"] },
+    { "name": "limes", "amount": "2", "for_meals": ["Sunday"] }
   ],
   "_kroger_note": "skipped: 'KROGER_CLIENT_ID'",
   "cart_webhook_url": "https://script.google.com/macros/s/AKfycbyxaboTokRQZ6RQe9jOgIBPy8biw1q9b1t8I77XZWSxcIFyQpz64seqIZFqPD31C1aW/exec"
