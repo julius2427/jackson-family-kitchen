@@ -1,783 +1,849 @@
 {
-  "week_start": "2026-07-13",
-  "week_end": "2026-07-19",
-  "generated_at": "2026-07-06T18:20:02.629735+00:00",
+  "week_start": "2026-07-20",
+  "week_end": "2026-07-26",
+  "generated_at": "2026-07-19T12:00:13.581191+00:00",
   "meals": [
     {
       "day": "Monday",
-      "date": "2026-07-13",
-      "name": "Sheet Pan Pork Sausage & Sweet Potatoes with Bell Peppers",
-      "description": "A flavorful and easy sheet pan dinner featuring sliced pork sausage, sweet potatoes, and bell peppers, ready in about 40 minutes.",
-      "prep_minutes": 15,
-      "cook_minutes": 25,
-      "servings": 4,
-      "ingredients": [
-        {
-          "name": "Smoked Pork Sausage",
-          "amount": "1 lb",
-          "in_pantry": false
-        },
-        {
-          "name": "Sweet Potatoes",
-          "amount": "2 large",
-          "in_pantry": false
-        },
-        {
-          "name": "Bell Peppers",
-          "amount": "3 (any color)",
-          "in_pantry": false
-        },
-        {
-          "name": "Yellow Onion",
-          "amount": "1 large",
-          "in_pantry": false
-        },
-        {
-          "name": "Olive Oil",
-          "amount": "2 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Dried Oregano",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Paprika",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Garlic Powder",
-          "amount": "1/2 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Salt",
-          "amount": "1/2 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Black Pepper",
-          "amount": "1/4 tsp",
-          "in_pantry": true
-        }
-      ],
-      "instructions": [
-        "Preheat oven to 400\u00b0F (200\u00b0C). Line a large sheet pan with parchment paper for easy cleanup.",
-        "Slice the smoked sausage into 1/2-inch thick rounds. Peel and chop sweet potatoes and bell peppers into 1-inch pieces. Slice the onion into wedges.",
-        "On the prepared sheet pan, combine sausage, sweet potatoes, bell peppers, and onion. Drizzle with olive oil, then sprinkle with dried oregano, paprika, garlic powder, salt, and black pepper. Toss well to coat all ingredients evenly.",
-        "Spread the mixture in a single layer on the sheet pan and roast for 25-30 minutes, or until sweet potatoes are tender and lightly caramelized, and sausage is slightly browned. Stir halfway through cooking. Serve hot."
-      ]
-    },
-    {
-      "day": "Tuesday",
-      "date": "2026-07-14",
-      "name": "Quick Baked Chicken Taquitos with Refried Beans and Rice",
-      "description": "Crispy, kid-friendly baked chicken taquitos served with creamy refried beans and fluffy white rice, ready in about 40 minutes.",
-      "prep_minutes": 20,
-      "cook_minutes": 20,
-      "servings": 4,
-      "ingredients": [
-        {
-          "name": "Chicken Breast",
-          "amount": "1.5 lbs",
-          "in_pantry": false
-        },
-        {
-          "name": "Corn Tortillas",
-          "amount": "12-16 count package",
-          "in_pantry": false
-        },
-        {
-          "name": "Cream Cheese",
-          "amount": "4 oz",
-          "in_pantry": false
-        },
-        {
-          "name": "Shredded Cheddar Cheese",
-          "amount": "1 cup",
-          "in_pantry": false
-        },
-        {
-          "name": "Taco Seasoning Mix",
-          "amount": "1 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Vegetable Oil",
-          "amount": "2 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Refried Beans",
-          "amount": "1 can (15 oz)",
-          "in_pantry": false
-        },
-        {
-          "name": "White Rice (uncooked)",
-          "amount": "1 cup",
-          "in_pantry": false
-        },
-        {
-          "name": "Chicken Broth",
-          "amount": "2 cups",
-          "in_pantry": true
-        },
-        {
-          "name": "Salt",
-          "amount": "1/2 tsp",
-          "in_pantry": true
-        }
-      ],
-      "instructions": [
-        "Preheat oven to 400\u00b0F (200\u00b0C). Poach chicken breasts in simmering water or broth until cooked through, then shred finely. In a bowl, combine shredded chicken, cream cheese, shredded cheddar cheese, and taco seasoning. Mix well.",
-        "Warm corn tortillas slightly in the microwave (about 10-15 seconds per stack) to make them pliable. Fill each tortilla with about 2 tablespoons of the chicken mixture, roll tightly, and place seam-side down on a baking sheet.",
-        "Brush the tops of the taquitos lightly with vegetable oil. Bake for 15-20 minutes, or until golden brown and crispy. Meanwhile, prepare the sides.",
-        "In a small saucepan, heat the refried beans over medium-low heat until warm, stirring occasionally. Cook white rice according to package directions, using chicken broth instead of water and adding 1/2 tsp salt. Serve the crispy taquitos with warm refried beans and rice."
-      ]
-    },
-    {
-      "day": "Wednesday",
-      "date": "2026-07-15",
-      "name": "Slow Cooker Hearty Beef Pot Roast with Carrots & Potatoes",
-      "description": "Tender beef chuck roast cooked low and slow with vegetables in a savory broth, perfect for a comforting weeknight meal with minimal active cooking time.",
-      "prep_minutes": 15,
-      "cook_minutes": 480,
-      "servings": 4,
-      "ingredients": [
-        {
-          "name": "Boneless Beef Chuck Roast",
-          "amount": "3 lbs",
-          "in_pantry": false
-        },
-        {
-          "name": "Beef Broth",
-          "amount": "3 cups",
-          "in_pantry": true
-        },
-        {
-          "name": "Worcestershire Sauce",
-          "amount": "1 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Diced Tomatoes (canned)",
-          "amount": "1 can (14.5 oz)",
-          "in_pantry": true
-        },
-        {
-          "name": "Yellow Onion",
-          "amount": "1 large",
-          "in_pantry": false
-        },
-        {
-          "name": "Carrots",
-          "amount": "1 lb",
-          "in_pantry": false
-        },
-        {
-          "name": "Russet Potatoes",
-          "amount": "2 lbs",
-          "in_pantry": false
-        },
-        {
-          "name": "Garlic Cloves",
-          "amount": "4 cloves",
-          "in_pantry": false
-        },
-        {
-          "name": "Dried Thyme",
-          "amount": "1 tsp",
-          "in_pantry": false
-        },
-        {
-          "name": "Bay Leaves",
-          "amount": "2",
-          "in_pantry": false
-        },
-        {
-          "name": "Cornstarch",
-          "amount": "2 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Water",
-          "amount": "2 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Salt",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Black Pepper",
-          "amount": "1/2 tsp",
-          "in_pantry": true
-        }
-      ],
-      "instructions": [
-        "Trim excess fat from the beef chuck roast. Season the roast generously with salt and pepper.",
-        "Place the roast in the slow cooker. Add beef broth, Worcestershire sauce, and diced tomatoes. Chop the onion, carrots, and potatoes into large chunks (approx. 1.5 inches) and mince the garlic. Add these vegetables to the slow cooker along with dried thyme and bay leaves.",
-        "Cover and cook on low for 6-8 hours or on high for 3-4 hours, until the beef is fork-tender.",
-        "Remove the roast and vegetables from the slow cooker and set aside. In a small bowl, whisk together cornstarch and water to create a slurry. Stir the slurry into the liquid in the slow cooker. Cook on high for an additional 15-20 minutes, or until the gravy has thickened. Shred the beef, discard bay leaves, and serve with the thickened gravy and vegetables."
-      ]
-    },
-    {
-      "day": "Thursday",
-      "date": "2026-07-16",
-      "name": "Speedy Chicken Fried Rice",
-      "description": "A quick and flavorful chicken fried rice, perfect for using up leftover chicken and rice, ready in under 30 minutes.",
-      "prep_minutes": 10,
-      "cook_minutes": 20,
-      "servings": 4,
-      "ingredients": [
-        {
-          "name": "Cooked Chicken (shredded or diced)",
-          "amount": "1.5 cups",
-          "in_pantry": false
-        },
-        {
-          "name": "Day-Old Cooked White Rice",
-          "amount": "3 cups",
-          "in_pantry": false
-        },
-        {
-          "name": "Eggs",
-          "amount": "2 large",
-          "in_pantry": false
-        },
-        {
-          "name": "Frozen Mixed Vegetables (peas, carrots, corn)",
-          "amount": "1 cup",
-          "in_pantry": false
-        },
-        {
-          "name": "Soy Sauce",
-          "amount": "3 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Sesame Oil",
-          "amount": "1 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Oyster Sauce",
-          "amount": "1 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Garlic Cloves",
-          "amount": "2 cloves",
-          "in_pantry": false
-        },
-        {
-          "name": "Fresh Ginger",
-          "amount": "1 tsp (grated)",
-          "in_pantry": false
-        },
-        {
-          "name": "Green Onions",
-          "amount": "2 stalks",
-          "in_pantry": false
-        },
-        {
-          "name": "Vegetable Oil",
-          "amount": "1 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Salt",
-          "amount": "to taste",
-          "in_pantry": true
-        },
-        {
-          "name": "Black Pepper",
-          "amount": "to taste",
-          "in_pantry": true
-        }
-      ],
-      "instructions": [
-        "In a small bowl, whisk eggs with a pinch of salt and pepper. Mince garlic and grate ginger. Slice green onions, separating white and green parts.",
-        "Heat vegetable oil in a large skillet or wok over medium-high heat. Add the whisked eggs and scramble until just set, then remove from skillet and set aside.",
-        "Add a little more oil if needed. Add minced garlic, grated ginger, and white parts of green onions to the skillet; stir-fry for 30 seconds until fragrant. Add frozen mixed vegetables and stir-fry for 2-3 minutes.",
-        "Add day-old cooked rice and cooked chicken to the skillet. Break up any clumps of rice. Pour in soy sauce, sesame oil, and oyster sauce. Stir-fry for 5-7 minutes, ensuring everything is heated through and well combined. Stir in the scrambled eggs and green parts of the green onions. Serve immediately."
-      ]
-    },
-    {
-      "day": "Friday",
-      "date": "2026-07-17",
-      "name": "Quick Lemon Herb Cod Skillet with Roasted Asparagus",
-      "description": "A light and healthy weeknight meal featuring pan-seared cod fillets and tender roasted asparagus with bright lemon and herbs, ready in under 30 minutes.",
-      "prep_minutes": 10,
-      "cook_minutes": 15,
-      "servings": 4,
-      "ingredients": [
-        {
-          "name": "Cod Fillets",
-          "amount": "1.5 lbs",
-          "in_pantry": false
-        },
-        {
-          "name": "Asparagus",
-          "amount": "1 bunch (1 lb)",
-          "in_pantry": false
-        },
-        {
-          "name": "Lemon",
-          "amount": "1",
-          "in_pantry": false
-        },
-        {
-          "name": "Olive Oil",
-          "amount": "3 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Garlic Powder",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Dried Dill",
-          "amount": "1 tsp",
-          "in_pantry": false
-        },
-        {
-          "name": "Dried Parsley",
-          "amount": "1 tsp",
-          "in_pantry": false
-        },
-        {
-          "name": "Salt",
-          "amount": "to taste",
-          "in_pantry": true
-        },
-        {
-          "name": "Black Pepper",
-          "amount": "to taste",
-          "in_pantry": true
-        }
-      ],
-      "instructions": [
-        "Preheat oven to 400\u00b0F (200\u00b0C). Trim the woody ends off the asparagus. Toss asparagus with 1 tablespoon olive oil, salt, and pepper on a baking sheet. Roast for 10-12 minutes, until tender-crisp.",
-        "While asparagus roasts, pat cod fillets dry with paper towels. Season both sides with garlic powder, dried dill, dried parsley, salt, and pepper.",
-        "Heat 2 tablespoons olive oil in a large non-stick skillet over medium-high heat. Once hot, carefully place cod fillets in the skillet. Sear for 3-4 minutes per side, or until the fish is flaky and cooked through (internal temperature 145\u00b0F / 63\u00b0C).",
-        "Remove cod from skillet. Squeeze fresh lemon juice over the cooked cod and roasted asparagus. Serve immediately."
-      ]
-    },
-    {
-      "day": "Saturday",
-      "date": "2026-07-18",
-      "name": "Creamy Tomato & Sausage Penne Pasta",
-      "description": "A rich and comforting pasta dish with ground pork sausage in a creamy tomato sauce, perfect for a cozy weekend dinner.",
+      "date": "2026-07-20",
+      "name": "Homemade Crispy Chicken Nuggets with Roasted Broccoli and Creamy Macaroni & Cheese",
+      "description": "Crispy baked chicken nuggets served with tender roasted broccoli florets and a rich, creamy stovetop macaroni and cheese. Total cook time: 45 minutes.",
       "prep_minutes": 15,
       "cook_minutes": 30,
       "servings": 4,
       "ingredients": [
         {
-          "name": "Penne Pasta",
-          "amount": "1 lb",
-          "in_pantry": true
-        },
-        {
-          "name": "Ground Pork Sausage",
-          "amount": "1 lb",
+          "name": "boneless, skinless chicken breasts",
+          "amount": "1.5 pounds",
           "in_pantry": false
         },
         {
-          "name": "Yellow Onion",
-          "amount": "1 large",
-          "in_pantry": false
-        },
-        {
-          "name": "Garlic Cloves",
-          "amount": "3 cloves",
-          "in_pantry": false
-        },
-        {
-          "name": "Diced Tomatoes (canned)",
-          "amount": "1 can (14.5 oz)",
-          "in_pantry": true
-        },
-        {
-          "name": "Tomato Basil Pasta Sauce",
+          "name": "panko bread crumbs",
           "amount": "1 cup",
           "in_pantry": true
         },
         {
-          "name": "Heavy Cream",
-          "amount": "1/2 cup",
-          "in_pantry": false
-        },
-        {
-          "name": "Grated Parmesan Cheese",
-          "amount": "1/2 cup",
-          "in_pantry": false
-        },
-        {
-          "name": "Fresh Basil (optional)",
-          "amount": "1/4 cup (chopped)",
-          "in_pantry": false
-        },
-        {
-          "name": "Olive Oil",
-          "amount": "1 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Salt",
-          "amount": "to taste",
-          "in_pantry": true
-        },
-        {
-          "name": "Black Pepper",
-          "amount": "to taste",
-          "in_pantry": true
-        }
-      ],
-      "instructions": [
-        "Cook penne pasta according to package directions in salted boiling water. Drain and set aside, reserving 1/2 cup of pasta water.",
-        "While pasta cooks, heat olive oil in a large skillet or Dutch oven over medium-high heat. Add ground pork sausage and cook, breaking it apart with a spoon, until browned and cooked through. Drain excess grease and remove sausage from the pan, setting aside.",
-        "Add chopped onion to the skillet and saut\u00e9 for 3-5 minutes until softened. Add minced garlic and cook for another minute until fragrant. Stir in diced tomatoes (undrained) and pasta sauce; bring to a simmer.",
-        "Reduce heat to medium-low, stir in heavy cream and cooked sausage. Simmer for 5-7 minutes, allowing flavors to meld. Stir in cooked penne pasta and parmesan cheese, adding reserved pasta water if the sauce is too thick. Season with salt and pepper to taste. Garnish with fresh basil if desired and serve hot."
-      ]
-    },
-    {
-      "day": "Sunday",
-      "date": "2026-07-19",
-      "name": "Classic Meatloaf with Roasted Red Potatoes and Saut\u00e9ed Green Beans",
-      "description": "A comforting, protein-rich meatloaf served with tender roasted red potatoes and fresh saut\u00e9ed green beans, a perfect Sunday family dinner.",
-      "prep_minutes": 20,
-      "cook_minutes": 60,
-      "servings": 4,
-      "ingredients": [
-        {
-          "name": "Ground Beef (80/20)",
-          "amount": "1.5 lbs",
-          "in_pantry": false
-        },
-        {
-          "name": "Panko Bread Crumbs",
-          "amount": "1/2 cup",
-          "in_pantry": true
-        },
-        {
-          "name": "Large Egg",
-          "amount": "1",
-          "in_pantry": false
-        },
-        {
-          "name": "Milk",
+          "name": "grated Parmesan cheese",
           "amount": "1/4 cup",
           "in_pantry": false
         },
         {
-          "name": "Yellow Onion",
-          "amount": "1/2 cup (finely chopped)",
+          "name": "garlic powder",
+          "amount": "1 teaspoon",
+          "in_pantry": true
+        },
+        {
+          "name": "paprika",
+          "amount": "1 teaspoon",
+          "in_pantry": true
+        },
+        {
+          "name": "eggs",
+          "amount": "2 large",
           "in_pantry": false
         },
         {
-          "name": "Garlic Cloves",
-          "amount": "2 cloves (minced)",
+          "name": "broccoli florets",
+          "amount": "1 pound",
           "in_pantry": false
         },
         {
-          "name": "Ketchup",
+          "name": "cavatappi or elbow macaroni",
+          "amount": "12 ounces",
+          "in_pantry": true
+        },
+        {
+          "name": "milk",
+          "amount": "2 cups",
+          "in_pantry": false
+        },
+        {
+          "name": "sharp cheddar cheese, shredded",
+          "amount": "2 cups",
+          "in_pantry": false
+        },
+        {
+          "name": "cream cheese",
+          "amount": "2 ounces",
+          "in_pantry": false
+        },
+        {
+          "name": "Dijon mustard",
+          "amount": "1 teaspoon",
+          "in_pantry": false
+        }
+      ],
+      "instructions": [
+        "Step 1: Preheat oven to 400\u00b0F (200\u00b0C). Line a baking sheet with parchment paper or foil and lightly grease. Cut chicken breasts into 1-inch pieces. In a shallow dish, combine panko, Parmesan, garlic powder, paprika, salt, and pepper. In another shallow dish, whisk eggs.",
+        "Step 2: Dip each chicken piece into the egg, then dredge in the panko mixture, pressing to coat thoroughly. Place coated nuggets on the prepared baking sheet. Toss broccoli florets with olive oil, salt, and pepper on a separate part of the baking sheet or a second sheet. Bake for 18-22 minutes, flipping nuggets halfway through, until chicken is cooked through (internal temperature 165\u00b0F/74\u00b0C) and broccoli is tender-crisp.",
+        "Step 3: While chicken and broccoli bake, cook pasta according to package directions. Drain well. In the same pot, melt 2 tablespoons butter over medium heat. Whisk in 2 tablespoons flour and cook for 1 minute to create a roux. Gradually whisk in milk until smooth, bring to a simmer, and cook for 2-3 minutes until slightly thickened.",
+        "Step 4: Reduce heat to low. Stir in shredded cheddar cheese, cream cheese, and Dijon mustard until melted and smooth. Season with salt and pepper to taste. Add the cooked pasta to the cheese sauce and stir to combine. Serve crispy chicken nuggets, roasted broccoli, and creamy macaroni & cheese immediately."
+      ]
+    },
+    {
+      "day": "Tuesday",
+      "date": "2026-07-21",
+      "name": "Quick Korean-Inspired Ground Beef & Kimchi Bowls",
+      "description": "A flavorful and quick ground beef and kimchi bowl served over steamed rice, garnished with green onions and sesame seeds. Total cook time: 25 minutes.",
+      "prep_minutes": 10,
+      "cook_minutes": 15,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "ground beef (80/20)",
+          "amount": "1 pound",
+          "in_pantry": false
+        },
+        {
+          "name": "garlic, minced",
+          "amount": "3 cloves",
+          "in_pantry": false
+        },
+        {
+          "name": "ginger, grated",
+          "amount": "1 tablespoon",
+          "in_pantry": false
+        },
+        {
+          "name": "soy sauce",
+          "amount": "1/4 cup",
+          "in_pantry": true
+        },
+        {
+          "name": "brown sugar",
+          "amount": "2 tablespoons",
+          "in_pantry": false
+        },
+        {
+          "name": "gochujang (Korean chili paste)",
+          "amount": "1 tablespoon",
+          "in_pantry": false
+        },
+        {
+          "name": "sesame oil",
+          "amount": "1 teaspoon",
+          "in_pantry": true
+        },
+        {
+          "name": "cooked white rice",
+          "amount": "4 cups",
+          "in_pantry": false
+        },
+        {
+          "name": "kimchi",
+          "amount": "1 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "scallions, sliced",
+          "amount": "2",
+          "in_pantry": false
+        },
+        {
+          "name": "sesame seeds",
+          "amount": "1 tablespoon",
+          "in_pantry": false
+        }
+      ],
+      "instructions": [
+        "Step 1: Prepare the sauce: In a small bowl, whisk together soy sauce, brown sugar, gochujang, and sesame oil. Set aside.",
+        "Step 2: Heat a large skillet or wok over medium-high heat. Add ground beef and cook, breaking it up with a spoon, until browned and no longer pink. Drain any excess grease.",
+        "Step 3: Add minced garlic and grated ginger to the skillet. Cook for 1 minute until fragrant. Pour in the prepared sauce and bring to a simmer, stirring constantly, for 2-3 minutes until the sauce slightly thickens and coats the beef.",
+        "Step 4: Divide cooked white rice among four bowls. Top with the Korean ground beef, a generous spoonful of kimchi, sliced scallions, and a sprinkle of sesame seeds. Serve immediately."
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "date": "2026-07-22",
+      "name": "Slow Cooker Tangy Pulled Chicken Sliders with Quick Pickled Red Onions",
+      "description": "Tender, tangy shredded chicken cooked in a slow cooker, served on slider buns with crisp, quick pickled red onions. Active cook time: 20 minutes; Slow cook time: 4-6 hours.",
+      "prep_minutes": 15,
+      "cook_minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "boneless, skinless chicken thighs",
+          "amount": "2 pounds",
+          "in_pantry": false
+        },
+        {
+          "name": "chicken broth",
+          "amount": "1 cup",
+          "in_pantry": true
+        },
+        {
+          "name": "apple cider vinegar",
           "amount": "1/2 cup",
           "in_pantry": false
         },
         {
-          "name": "Worcestershire Sauce",
-          "amount": "1 tbsp",
+          "name": "Worcestershire sauce",
+          "amount": "1 tablespoon",
           "in_pantry": true
         },
         {
-          "name": "Dried Parsley",
-          "amount": "1 tbsp",
+          "name": "brown sugar",
+          "amount": "2 tablespoons",
           "in_pantry": false
         },
         {
-          "name": "Salt",
-          "amount": "1 tsp",
+          "name": "garlic powder",
+          "amount": "1 teaspoon",
           "in_pantry": true
         },
         {
-          "name": "Black Pepper",
-          "amount": "1/2 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Red Potatoes",
-          "amount": "1.5 lbs",
+          "name": "smoked paprika",
+          "amount": "1 teaspoon",
           "in_pantry": false
         },
         {
-          "name": "Green Beans",
-          "amount": "1 lb",
+          "name": "red onion",
+          "amount": "1 medium",
           "in_pantry": false
         },
         {
-          "name": "Olive Oil",
-          "amount": "2 tbsp",
+          "name": "white vinegar",
+          "amount": "1/2 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "granulated sugar",
+          "amount": "1 tablespoon",
           "in_pantry": true
+        },
+        {
+          "name": "slider buns",
+          "amount": "8-12",
+          "in_pantry": false
         }
       ],
       "instructions": [
-        "Preheat oven to 350\u00b0F (175\u00b0C). In a large bowl, combine ground beef, panko bread crumbs, egg, milk, chopped onion, minced garlic, 1/4 cup ketchup, Worcestershire sauce, dried parsley, salt, and black pepper. Mix gently until just combined, being careful not to overmix.",
-        "Form the meat mixture into a loaf shape (approximately 9x5 inches) and place it in a loaf pan or on a foil-lined baking sheet. Spread the remaining 1/4 cup ketchup evenly over the top of the meatloaf.",
-        "Roast red potatoes: Wash and quarter the red potatoes. Toss with 1 tbsp olive oil, salt, and pepper on a separate baking sheet. Place in the oven with the meatloaf. Bake meatloaf and potatoes for 50-60 minutes, or until the meatloaf reaches an internal temperature of 160\u00b0F (71\u00b0C) and potatoes are tender.",
-        "While meatloaf rests for 10 minutes after baking, heat 1 tbsp olive oil in a skillet over medium heat. Add green beans and saut\u00e9 for 5-7 minutes until tender-crisp. Season with salt and pepper. Slice meatloaf and serve alongside roasted potatoes and green beans."
+        "Step 1: Place chicken thighs in the slow cooker. In a bowl, whisk together chicken broth, apple cider vinegar, Worcestershire sauce, brown sugar, garlic powder, smoked paprika, salt, and pepper. Pour over the chicken.",
+        "Step 2: Cover and cook on low for 4-6 hours or on high for 2-3 hours, until the chicken is easily shredded with two forks. While chicken cooks, prepare quick pickled red onions: Thinly slice the red onion. In a small jar or bowl, combine white vinegar, 1/2 cup water, granulated sugar, and a pinch of salt. Stir until sugar dissolves. Add sliced red onion, cover, and refrigerate for at least 30 minutes.",
+        "Step 3: Once chicken is cooked, remove it from the slow cooker and shred it using two forks. Return the shredded chicken to the slow cooker and stir it into the cooking liquid, ensuring it's well coated. Keep warm on the 'warm' setting.",
+        "Step 4: Toast slider buns if desired. Serve the tangy pulled chicken on slider buns, topped with a few slices of the quick pickled red onions. Offer any additional condiments as preferred."
+      ]
+    },
+    {
+      "day": "Thursday",
+      "date": "2026-07-23",
+      "name": "Skillet Pork & Pineapple Fried Rice",
+      "description": "A vibrant and flavorful fried rice dish with tender pork, sweet pineapple chunks, and colorful vegetables, all cooked in one skillet. Total cook time: 35 minutes.",
+      "prep_minutes": 15,
+      "cook_minutes": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "pork tenderloin",
+          "amount": "1 pound",
+          "in_pantry": false
+        },
+        {
+          "name": "soy sauce",
+          "amount": "3 tablespoons",
+          "in_pantry": true
+        },
+        {
+          "name": "sesame oil",
+          "amount": "1 tablespoon",
+          "in_pantry": true
+        },
+        {
+          "name": "cornstarch",
+          "amount": "1 tablespoon",
+          "in_pantry": true
+        },
+        {
+          "name": "vegetable oil",
+          "amount": "2 tablespoons",
+          "in_pantry": true
+        },
+        {
+          "name": "garlic, minced",
+          "amount": "2 cloves",
+          "in_pantry": false
+        },
+        {
+          "name": "ginger, grated",
+          "amount": "1 teaspoon",
+          "in_pantry": false
+        },
+        {
+          "name": "carrots, diced",
+          "amount": "1 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "frozen peas",
+          "amount": "1/2 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "canned pineapple chunks, drained",
+          "amount": "1 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "day-old cooked white rice",
+          "amount": "4 cups",
+          "in_pantry": false
+        },
+        {
+          "name": "eggs",
+          "amount": "2 large",
+          "in_pantry": false
+        },
+        {
+          "name": "scallions, sliced",
+          "amount": "2",
+          "in_pantry": false
+        }
+      ],
+      "instructions": [
+        "Step 1: Slice pork tenderloin into small, bite-sized pieces. In a bowl, toss the pork with 1 tablespoon soy sauce, 1 teaspoon sesame oil, and cornstarch. Set aside to marinate for 10 minutes.",
+        "Step 2: Heat 1 tablespoon vegetable oil in a large skillet or wok over medium-high heat. Add the marinated pork and cook until browned on all sides and cooked through, about 5-7 minutes. Remove pork from skillet and set aside.",
+        "Step 3: Add the remaining 1 tablespoon vegetable oil to the skillet. Add minced garlic and grated ginger and cook for 30 seconds until fragrant. Add diced carrots and cook for 3-4 minutes until slightly tender. Stir in frozen peas and drained pineapple chunks, cooking for another 2 minutes.",
+        "Step 4: Push vegetables to one side of the skillet. Crack eggs into the empty side and scramble until cooked through. Add the day-old cooked rice to the skillet. Pour in the remaining 2 tablespoons soy sauce and 2 teaspoons sesame oil. Stir everything together, breaking up any clumps of rice, and cook for 3-5 minutes, until rice is heated through and slightly crispy. Return cooked pork to the skillet and stir to combine. Garnish with sliced scallions and serve hot."
+      ]
+    },
+    {
+      "day": "Friday",
+      "date": "2026-07-24",
+      "name": "Sheet Pan Lemon-Herb Shrimp and Mediterranean Veggies",
+      "description": "Quick and easy sheet pan meal featuring succulent shrimp and colorful Mediterranean vegetables (zucchini, bell peppers, cherry tomatoes) seasoned with lemon and herbs. Total cook time: 30 minutes.",
+      "prep_minutes": 15,
+      "cook_minutes": 15,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "large shrimp, peeled and deveined (tails on or off)",
+          "amount": "1.5 pounds",
+          "in_pantry": false
+        },
+        {
+          "name": "zucchini, sliced",
+          "amount": "2 medium",
+          "in_pantry": false
+        },
+        {
+          "name": "red bell pepper, sliced",
+          "amount": "1 large",
+          "in_pantry": false
+        },
+        {
+          "name": "yellow bell pepper, sliced",
+          "amount": "1 large",
+          "in_pantry": false
+        },
+        {
+          "name": "cherry tomatoes",
+          "amount": "1 pint",
+          "in_pantry": false
+        },
+        {
+          "name": "lemon, juiced and zested",
+          "amount": "1",
+          "in_pantry": false
+        },
+        {
+          "name": "garlic, minced",
+          "amount": "3 cloves",
+          "in_pantry": false
+        },
+        {
+          "name": "dried oregano",
+          "amount": "1 teaspoon",
+          "in_pantry": true
+        },
+        {
+          "name": "fresh parsley, chopped",
+          "amount": "1/4 cup",
+          "in_pantry": false
+        }
+      ],
+      "instructions": [
+        "Step 1: Preheat oven to 400\u00b0F (200\u00b0C). Line a large baking sheet with parchment paper or foil. In a large bowl, combine sliced zucchini, bell peppers, and cherry tomatoes. Drizzle with 2 tablespoons olive oil, half of the lemon juice, minced garlic, dried oregano, salt, and pepper. Toss to coat evenly.",
+        "Step 2: Spread the seasoned vegetables in a single layer on one half of the prepared baking sheet. Roast for 10 minutes.",
+        "Step 3: While vegetables roast, pat shrimp dry. Add shrimp to the same bowl you used for veggies (no need to clean). Drizzle shrimp with 1 tablespoon olive oil, the remaining lemon juice, lemon zest, salt, and pepper. Toss to coat.",
+        "Step 4: After 10 minutes, remove the baking sheet from the oven. Add the seasoned shrimp to the other half of the baking sheet, spreading in a single layer. Return to the oven and roast for another 8-12 minutes, or until shrimp are pink and cooked through and vegetables are tender. Garnish with fresh chopped parsley before serving."
+      ]
+    },
+    {
+      "day": "Saturday",
+      "date": "2026-07-25",
+      "name": "Hearty Baked Ziti with Meat Sauce and Mozzarella",
+      "description": "A classic Italian-American comfort food featuring baked ziti pasta layered with a rich ground beef and tomato sauce, ricotta, and plenty of melted mozzarella cheese. Total cook time: 70 minutes.",
+      "prep_minutes": 20,
+      "cook_minutes": 50,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "ziti or penne pasta",
+          "amount": "1 pound",
+          "in_pantry": true
+        },
+        {
+          "name": "ground beef (80/20)",
+          "amount": "1 pound",
+          "in_pantry": false
+        },
+        {
+          "name": "yellow onion, chopped",
+          "amount": "1 medium",
+          "in_pantry": false
+        },
+        {
+          "name": "garlic, minced",
+          "amount": "4 cloves",
+          "in_pantry": false
+        },
+        {
+          "name": "canned crushed tomatoes",
+          "amount": "28 ounces",
+          "in_pantry": false
+        },
+        {
+          "name": "canned diced tomatoes",
+          "amount": "14.5 ounces",
+          "in_pantry": true
+        },
+        {
+          "name": "tomato paste",
+          "amount": "2 tablespoons",
+          "in_pantry": false
+        },
+        {
+          "name": "dried oregano",
+          "amount": "1 teaspoon",
+          "in_pantry": true
+        },
+        {
+          "name": "dried basil",
+          "amount": "1 teaspoon",
+          "in_pantry": false
+        },
+        {
+          "name": "beef broth",
+          "amount": "1/2 cup",
+          "in_pantry": true
+        },
+        {
+          "name": "ricotta cheese",
+          "amount": "15 ounces",
+          "in_pantry": false
+        },
+        {
+          "name": "mozzarella cheese, shredded",
+          "amount": "3 cups",
+          "in_pantry": false
+        },
+        {
+          "name": "Parmesan cheese, grated",
+          "amount": "1/2 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "fresh parsley, chopped",
+          "amount": "2 tablespoons",
+          "in_pantry": false
+        }
+      ],
+      "instructions": [
+        "Step 1: Preheat oven to 375\u00b0F (190\u00b0C). Cook ziti or penne pasta according to package directions until al dente. Drain and set aside. In a large pot or Dutch oven, brown ground beef over medium-high heat. Drain excess fat. Add chopped yellow onion and cook until softened, about 5 minutes. Stir in minced garlic and cook for 1 minute until fragrant.",
+        "Step 2: Add crushed tomatoes, diced tomatoes, tomato paste, dried oregano, dried basil, salt, and pepper to the pot. Pour in beef broth. Bring the sauce to a simmer, then reduce heat to low, cover, and let it cook for at least 15 minutes, stirring occasionally, to allow flavors to meld.",
+        "Step 3: In a separate bowl, combine ricotta cheese with 1 cup of shredded mozzarella, 1/4 cup of grated Parmesan, 1 tablespoon chopped fresh parsley, salt, and pepper. In a large baking dish (9x13 inch), spread a thin layer of meat sauce on the bottom. Add half of the cooked pasta, then dollop half of the ricotta mixture over the pasta, followed by half of the remaining meat sauce and 1 cup of mozzarella cheese.",
+        "Step 4: Repeat the layers: remaining pasta, remaining ricotta mixture, remaining meat sauce, and top with the final 1 cup of mozzarella cheese and 1/4 cup Parmesan. Bake for 25-30 minutes, or until the cheese is bubbly and golden brown. Let stand for 5-10 minutes before serving, garnished with remaining fresh parsley."
+      ]
+    },
+    {
+      "day": "Sunday",
+      "date": "2026-07-26",
+      "name": "Classic Pan-Seared Pork Chops with Creamy Mushroom Sauce and Mashed Potatoes",
+      "description": "Juicy pan-seared pork chops finished with a rich and creamy mushroom sauce, served alongside fluffy homemade mashed potatoes. Total cook time: 45 minutes.",
+      "prep_minutes": 15,
+      "cook_minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "boneless pork chops, 1-inch thick",
+          "amount": "4",
+          "in_pantry": false
+        },
+        {
+          "name": "baby bella mushrooms, sliced",
+          "amount": "8 ounces",
+          "in_pantry": false
+        },
+        {
+          "name": "yellow onion, diced",
+          "amount": "1/2 medium",
+          "in_pantry": false
+        },
+        {
+          "name": "garlic, minced",
+          "amount": "2 cloves",
+          "in_pantry": false
+        },
+        {
+          "name": "beef broth",
+          "amount": "1/2 cup",
+          "in_pantry": true
+        },
+        {
+          "name": "heavy cream",
+          "amount": "1/2 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "Dijon mustard",
+          "amount": "1 teaspoon",
+          "in_pantry": false
+        },
+        {
+          "name": "fresh parsley, chopped",
+          "amount": "2 tablespoons",
+          "in_pantry": false
+        },
+        {
+          "name": "potatoes (Russet or Yukon Gold), peeled and quartered",
+          "amount": "2 pounds",
+          "in_pantry": false
+        },
+        {
+          "name": "milk",
+          "amount": "1/2 cup",
+          "in_pantry": false
+        }
+      ],
+      "instructions": [
+        "Step 1: Pat pork chops dry and season generously with salt and pepper. Heat 1 tablespoon olive oil and 1 tablespoon butter in a large skillet over medium-high heat. Sear pork chops for 4-5 minutes per side, until golden brown and cooked through (internal temperature 145\u00b0F/63\u00b0C). Remove pork chops from skillet and set aside on a plate, tented with foil.",
+        "Step 2: While pork cooks, prepare mashed potatoes: Place peeled and quartered potatoes in a large pot and cover with cold, salted water. Bring to a boil, then reduce heat and simmer for 15-20 minutes, or until fork-tender. Drain well.",
+        "Step 3: To the same skillet used for pork, add a little more butter if needed. Add sliced mushrooms and diced onion. Cook over medium heat for 5-7 minutes, until mushrooms are browned and onions are softened. Add minced garlic and cook for 1 minute until fragrant.",
+        "Step 4: Pour in beef broth and scrape up any browned bits from the bottom of the skillet. Bring to a simmer and cook for 2-3 minutes until slightly reduced. Stir in heavy cream and Dijon mustard, simmer for another 2-3 minutes until sauce thickens. Return pork chops to the skillet to coat in sauce. For mashed potatoes, mash potatoes with 1/2 cup milk and 2 tablespoons butter, season with salt and pepper until creamy. Garnish pork chops with fresh parsley and serve with mashed potatoes."
       ]
     }
   ],
   "shopping_list": [
     {
-      "name": "Smoked Pork Sausage",
-      "amount": "1 lb",
+      "name": "boneless, skinless chicken breasts",
+      "amount": "1.5 pounds",
       "for_meals": [
         "Monday"
       ]
     },
     {
-      "name": "Sweet Potatoes",
-      "amount": "2 large",
-      "for_meals": [
-        "Monday"
-      ]
-    },
-    {
-      "name": "Bell Peppers (any color)",
-      "amount": "3",
-      "for_meals": [
-        "Monday"
-      ]
-    },
-    {
-      "name": "Yellow Onion",
-      "amount": "3 large",
+      "name": "grated Parmesan cheese",
+      "amount": "3/4 cup",
       "for_meals": [
         "Monday",
-        "Wednesday",
+        "Saturday"
+      ]
+    },
+    {
+      "name": "eggs",
+      "amount": "4 large",
+      "for_meals": [
+        "Monday",
+        "Thursday"
+      ]
+    },
+    {
+      "name": "broccoli florets",
+      "amount": "1 pound",
+      "for_meals": [
+        "Monday"
+      ]
+    },
+    {
+      "name": "milk",
+      "amount": "2.5 cups",
+      "for_meals": [
+        "Monday",
+        "Sunday"
+      ]
+    },
+    {
+      "name": "sharp cheddar cheese, shredded",
+      "amount": "2 cups",
+      "for_meals": [
+        "Monday"
+      ]
+    },
+    {
+      "name": "cream cheese",
+      "amount": "2 ounces",
+      "for_meals": [
+        "Monday"
+      ]
+    },
+    {
+      "name": "Dijon mustard",
+      "amount": "2 teaspoons",
+      "for_meals": [
+        "Monday",
+        "Sunday"
+      ]
+    },
+    {
+      "name": "ground beef (80/20)",
+      "amount": "2 pounds",
+      "for_meals": [
+        "Tuesday",
+        "Saturday"
+      ]
+    },
+    {
+      "name": "garlic",
+      "amount": "14 cloves",
+      "for_meals": [
+        "Tuesday",
+        "Thursday",
+        "Friday",
         "Saturday",
         "Sunday"
       ]
     },
     {
-      "name": "Chicken Breast",
-      "amount": "1.5 lbs",
+      "name": "ginger",
+      "amount": "1 tablespoon + 1 teaspoon",
       "for_meals": [
         "Tuesday",
         "Thursday"
       ]
     },
     {
-      "name": "Corn Tortillas",
-      "amount": "1 package (12-16 count)",
+      "name": "brown sugar",
+      "amount": "4 tablespoons",
+      "for_meals": [
+        "Tuesday",
+        "Wednesday"
+      ]
+    },
+    {
+      "name": "gochujang (Korean chili paste)",
+      "amount": "1 tablespoon",
       "for_meals": [
         "Tuesday"
       ]
     },
     {
-      "name": "Cream Cheese",
-      "amount": "4 oz",
+      "name": "cooked white rice",
+      "amount": "8 cups",
       "for_meals": [
-        "Tuesday"
+        "Tuesday",
+        "Thursday"
       ]
     },
     {
-      "name": "Shredded Cheddar Cheese",
+      "name": "kimchi",
       "amount": "1 cup",
       "for_meals": [
         "Tuesday"
       ]
     },
     {
-      "name": "Refried Beans",
-      "amount": "1 can (15 oz)",
-      "for_meals": [
-        "Tuesday"
-      ]
-    },
-    {
-      "name": "White Rice (uncooked)",
-      "amount": "2 cups",
+      "name": "scallions",
+      "amount": "4",
       "for_meals": [
         "Tuesday",
         "Thursday"
       ]
     },
     {
-      "name": "Boneless Beef Chuck Roast",
-      "amount": "3 lbs",
+      "name": "sesame seeds",
+      "amount": "1 tablespoon",
+      "for_meals": [
+        "Tuesday"
+      ]
+    },
+    {
+      "name": "boneless, skinless chicken thighs",
+      "amount": "2 pounds",
       "for_meals": [
         "Wednesday"
       ]
     },
     {
-      "name": "Carrots",
-      "amount": "1 lb",
+      "name": "apple cider vinegar",
+      "amount": "1/2 cup",
       "for_meals": [
         "Wednesday"
       ]
     },
     {
-      "name": "Russet Potatoes",
-      "amount": "2 lbs",
+      "name": "smoked paprika",
+      "amount": "1 teaspoon",
       "for_meals": [
         "Wednesday"
       ]
     },
     {
-      "name": "Garlic Head",
-      "amount": "2 heads",
-      "for_meals": [
-        "Wednesday",
-        "Thursday",
-        "Saturday",
-        "Sunday"
-      ]
-    },
-    {
-      "name": "Dried Thyme",
-      "amount": "1 jar",
+      "name": "red onion",
+      "amount": "1 medium",
       "for_meals": [
         "Wednesday"
       ]
     },
     {
-      "name": "Bay Leaves",
-      "amount": "1 small package",
+      "name": "white vinegar",
+      "amount": "1/2 cup",
       "for_meals": [
         "Wednesday"
       ]
     },
     {
-      "name": "Eggs",
-      "amount": "1 dozen",
+      "name": "slider buns",
+      "amount": "8-12",
       "for_meals": [
-        "Thursday",
-        "Sunday"
+        "Wednesday"
       ]
     },
     {
-      "name": "Frozen Mixed Vegetables",
-      "amount": "1 bag (12-16 oz)",
+      "name": "pork tenderloin",
+      "amount": "1 pound",
       "for_meals": [
         "Thursday"
       ]
     },
     {
-      "name": "Fresh Ginger Root",
-      "amount": "1 small knob",
+      "name": "carrots, diced",
+      "amount": "1 cup",
       "for_meals": [
         "Thursday"
       ]
     },
     {
-      "name": "Green Onions",
-      "amount": "1 bunch",
+      "name": "frozen peas",
+      "amount": "1/2 cup",
       "for_meals": [
         "Thursday"
       ]
     },
     {
-      "name": "Cod Fillets",
-      "amount": "1.5 lbs",
+      "name": "canned pineapple chunks, drained",
+      "amount": "1 cup",
+      "for_meals": [
+        "Thursday"
+      ]
+    },
+    {
+      "name": "large shrimp, peeled and deveined",
+      "amount": "1.5 pounds",
       "for_meals": [
         "Friday"
       ]
     },
     {
-      "name": "Asparagus",
-      "amount": "1 bunch (1 lb)",
+      "name": "zucchini, sliced",
+      "amount": "2 medium",
       "for_meals": [
         "Friday"
       ]
     },
     {
-      "name": "Lemon",
+      "name": "red bell pepper",
+      "amount": "1 large",
+      "for_meals": [
+        "Friday"
+      ]
+    },
+    {
+      "name": "yellow bell pepper",
+      "amount": "1 large",
+      "for_meals": [
+        "Friday"
+      ]
+    },
+    {
+      "name": "cherry tomatoes",
+      "amount": "1 pint",
+      "for_meals": [
+        "Friday"
+      ]
+    },
+    {
+      "name": "lemon",
       "amount": "1",
       "for_meals": [
         "Friday"
       ]
     },
     {
-      "name": "Dried Dill",
-      "amount": "1 jar",
-      "for_meals": [
-        "Friday"
-      ]
-    },
-    {
-      "name": "Dried Parsley",
-      "amount": "1 jar",
+      "name": "fresh parsley",
+      "amount": "1/4 cup + 2 tablespoons + 2 tablespoons",
       "for_meals": [
         "Friday",
+        "Saturday",
         "Sunday"
       ]
     },
     {
-      "name": "Ground Pork Sausage",
-      "amount": "1 lb",
+      "name": "canned crushed tomatoes",
+      "amount": "28 ounces",
       "for_meals": [
         "Saturday"
       ]
     },
     {
-      "name": "Heavy Cream",
+      "name": "yellow onion, chopped",
+      "amount": "1.5 medium",
+      "for_meals": [
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    {
+      "name": "tomato paste",
+      "amount": "2 tablespoons",
+      "for_meals": [
+        "Saturday"
+      ]
+    },
+    {
+      "name": "dried basil",
+      "amount": "1 teaspoon",
+      "for_meals": [
+        "Saturday"
+      ]
+    },
+    {
+      "name": "ricotta cheese",
+      "amount": "15 ounces",
+      "for_meals": [
+        "Saturday"
+      ]
+    },
+    {
+      "name": "mozzarella cheese, shredded",
+      "amount": "3 cups",
+      "for_meals": [
+        "Saturday"
+      ]
+    },
+    {
+      "name": "boneless pork chops, 1-inch thick",
+      "amount": "4",
+      "for_meals": [
+        "Sunday"
+      ]
+    },
+    {
+      "name": "baby bella mushrooms, sliced",
+      "amount": "8 ounces",
+      "for_meals": [
+        "Sunday"
+      ]
+    },
+    {
+      "name": "heavy cream",
       "amount": "1/2 cup",
       "for_meals": [
-        "Saturday"
-      ]
-    },
-    {
-      "name": "Grated Parmesan Cheese",
-      "amount": "1/2 cup",
-      "for_meals": [
-        "Saturday"
-      ]
-    },
-    {
-      "name": "Fresh Basil",
-      "amount": "1 small bunch",
-      "for_meals": [
-        "Saturday"
-      ]
-    },
-    {
-      "name": "Ground Beef (80/20)",
-      "amount": "1.5 lbs",
-      "for_meals": [
         "Sunday"
       ]
     },
     {
-      "name": "Milk",
-      "amount": "1/4 cup",
-      "for_meals": [
-        "Sunday"
-      ]
-    },
-    {
-      "name": "Ketchup",
-      "amount": "1 bottle",
-      "for_meals": [
-        "Sunday"
-      ]
-    },
-    {
-      "name": "Red Potatoes",
-      "amount": "1.5 lbs",
-      "for_meals": [
-        "Sunday"
-      ]
-    },
-    {
-      "name": "Green Beans",
-      "amount": "1 lb",
+      "name": "potatoes (Russet or Yukon Gold), peeled and quartered",
+      "amount": "2 pounds",
       "for_meals": [
         "Sunday"
       ]
