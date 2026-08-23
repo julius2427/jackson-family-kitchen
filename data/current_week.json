@@ -1,521 +1,524 @@
 {
-  "week_start": "2026-08-10",
-  "week_end": "2026-08-16",
-  "generated_at": "2026-08-06T02:50:13.054398+00:00",
+  "week_start": "2026-08-24",
+  "week_end": "2026-08-30",
+  "generated_at": "2026-08-23T12:21:58.500229+00:00",
   "meals": [
     {
       "day": "Monday",
-      "date": "2026-08-10",
-      "name": "Sheet Pan Lemon Herb Chicken & Roasted Potatoes",
-      "description": "Tender chicken and crispy potatoes roasted with lemon and herbs, ready in about 40 minutes.",
-      "prep_minutes": 15,
+      "date": "2026-08-24",
+      "name": "Honey-Garlic Chicken Stir-fry Bowls",
+      "description": "Quick and flavorful chicken and broccoli stir-fry served over steamed rice, ready in about 35 minutes.",
+      "prep_minutes": 10,
       "cook_minutes": 25,
       "servings": 4,
       "ingredients": [
         {
-          "name": "Boneless, Skinless Chicken Breasts",
+          "name": "boneless, skinless chicken breasts",
           "amount": "1.5 lbs",
           "in_pantry": false
         },
         {
-          "name": "Yellow Potatoes",
-          "amount": "1.5 lbs",
+          "name": "broccoli florets",
+          "amount": "4 cups",
           "in_pantry": false
         },
         {
-          "name": "Lemon",
-          "amount": "1",
+          "name": "soy sauce",
+          "amount": "1/4 cup",
+          "in_pantry": true
+        },
+        {
+          "name": "honey",
+          "amount": "2 tbsp",
           "in_pantry": false
         },
         {
-          "name": "Garlic",
-          "amount": "4 cloves",
+          "name": "rice vinegar",
+          "amount": "1 tbsp",
           "in_pantry": false
         },
         {
-          "name": "Dried Oregano",
+          "name": "sesame oil",
           "amount": "1 tsp",
           "in_pantry": true
         },
         {
-          "name": "Paprika",
+          "name": "garlic, minced",
+          "amount": "3 cloves",
+          "in_pantry": false
+        },
+        {
+          "name": "ginger, grated",
           "amount": "1 tsp",
+          "in_pantry": false
+        },
+        {
+          "name": "cornstarch",
+          "amount": "1 tbsp",
           "in_pantry": true
         },
         {
-          "name": "Olive Oil",
+          "name": "water",
           "amount": "2 tbsp",
           "in_pantry": true
         },
         {
-          "name": "Salt",
-          "amount": "to taste",
+          "name": "olive oil",
+          "amount": "1 tbsp",
           "in_pantry": true
         },
         {
-          "name": "Black Pepper",
-          "amount": "to taste",
-          "in_pantry": true
-        },
-        {
-          "name": "Fresh Parsley",
-          "amount": "2 tbsp",
+          "name": "cooked rice",
+          "amount": "for serving",
           "in_pantry": false
         }
       ],
       "instructions": [
-        "Preheat oven to 400\u00b0F (200\u00b0C). Line a large sheet pan with parchment paper.",
-        "Cut potatoes into 1-inch pieces. Mince garlic. In a large bowl, toss potatoes with 1 tbsp olive oil, half the minced garlic, 1/2 tsp oregano, 1/2 tsp paprika, salt, and pepper. Spread on half of the sheet pan.",
-        "Slice chicken breasts into 1-inch thick strips. In the same bowl, toss chicken with remaining 1 tbsp olive oil, remaining garlic, 1/2 tsp oregano, 1/2 tsp paprika, juice of 1/2 lemon, salt, and pepper. Spread on the other half of the sheet pan.",
-        "Roast for 20-25 minutes, or until chicken is cooked through (internal temperature 165\u00b0F / 74\u00b0C) and potatoes are tender and lightly browned. Squeeze remaining 1/2 lemon over the chicken and potatoes. Garnish with fresh parsley if desired before serving."
+        "Step 1: Slice chicken breasts into 1-inch pieces. In a small bowl, whisk together soy sauce, honey, rice vinegar, sesame oil, minced garlic, and grated ginger. In a separate small bowl, whisk cornstarch with water to create a slurry.",
+        "Step 2: Heat olive oil in a large skillet or wok over medium-high heat. Add chicken and cook for 5-7 minutes, until browned and cooked through. Remove chicken from skillet and set aside.",
+        "Step 3: Add broccoli florets to the hot skillet. Stir-fry for 3-5 minutes until tender-crisp. Return chicken to the skillet.",
+        "Step 4: Pour the sauce mixture over the chicken and broccoli. Bring to a simmer, then stir in the cornstarch slurry. Cook for 1-2 minutes, stirring constantly, until the sauce thickens. Serve immediately over cooked rice."
       ]
     },
     {
       "day": "Tuesday",
-      "date": "2026-08-11",
-      "name": "Speedy Ground Beef Tacos",
-      "description": "Flavorful ground beef tacos with classic toppings, ready in under 25 minutes for a quick weeknight meal.",
+      "date": "2026-08-25",
+      "name": "Sheet Pan Lemon Herb Salmon & Asparagus",
+      "description": "A healthy and easy sheet pan meal featuring tender salmon fillets and roasted asparagus with bright lemon and herbs, ready in under 40 minutes.",
+      "prep_minutes": 10,
+      "cook_minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "salmon fillets",
+          "amount": "4 (6 oz each)",
+          "in_pantry": false
+        },
+        {
+          "name": "asparagus spears",
+          "amount": "1 lb",
+          "in_pantry": false
+        },
+        {
+          "name": "lemon, thinly sliced",
+          "amount": "1",
+          "in_pantry": false
+        },
+        {
+          "name": "fresh dill, chopped",
+          "amount": "2 tbsp",
+          "in_pantry": false
+        },
+        {
+          "name": "garlic powder",
+          "amount": "1 tsp",
+          "in_pantry": true
+        },
+        {
+          "name": "paprika",
+          "amount": "1 tsp",
+          "in_pantry": true
+        },
+        {
+          "name": "olive oil",
+          "amount": "2 tbsp",
+          "in_pantry": true
+        },
+        {
+          "name": "salt",
+          "amount": "to taste",
+          "in_pantry": true
+        },
+        {
+          "name": "black pepper",
+          "amount": "to taste",
+          "in_pantry": true
+        }
+      ],
+      "instructions": [
+        "Step 1: Preheat oven to 400\u00b0F (200\u00b0C). Line a large baking sheet with parchment paper.",
+        "Step 2: Pat salmon fillets dry. Trim the woody ends off the asparagus. On the baking sheet, toss asparagus with 1 tablespoon olive oil, half of the garlic powder, half of the paprika, salt, and pepper.",
+        "Step 3: Place salmon fillets on the same baking sheet. Drizzle with remaining 1 tablespoon olive oil. Season salmon with remaining garlic powder, paprika, salt, and pepper. Top each fillet with lemon slices and sprinkle with fresh dill.",
+        "Step 4: Bake for 12-18 minutes, or until salmon is cooked through and flakes easily with a fork (internal temperature 145\u00b0F/63\u00b0C) and asparagus is tender-crisp. Serve immediately."
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "date": "2026-08-26",
+      "name": "Slow Cooker Dr Pepper Pulled Beef Sandwiches",
+      "description": "Tender, sweet, and savory pulled beef made easily in the slow cooker, perfect for sandwiches, with minimal active cooking time.",
+      "prep_minutes": 15,
+      "cook_minutes": 60,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "beef chuck roast",
+          "amount": "2.5-3 lbs",
+          "in_pantry": false
+        },
+        {
+          "name": "Dr Pepper",
+          "amount": "1 (12 oz) can",
+          "in_pantry": false
+        },
+        {
+          "name": "BBQ sauce",
+          "amount": "1 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "yellow onion, sliced",
+          "amount": "1 large",
+          "in_pantry": false
+        },
+        {
+          "name": "garlic powder",
+          "amount": "1 tsp",
+          "in_pantry": true
+        },
+        {
+          "name": "chili powder",
+          "amount": "1 tsp",
+          "in_pantry": true
+        },
+        {
+          "name": "cumin",
+          "amount": "1 tsp",
+          "in_pantry": true
+        },
+        {
+          "name": "salt",
+          "amount": "1 tsp",
+          "in_pantry": true
+        },
+        {
+          "name": "black pepper",
+          "amount": "1/2 tsp",
+          "in_pantry": true
+        },
+        {
+          "name": "hamburger buns",
+          "amount": "4",
+          "in_pantry": false
+        }
+      ],
+      "instructions": [
+        "Step 1: Trim any excess fat from the beef chuck roast. Season the roast generously with garlic powder, chili powder, cumin, salt, and black pepper.",
+        "Step 2: Place sliced yellow onion in the bottom of a 6-quart slow cooker. Add the seasoned beef roast on top of the onions.",
+        "Step 3: Pour the can of Dr Pepper and BBQ sauce over the beef. Cover and cook on LOW for 6-8 hours, or on HIGH for 3-4 hours, until the beef is fork-tender and easily shredded.",
+        "Step 4: Carefully remove the beef from the slow cooker and shred it using two forks. Return the shredded beef to the slow cooker and stir to coat with the sauce. Serve hot on hamburger buns."
+      ]
+    },
+    {
+      "day": "Thursday",
+      "date": "2026-08-27",
+      "name": "Sheet Pan Crispy Chicken Thighs & Roasted Broccoli",
+      "description": "Crispy-skinned chicken thighs and tender-crisp broccoli roasted together on one pan for an easy and delicious meal in about 40 minutes.",
+      "prep_minutes": 10,
+      "cook_minutes": 30,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "bone-in, skin-on chicken thighs",
+          "amount": "4 (about 2 lbs total)",
+          "in_pantry": false
+        },
+        {
+          "name": "broccoli florets",
+          "amount": "4 cups",
+          "in_pantry": false
+        },
+        {
+          "name": "panko bread crumbs",
+          "amount": "1/4 cup",
+          "in_pantry": true
+        },
+        {
+          "name": "paprika",
+          "amount": "1 tsp",
+          "in_pantry": true
+        },
+        {
+          "name": "garlic powder",
+          "amount": "1 tsp",
+          "in_pantry": true
+        },
+        {
+          "name": "onion powder",
+          "amount": "1 tsp",
+          "in_pantry": false
+        },
+        {
+          "name": "dried oregano",
+          "amount": "1/2 tsp",
+          "in_pantry": true
+        },
+        {
+          "name": "olive oil",
+          "amount": "2 tbsp",
+          "in_pantry": true
+        },
+        {
+          "name": "salt",
+          "amount": "to taste",
+          "in_pantry": true
+        },
+        {
+          "name": "black pepper",
+          "amount": "to taste",
+          "in_pantry": true
+        }
+      ],
+      "instructions": [
+        "Step 1: Preheat oven to 425\u00b0F (220\u00b0C). Line a large baking sheet with parchment paper. Pat chicken thighs thoroughly dry with paper towels.",
+        "Step 2: In a small bowl, combine panko bread crumbs, paprika, garlic powder, onion powder, oregano, salt, and pepper. Drizzle chicken thighs with 1 tablespoon olive oil, then press the panko mixture onto the skin side of each thigh.",
+        "Step 3: Place chicken thighs skin-side up on one half of the baking sheet. Toss broccoli florets with the remaining 1 tablespoon olive oil, salt, and pepper, then spread them on the other half of the baking sheet.",
+        "Step 4: Roast for 25-30 minutes, or until chicken internal temperature reaches 165\u00b0F (74\u00b0C) and the skin is golden and crispy, and broccoli is tender-crisp with slightly browned edges. Serve immediately."
+      ]
+    },
+    {
+      "day": "Friday",
+      "date": "2026-08-28",
+      "name": "Quick Pork and Cabbage Stir-fry",
+      "description": "A super-fast and simple stir-fry featuring tender ground pork and crisp cabbage in a savory sauce, on the table in under 30 minutes.",
       "prep_minutes": 10,
       "cook_minutes": 15,
       "servings": 4,
       "ingredients": [
         {
-          "name": "Ground Beef (80/20)",
+          "name": "ground pork",
           "amount": "1 lb",
           "in_pantry": false
         },
         {
-          "name": "Taco Seasoning Mix",
-          "amount": "1 packet",
+          "name": "green cabbage, shredded",
+          "amount": "6 cups",
+          "in_pantry": false
+        },
+        {
+          "name": "yellow onion, diced",
+          "amount": "1/2",
+          "in_pantry": false
+        },
+        {
+          "name": "garlic, minced",
+          "amount": "2 cloves",
+          "in_pantry": false
+        },
+        {
+          "name": "ginger, grated",
+          "amount": "1 tsp",
+          "in_pantry": false
+        },
+        {
+          "name": "soy sauce",
+          "amount": "1/4 cup",
           "in_pantry": true
         },
         {
-          "name": "Water",
-          "amount": "1/2 cup",
+          "name": "oyster sauce",
+          "amount": "2 tbsp",
           "in_pantry": true
         },
         {
-          "name": "Taco Shells or Soft Tortillas",
-          "amount": "12",
-          "in_pantry": true
-        },
-        {
-          "name": "Shredded Lettuce",
-          "amount": "2 cups",
-          "in_pantry": false
-        },
-        {
-          "name": "Diced Tomatoes",
-          "amount": "1 can (14.5 oz)",
-          "in_pantry": true
-        },
-        {
-          "name": "Shredded Cheddar Cheese",
-          "amount": "1 cup",
-          "in_pantry": false
-        },
-        {
-          "name": "Sour Cream",
-          "amount": "1/2 cup",
-          "in_pantry": false
-        }
-      ],
-      "instructions": [
-        "Brown ground beef in a large skillet over medium-high heat, breaking it apart with a spoon, until no pink remains, about 5-7 minutes. Drain any excess fat.",
-        "Stir in the taco seasoning mix and 1/2 cup water. Bring to a simmer and cook for 5 minutes, stirring occasionally, until the sauce thickens.",
-        "Warm taco shells or tortillas according to package directions.",
-        "Assemble tacos by spooning the seasoned ground beef into shells/tortillas and topping with shredded lettuce, diced tomatoes, shredded cheddar cheese, and a dollop of sour cream."
-      ]
-    },
-    {
-      "day": "Wednesday",
-      "date": "2026-08-12",
-      "name": "Slow Cooker BBQ Pulled Pork Sandwiches",
-      "description": "Tender, slow-cooked pulled pork coated in sweet and tangy BBQ sauce, perfect for sandwiches, ready in 6-8 hours.",
-      "prep_minutes": 15,
-      "cook_minutes": 6,
-      "servings": 4,
-      "ingredients": [
-        {
-          "name": "Pork Shoulder (Boston Butt)",
-          "amount": "3 lbs",
-          "in_pantry": false
-        },
-        {
-          "name": "BBQ Sauce",
-          "amount": "1.5 cups",
-          "in_pantry": false
-        },
-        {
-          "name": "Yellow Onion",
-          "amount": "1 medium",
-          "in_pantry": false
-        },
-        {
-          "name": "Garlic Powder",
+          "name": "sesame oil",
           "amount": "1 tsp",
           "in_pantry": true
         },
         {
-          "name": "Paprika",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Brown Sugar",
-          "amount": "2 tbsp",
-          "in_pantry": false
-        },
-        {
-          "name": "Apple Cider Vinegar",
-          "amount": "2 tbsp",
-          "in_pantry": false
-        },
-        {
-          "name": "Chicken Broth",
-          "amount": "1/2 cup",
-          "in_pantry": true
-        },
-        {
-          "name": "Hamburger Buns",
-          "amount": "4-6",
-          "in_pantry": false
-        },
-        {
-          "name": "Coleslaw (optional)",
-          "amount": "2 cups",
-          "in_pantry": false
-        }
-      ],
-      "instructions": [
-        "Trim any large excess fat from the pork shoulder. Rub the pork with garlic powder and paprika.",
-        "Dice the yellow onion and place it in the bottom of a 6-quart or larger slow cooker. Place the seasoned pork shoulder on top of the onions.",
-        "In a bowl, whisk together BBQ sauce, brown sugar, apple cider vinegar, and chicken broth. Pour over the pork.",
-        "Cook on low for 6-8 hours or on high for 3-4 hours, until the pork is very tender and easily shreds with a fork. Remove pork from the slow cooker, shred it using two forks, then return to the sauce in the slow cooker and stir to combine. Serve warm on hamburger buns, optionally topped with coleslaw."
-      ]
-    },
-    {
-      "day": "Thursday",
-      "date": "2026-08-13",
-      "name": "Teriyaki Beef & Broccoli Bowls",
-      "description": "Quick and flavorful beef and broccoli stir-fry in a savory teriyaki sauce, served over rice, ready in about 35 minutes.",
-      "prep_minutes": 15,
-      "cook_minutes": 20,
-      "servings": 4,
-      "ingredients": [
-        {
-          "name": "Flank Steak",
-          "amount": "1 lb",
-          "in_pantry": false
-        },
-        {
-          "name": "Broccoli Florets",
-          "amount": "4 cups",
-          "in_pantry": false
-        },
-        {
-          "name": "White Rice (uncooked)",
-          "amount": "1.5 cups",
-          "in_pantry": false
-        },
-        {
-          "name": "Soy Sauce",
-          "amount": "1/2 cup",
-          "in_pantry": true
-        },
-        {
-          "name": "Honey",
-          "amount": "2 tbsp",
-          "in_pantry": false
-        },
-        {
-          "name": "Rice Vinegar",
+          "name": "rice vinegar",
           "amount": "1 tbsp",
           "in_pantry": false
         },
         {
-          "name": "Sesame Oil",
-          "amount": "1 tsp",
+          "name": "red pepper flakes",
+          "amount": "1/2 tsp (optional)",
           "in_pantry": true
         },
         {
-          "name": "Garlic",
-          "amount": "3 cloves",
-          "in_pantry": false
-        },
-        {
-          "name": "Fresh Ginger",
-          "amount": "1 tsp grated",
-          "in_pantry": false
-        },
-        {
-          "name": "Cornstarch",
+          "name": "olive oil",
           "amount": "1 tbsp",
           "in_pantry": true
         },
         {
-          "name": "Vegetable Oil",
-          "amount": "1 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Sesame Seeds (optional)",
-          "amount": "1 tsp",
+          "name": "cooked rice",
+          "amount": "for serving",
           "in_pantry": false
         }
       ],
       "instructions": [
-        "Cook white rice according to package directions. Thinly slice flank steak against the grain into bite-sized strips. Mince garlic and grate ginger.",
-        "In a small bowl, whisk together soy sauce, honey, rice vinegar, sesame oil, minced garlic, grated ginger, and cornstarch. Set aside.",
-        "Heat vegetable oil in a large skillet or wok over medium-high heat. Add beef strips and stir-fry for 3-4 minutes until browned. Remove beef from the skillet and set aside.",
-        "Add broccoli florets to the skillet and stir-fry for 5-7 minutes until tender-crisp. Return beef to the skillet. Pour the prepared teriyaki sauce over the beef and broccoli, stir constantly for 1-2 minutes until the sauce thickens and coats everything. Serve immediately over cooked rice, garnished with sesame seeds if desired."
+        "Step 1: In a small bowl, whisk together soy sauce, oyster sauce, sesame oil, and rice vinegar. Set aside.",
+        "Step 2: Heat olive oil in a large skillet or wok over medium-high heat. Add ground pork and cook, breaking it up with a spoon, until browned and cooked through, about 5-7 minutes. Drain any excess fat.",
+        "Step 3: Add diced yellow onion, minced garlic, grated ginger, and red pepper flakes (if using) to the skillet with the pork. Stir-fry for 2 minutes until fragrant.",
+        "Step 4: Add shredded cabbage to the skillet. Stir-fry for 3-5 minutes until the cabbage starts to wilt but still retains some crunch. Pour the prepared sauce over the pork and cabbage, toss to combine, and cook for another 1-2 minutes until heated through. Serve immediately, optionally over cooked rice."
       ]
     },
     {
-      "day": "Friday",
-      "date": "2026-08-14",
-      "name": "Crispy Baked Chicken Drumsticks with Roasted Green Beans",
-      "description": "Oven-baked chicken drumsticks with a crispy coating and tender roasted green beans, a kid-favorite, ready in about 45 minutes.",
+      "day": "Saturday",
+      "date": "2026-08-29",
+      "name": "Garlic-Ginger Beef and Broccoli Noodle Skillet",
+      "description": "A savory and satisfying one-pan noodle skillet with tender beef, crisp broccoli, and a rich garlic-ginger sauce, ready in about 45 minutes.",
       "prep_minutes": 15,
       "cook_minutes": 30,
       "servings": 4,
       "ingredients": [
         {
-          "name": "Chicken Drumsticks",
-          "amount": "8 (approx. 2.5 lbs)",
+          "name": "beef sirloin or flank steak",
+          "amount": "1.5 lbs",
           "in_pantry": false
         },
         {
-          "name": "Panko Breadcrumbs",
+          "name": "broccoli florets",
+          "amount": "3 cups",
+          "in_pantry": false
+        },
+        {
+          "name": "lo mein or egg noodles",
+          "amount": "12 oz",
+          "in_pantry": false
+        },
+        {
+          "name": "beef broth",
           "amount": "1 cup",
           "in_pantry": true
         },
         {
-          "name": "Paprika",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Garlic Powder",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Onion Powder",
-          "amount": "1 tsp",
-          "in_pantry": false
-        },
-        {
-          "name": "Dried Thyme",
-          "amount": "1 tsp",
-          "in_pantry": false
-        },
-        {
-          "name": "Fresh Green Beans",
-          "amount": "1 lb",
-          "in_pantry": false
-        },
-        {
-          "name": "Olive Oil",
-          "amount": "2 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Salt",
-          "amount": "to taste",
-          "in_pantry": true
-        },
-        {
-          "name": "Black Pepper",
-          "amount": "to taste",
-          "in_pantry": true
-        }
-      ],
-      "instructions": [
-        "Preheat oven to 400\u00b0F (200\u00b0C). Line a large baking sheet with foil or parchment paper and place a wire rack on top (optional, for crispier chicken).",
-        "In a shallow dish, combine panko breadcrumbs, paprika, garlic powder, onion powder, and dried thyme. Drizzle drumsticks with 1 tbsp olive oil, then dredge each drumstick in the breadcrumb mixture, pressing to coat thoroughly. Place on the prepared wire rack/baking sheet.",
-        "In a bowl, toss green beans with remaining 1 tbsp olive oil, salt, and pepper. Spread green beans on the other half of the baking sheet or a second small baking sheet.",
-        "Bake chicken for 30-35 minutes, flipping halfway, until internal temperature reaches 165\u00b0F (74\u00b0C) and the coating is golden and crispy. Roast green beans alongside for 15-20 minutes, until tender-crisp and slightly charred. Serve hot."
-      ]
-    },
-    {
-      "day": "Saturday",
-      "date": "2026-08-15",
-      "name": "Skillet Shrimp Scampi with Linguine",
-      "description": "Garlicky shrimp cooked in a buttery lemon-wine sauce tossed with linguine, a quick and elegant meal ready in about 35 minutes.",
-      "prep_minutes": 15,
-      "cook_minutes": 20,
-      "servings": 4,
-      "ingredients": [
-        {
-          "name": "Linguine (or thin spaghetti)",
-          "amount": "12 oz",
-          "in_pantry": true
-        },
-        {
-          "name": "Large Shrimp (peeled, deveined)",
-          "amount": "1.5 lbs",
-          "in_pantry": false
-        },
-        {
-          "name": "Garlic",
-          "amount": "6 cloves",
-          "in_pantry": false
-        },
-        {
-          "name": "Dry White Wine (e.g., Pinot Grigio)",
-          "amount": "1/2 cup",
-          "in_pantry": false
-        },
-        {
-          "name": "Lemon",
-          "amount": "1",
-          "in_pantry": false
-        },
-        {
-          "name": "Butter",
-          "amount": "4 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Olive Oil",
-          "amount": "2 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Red Pepper Flakes",
-          "amount": "1/4 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "Fresh Parsley, chopped",
+          "name": "soy sauce",
           "amount": "1/4 cup",
+          "in_pantry": true
+        },
+        {
+          "name": "brown sugar",
+          "amount": "2 tbsp",
           "in_pantry": false
         },
         {
-          "name": "Salt",
-          "amount": "to taste",
+          "name": "garlic, minced",
+          "amount": "4 cloves",
+          "in_pantry": false
+        },
+        {
+          "name": "ginger, grated",
+          "amount": "1 tbsp",
+          "in_pantry": false
+        },
+        {
+          "name": "cornstarch",
+          "amount": "2 tbsp",
           "in_pantry": true
         },
         {
-          "name": "Black Pepper",
-          "amount": "to taste",
+          "name": "water",
+          "amount": "3 tbsp",
           "in_pantry": true
+        },
+        {
+          "name": "olive oil",
+          "amount": "2 tbsp",
+          "in_pantry": true
+        },
+        {
+          "name": "sesame seeds",
+          "amount": "for garnish (optional)",
+          "in_pantry": false
         }
       ],
       "instructions": [
-        "Cook linguine according to package directions in a large pot of salted water. Reserve 1/2 cup pasta water before draining.",
-        "While pasta cooks, mince garlic. Zest and juice the lemon. Pat shrimp dry.",
-        "In a large skillet, melt butter with olive oil over medium heat. Add minced garlic and red pepper flakes; cook for 1 minute until fragrant (do not brown garlic).",
-        "Add shrimp to the skillet and cook for 2-3 minutes per side, until pink and opaque. Pour in white wine and lemon juice; bring to a simmer and cook for 1-2 minutes until slightly reduced.",
-        "Add cooked and drained linguine, chopped fresh parsley, and reserved pasta water (if needed for desired consistency) to the skillet. Toss everything to combine and coat the pasta. Season with salt and pepper to taste. Serve immediately."
+        "Step 1: Slice beef against the grain into thin strips. In a small bowl, whisk together beef broth, soy sauce, and brown sugar. In another small bowl, whisk cornstarch and water to create a slurry.",
+        "Step 2: Heat 1 tablespoon olive oil in a large skillet or wok over medium-high heat. Add beef strips and cook in batches for 2-3 minutes per side until browned. Remove beef and set aside.",
+        "Step 3: Add remaining 1 tablespoon olive oil to the skillet. Add minced garlic and grated ginger, stir-fry for 1 minute until fragrant. Add broccoli florets and stir-fry for 3-5 minutes until tender-crisp.",
+        "Step 4: Return beef to the skillet. Pour in the broth mixture, bring to a simmer. Add cooked noodles and cornstarch slurry, tossing to coat. Cook for 2-3 minutes, stirring, until sauce thickens and noodles are well coated. Garnish with sesame seeds if desired and serve immediately."
       ]
     },
     {
       "day": "Sunday",
-      "date": "2026-08-16",
-      "name": "Sheet Pan Italian Sausage & Pepper Hoagies",
-      "description": "Flavorful Italian sausage, bell peppers, and onions roasted on a sheet pan, served in toasted hoagie rolls with melty provolone cheese, ready in about 50 minutes.",
+      "date": "2026-08-30",
+      "name": "Roasted Pork Loin with Apples and Sweet Potatoes",
+      "description": "A comforting and hearty roasted pork loin with tender sweet potatoes and apples, perfect for a family dinner in about 75 minutes.",
       "prep_minutes": 15,
-      "cook_minutes": 35,
+      "cook_minutes": 60,
       "servings": 4,
       "ingredients": [
         {
-          "name": "Italian Sausage (links, mild or hot)",
-          "amount": "1.5 lbs",
+          "name": "pork loin roast",
+          "amount": "2 lbs",
           "in_pantry": false
         },
         {
-          "name": "Bell Peppers (red, green, or yellow)",
-          "amount": "3 large",
+          "name": "sweet potatoes, peeled and diced",
+          "amount": "2 large",
           "in_pantry": false
         },
         {
-          "name": "Yellow Onion",
-          "amount": "1 large",
+          "name": "apples, cored and diced (e.g., Honeycrisp, Fuji)",
+          "amount": "2 medium",
           "in_pantry": false
         },
         {
-          "name": "Garlic Powder",
+          "name": "yellow onion, roughly chopped",
+          "amount": "1 medium",
+          "in_pantry": false
+        },
+        {
+          "name": "garlic, minced",
+          "amount": "3 cloves",
+          "in_pantry": false
+        },
+        {
+          "name": "Dijon mustard",
+          "amount": "2 tbsp",
+          "in_pantry": false
+        },
+        {
+          "name": "maple syrup",
+          "amount": "2 tbsp",
+          "in_pantry": false
+        },
+        {
+          "name": "dried thyme",
           "amount": "1 tsp",
-          "in_pantry": true
+          "in_pantry": false
         },
         {
-          "name": "Dried Oregano",
+          "name": "rosemary, fresh chopped",
           "amount": "1 tsp",
-          "in_pantry": true
+          "in_pantry": false
         },
         {
-          "name": "Olive Oil",
+          "name": "olive oil",
           "amount": "2 tbsp",
           "in_pantry": true
         },
         {
-          "name": "Salt",
-          "amount": "to taste",
+          "name": "salt",
+          "amount": "1 tsp",
           "in_pantry": true
         },
         {
-          "name": "Black Pepper",
-          "amount": "to taste",
+          "name": "black pepper",
+          "amount": "1/2 tsp",
           "in_pantry": true
-        },
-        {
-          "name": "Hoagie Rolls",
-          "amount": "4",
-          "in_pantry": false
-        },
-        {
-          "name": "Provolone Cheese Slices",
-          "amount": "4-8",
-          "in_pantry": false
-        },
-        {
-          "name": "Marinara Sauce (for dipping, optional)",
-          "amount": "1/2 cup",
-          "in_pantry": true
-        },
-        {
-          "name": "Fresh Parsley (for garnish, optional)",
-          "amount": "2 tbsp",
-          "in_pantry": false
         }
       ],
       "instructions": [
-        "Preheat oven to 400\u00b0F (200\u00b0C). Line a large sheet pan with parchment paper.",
-        "Slice bell peppers and onion into 1/2-inch strips. In a large bowl, toss peppers and onions with olive oil, garlic powder, dried oregano, salt, and pepper. Spread evenly on the sheet pan.",
-        "Add Italian sausage links to the sheet pan, nestled among the vegetables.",
-        "Roast for 30-35 minutes, turning the sausages and vegetables halfway, until sausages are cooked through (internal temperature 160\u00b0F / 71\u00b0C) and vegetables are tender and slightly caramelized.",
-        "Slice hoagie rolls lengthwise, place them cut-side up on a separate smaller baking sheet. Top each roll with 1-2 slices of provolone cheese. Place in the oven for the last 5 minutes of cooking, or until cheese is melted and rolls are lightly toasted. Assemble hoagies by placing sausages and vegetables into the toasted rolls with melted provolone. Garnish with fresh parsley if desired. Serve with marinara sauce for dipping."
+        "Step 1: Preheat oven to 400\u00b0F (200\u00b0C). In a small bowl, whisk together Dijon mustard, maple syrup, dried thyme, chopped rosemary, 1 tablespoon olive oil, 1/2 tsp salt, and 1/4 tsp pepper.",
+        "Step 2: Pat the pork loin dry. Rub the mustard-maple mixture all over the pork loin. Place the pork loin in the center of a large roasting pan or oven-safe dish.",
+        "Step 3: In a large bowl, toss diced sweet potatoes, diced apples, chopped yellow onion, and minced garlic with the remaining 1 tablespoon olive oil, 1/2 tsp salt, and 1/4 tsp pepper. Arrange the vegetable and fruit mixture around the pork loin in the roasting pan.",
+        "Step 4: Roast for 45-60 minutes, or until the internal temperature of the pork loin reaches 145\u00b0F (63\u00b0C) (checked with a meat thermometer), and the sweet potatoes are tender. Let the pork rest for 5-10 minutes before slicing and serving with the roasted vegetables and apples."
       ]
     }
   ],
   "shopping_list": [
     {
-      "name": "Boneless, Skinless Chicken Breasts",
+      "name": "boneless, skinless chicken breasts",
       "amount": "1.5 lbs",
       "for_meals": [
         "Monday"
       ]
     },
     {
-      "name": "Yellow Potatoes",
-      "amount": "1.5 lbs",
-      "for_meals": [
-        "Monday"
-      ]
-    },
-    {
-      "name": "Lemon",
-      "amount": "2",
-      "for_meals": [
-        "Monday",
-        "Saturday"
-      ]
-    },
-    {
-      "name": "Garlic",
-      "amount": "2 heads",
+      "name": "broccoli florets",
+      "amount": "11 cups",
       "for_meals": [
         "Monday",
         "Thursday",
@@ -523,207 +526,212 @@
       ]
     },
     {
-      "name": "Fresh Parsley",
-      "amount": "1 bunch",
+      "name": "honey",
+      "amount": "2 tbsp",
+      "for_meals": [
+        "Monday"
+      ]
+    },
+    {
+      "name": "rice vinegar",
+      "amount": "2 tbsp",
       "for_meals": [
         "Monday",
+        "Friday"
+      ]
+    },
+    {
+      "name": "garlic, minced",
+      "amount": "12 cloves",
+      "for_meals": [
+        "Monday",
+        "Friday",
         "Saturday",
         "Sunday"
       ]
     },
     {
-      "name": "Ground Beef (80/20)",
+      "name": "ginger, grated",
+      "amount": "2 tsp",
+      "for_meals": [
+        "Monday",
+        "Friday"
+      ]
+    },
+    {
+      "name": "cooked rice",
+      "amount": "for serving",
+      "for_meals": [
+        "Monday",
+        "Friday"
+      ]
+    },
+    {
+      "name": "salmon fillets",
+      "amount": "4 (6 oz each)",
+      "for_meals": [
+        "Tuesday"
+      ]
+    },
+    {
+      "name": "asparagus spears",
       "amount": "1 lb",
       "for_meals": [
         "Tuesday"
       ]
     },
     {
-      "name": "Shredded Lettuce",
-      "amount": "1 head",
+      "name": "lemon, thinly sliced",
+      "amount": "1",
       "for_meals": [
         "Tuesday"
       ]
     },
     {
-      "name": "Shredded Cheddar Cheese",
+      "name": "fresh dill, chopped",
+      "amount": "2 tbsp",
+      "for_meals": [
+        "Tuesday"
+      ]
+    },
+    {
+      "name": "beef chuck roast",
+      "amount": "2.5-3 lbs",
+      "for_meals": [
+        "Wednesday"
+      ]
+    },
+    {
+      "name": "Dr Pepper",
+      "amount": "1 (12 oz) can",
+      "for_meals": [
+        "Wednesday"
+      ]
+    },
+    {
+      "name": "BBQ sauce",
       "amount": "1 cup",
       "for_meals": [
-        "Tuesday"
-      ]
-    },
-    {
-      "name": "Sour Cream",
-      "amount": "1/2 cup",
-      "for_meals": [
-        "Tuesday"
-      ]
-    },
-    {
-      "name": "Pork Shoulder (Boston Butt)",
-      "amount": "3 lbs",
-      "for_meals": [
         "Wednesday"
       ]
     },
     {
-      "name": "BBQ Sauce",
-      "amount": "1.5 cups",
-      "for_meals": [
-        "Wednesday"
-      ]
-    },
-    {
-      "name": "Yellow Onion",
-      "amount": "2 large",
+      "name": "yellow onion, sliced",
+      "amount": "2.5 large",
       "for_meals": [
         "Wednesday",
+        "Friday",
         "Sunday"
       ]
     },
     {
-      "name": "Brown Sugar",
-      "amount": "2 tbsp",
+      "name": "hamburger buns",
+      "amount": "4",
       "for_meals": [
         "Wednesday"
       ]
     },
     {
-      "name": "Apple Cider Vinegar",
-      "amount": "1 bottle",
-      "for_meals": [
-        "Wednesday"
-      ]
-    },
-    {
-      "name": "Hamburger Buns",
-      "amount": "1 pack of 6",
-      "for_meals": [
-        "Wednesday"
-      ]
-    },
-    {
-      "name": "Coleslaw",
-      "amount": "2 cups",
-      "for_meals": [
-        "Wednesday"
-      ]
-    },
-    {
-      "name": "Flank Steak",
-      "amount": "1 lb",
+      "name": "bone-in, skin-on chicken thighs",
+      "amount": "4 (about 2 lbs total)",
       "for_meals": [
         "Thursday"
       ]
     },
     {
-      "name": "Broccoli Florets",
-      "amount": "4 cups",
-      "for_meals": [
-        "Thursday"
-      ]
-    },
-    {
-      "name": "White Rice (uncooked)",
-      "amount": "1.5 cups",
-      "for_meals": [
-        "Thursday"
-      ]
-    },
-    {
-      "name": "Honey",
-      "amount": "2 tbsp",
-      "for_meals": [
-        "Thursday"
-      ]
-    },
-    {
-      "name": "Rice Vinegar",
-      "amount": "1 bottle",
-      "for_meals": [
-        "Thursday"
-      ]
-    },
-    {
-      "name": "Fresh Ginger",
-      "amount": "1 small knob",
-      "for_meals": [
-        "Thursday"
-      ]
-    },
-    {
-      "name": "Sesame Seeds",
+      "name": "onion powder",
       "amount": "1 tsp",
       "for_meals": [
         "Thursday"
       ]
     },
     {
-      "name": "Chicken Drumsticks",
-      "amount": "8 (approx. 2.5 lbs)",
-      "for_meals": [
-        "Friday"
-      ]
-    },
-    {
-      "name": "Onion Powder",
-      "amount": "1 tsp",
-      "for_meals": [
-        "Friday"
-      ]
-    },
-    {
-      "name": "Dried Thyme",
-      "amount": "1 tsp",
-      "for_meals": [
-        "Friday"
-      ]
-    },
-    {
-      "name": "Fresh Green Beans",
+      "name": "ground pork",
       "amount": "1 lb",
       "for_meals": [
         "Friday"
       ]
     },
     {
-      "name": "Large Shrimp (peeled, deveined)",
+      "name": "green cabbage, shredded",
+      "amount": "6 cups",
+      "for_meals": [
+        "Friday"
+      ]
+    },
+    {
+      "name": "beef sirloin or flank steak",
       "amount": "1.5 lbs",
       "for_meals": [
         "Saturday"
       ]
     },
     {
-      "name": "Dry White Wine (e.g., Pinot Grigio)",
-      "amount": "1/2 cup",
+      "name": "lo mein or egg noodles",
+      "amount": "12 oz",
       "for_meals": [
         "Saturday"
       ]
     },
     {
-      "name": "Italian Sausage (links, mild or hot)",
-      "amount": "1.5 lbs",
+      "name": "brown sugar",
+      "amount": "2 tbsp",
+      "for_meals": [
+        "Saturday"
+      ]
+    },
+    {
+      "name": "sesame seeds",
+      "amount": "for garnish (optional)",
+      "for_meals": [
+        "Saturday"
+      ]
+    },
+    {
+      "name": "pork loin roast",
+      "amount": "2 lbs",
       "for_meals": [
         "Sunday"
       ]
     },
     {
-      "name": "Bell Peppers (red, green, or yellow)",
-      "amount": "3 large",
+      "name": "sweet potatoes, peeled and diced",
+      "amount": "2 large",
       "for_meals": [
         "Sunday"
       ]
     },
     {
-      "name": "Hoagie Rolls",
-      "amount": "1 pack of 4-6",
+      "name": "apples, cored and diced (e.g., Honeycrisp, Fuji)",
+      "amount": "2 medium",
       "for_meals": [
         "Sunday"
       ]
     },
     {
-      "name": "Provolone Cheese Slices",
-      "amount": "1 pack",
+      "name": "Dijon mustard",
+      "amount": "2 tbsp",
+      "for_meals": [
+        "Sunday"
+      ]
+    },
+    {
+      "name": "maple syrup",
+      "amount": "2 tbsp",
+      "for_meals": [
+        "Sunday"
+      ]
+    },
+    {
+      "name": "dried thyme",
+      "amount": "1 tsp",
+      "for_meals": [
+        "Sunday"
+      ]
+    },
+    {
+      "name": "rosemary, fresh chopped",
+      "amount": "1 tsp",
       "for_meals": [
         "Sunday"
       ]
