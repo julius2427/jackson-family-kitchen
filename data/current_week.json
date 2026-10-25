@@ -1,777 +1,952 @@
 {
-  "week_start": "2026-10-19",
-  "week_end": "2026-10-25",
-  "generated_at": "2026-10-18T12:00:07.783792+00:00",
+  "week_start": "2026-10-26",
+  "week_end": "2026-11-01",
+  "generated_at": "2026-10-25T12:00:08.838008+00:00",
   "meals": [
     {
       "day": "Monday",
-      "date": "2026-10-19",
-      "name": "Sheet Pan Honey Garlic Chicken with Roasted Broccoli and Carrots",
-      "description": "Crispy chicken and tender vegetables coated in a sweet and savory honey-garlic sauce, all roasted on one sheet pan for easy cleanup. Cook time: ~45 minutes.",
+      "date": "2026-10-26",
+      "name": "Sticky Sesame Chicken with Roasted Broccoli and Rice",
+      "description": "Quick and flavorful chicken pieces coated in a sweet and savory sesame sauce, served with roasted broccoli and steamed rice, ready in about 40 minutes.",
       "prep_minutes": 15,
-      "cook_minutes": 30,
-      "servings": 4,
-      "ingredients": [
-        {
-          "name": "boneless, skinless chicken breasts",
-          "amount": "1.5 lbs",
-          "in_pantry": false
-        },
-        {
-          "name": "broccoli florets",
-          "amount": "4 cups",
-          "in_pantry": false
-        },
-        {
-          "name": "carrots",
-          "amount": "3 medium",
-          "in_pantry": false
-        },
-        {
-          "name": "honey",
-          "amount": "1/4 cup",
-          "in_pantry": false
-        },
-        {
-          "name": "soy sauce",
-          "amount": "1/4 cup",
-          "in_pantry": true
-        },
-        {
-          "name": "garlic powder",
-          "amount": "1 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "sesame oil",
-          "amount": "1 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "olive oil",
-          "amount": "2 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "salt",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "black pepper",
-          "amount": "1/2 tsp",
-          "in_pantry": true
-        }
-      ],
-      "instructions": [
-        "Step 1: Preheat oven to 400\u00b0F (200\u00b0C). Line a large sheet pan with parchment paper for easy cleanup.",
-        "Step 2: In a small bowl, whisk together honey, soy sauce, garlic powder, and sesame oil to create the honey-garlic sauce. Set aside.",
-        "Step 3: Cut chicken breasts into 1-inch bite-sized pieces. Chop broccoli into bite-sized florets and slice carrots into 1/4-inch thick coins. In a large bowl, toss the chicken, broccoli, and carrots with olive oil, salt, and black pepper until evenly coated.",
-        "Step 4: Spread the chicken and vegetables in a single layer on the prepared sheet pan. Roast for 15 minutes.",
-        "Step 5: Remove the sheet pan from the oven. Drizzle the honey-garlic sauce over the chicken and vegetables, tossing gently to coat. Return to oven and roast for another 10-15 minutes, or until chicken is cooked through (internal temperature 165\u00b0F / 74\u00b0C) and vegetables are tender-crisp. Serve immediately."
-      ]
-    },
-    {
-      "day": "Tuesday",
-      "date": "2026-10-20",
-      "name": "Slow Cooker Italian Meatball Subs",
-      "description": "Flavorful homemade meatballs simmered in marinara sauce all day, then served in toasted hoagie rolls with melted mozzarella for an easy weeknight meal. Cook time: ~6 hours (slow cooker), 20 minutes active.",
-      "prep_minutes": 20,
-      "cook_minutes": 10,
-      "servings": 4,
-      "ingredients": [
-        {
-          "name": "ground beef",
-          "amount": "1 lb",
-          "in_pantry": false
-        },
-        {
-          "name": "ground pork",
-          "amount": "0.5 lb",
-          "in_pantry": false
-        },
-        {
-          "name": "breadcrumbs",
-          "amount": "1/2 cup",
-          "in_pantry": false
-        },
-        {
-          "name": "egg",
-          "amount": "1 large",
-          "in_pantry": false
-        },
-        {
-          "name": "onion",
-          "amount": "1/4 cup, finely diced",
-          "in_pantry": false
-        },
-        {
-          "name": "garlic powder",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "kroger oregano leaves",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "salt",
-          "amount": "1/2 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "black pepper",
-          "amount": "1/4 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "marinara sauce",
-          "amount": "24 oz jar",
-          "in_pantry": false
-        },
-        {
-          "name": "hoagie rolls",
-          "amount": "4",
-          "in_pantry": false
-        },
-        {
-          "name": "mozzarella cheese",
-          "amount": "1 cup, shredded",
-          "in_pantry": false
-        }
-      ],
-      "instructions": [
-        "Step 1: In a large bowl, combine ground beef, ground pork, breadcrumbs, egg, diced onion, garlic powder, oregano, salt, and black pepper. Mix gently until just combined (do not overmix). Form into 1.5-inch meatballs.",
-        "Step 2: Place meatballs into a 6-quart slow cooker. Pour marinara sauce evenly over the meatballs.",
-        "Step 3: Cover and cook on LOW for 6-8 hours or on HIGH for 3-4 hours, until meatballs are cooked through and tender.",
-        "Step 4: About 10 minutes before serving, preheat oven to 375\u00b0F (190\u00b0C) or broiler. Carefully slice hoagie rolls lengthwise, leaving one side attached. Fill each roll generously with meatballs and sauce, then top with shredded mozzarella cheese.",
-        "Step 5: Place filled hoagie rolls on a baking sheet and bake for 5-7 minutes, or until cheese is melted and bubbly and rolls are lightly toasted. Alternatively, broil for 1-2 minutes, watching carefully to prevent burning. Serve immediately."
-      ]
-    },
-    {
-      "day": "Wednesday",
-      "date": "2026-10-21",
-      "name": "Speedy Shrimp Scampi with Linguine",
-      "description": "A classic Italian-American dish featuring succulent shrimp quickly saut\u00e9ed in a garlicky lemon-butter sauce, tossed with linguine. Cook time: ~25 minutes.",
-      "prep_minutes": 10,
-      "cook_minutes": 15,
-      "servings": 4,
-      "ingredients": [
-        {
-          "name": "linguine",
-          "amount": "12 oz",
-          "in_pantry": false
-        },
-        {
-          "name": "large shrimp",
-          "amount": "1.5 lbs, peeled and deveined",
-          "in_pantry": false
-        },
-        {
-          "name": "olive oil",
-          "amount": "2 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "butter",
-          "amount": "4 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "garlic powder",
-          "amount": "2 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "crushed red pepper",
-          "amount": "1/2 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "dry white wine",
-          "amount": "1/2 cup",
-          "in_pantry": false
-        },
-        {
-          "name": "lemon",
-          "amount": "1 medium",
-          "in_pantry": false
-        },
-        {
-          "name": "fresh parsley",
-          "amount": "1/4 cup, chopped",
-          "in_pantry": false
-        },
-        {
-          "name": "salt",
-          "amount": "to taste",
-          "in_pantry": true
-        },
-        {
-          "name": "black pepper",
-          "amount": "to taste",
-          "in_pantry": true
-        }
-      ],
-      "instructions": [
-        "Step 1: Cook linguine according to package directions in a large pot of salted boiling water until al dente. Reserve 1/2 cup pasta water before draining. Meanwhile, pat shrimp dry with paper towels and season lightly with salt and pepper.",
-        "Step 2: In a large skillet over medium heat, melt 2 tablespoons of butter with 2 tablespoons of olive oil. Add garlic powder and crushed red pepper flakes; cook for 30 seconds until fragrant.",
-        "Step 3: Add shrimp to the skillet and cook for 2-3 minutes per side, until pink and opaque. Remove shrimp from skillet and set aside.",
-        "Step 4: Pour white wine into the skillet, scraping up any browned bits. Squeeze in the juice from half of the lemon. Bring to a simmer and cook for 2 minutes. Stir in remaining 2 tablespoons of butter until melted, then add reserved pasta water as needed to create a light sauce consistency.",
-        "Step 5: Add the cooked linguine and shrimp back into the skillet. Toss to coat everything in the sauce. Stir in chopped fresh parsley. Taste and adjust seasoning with salt, pepper, and more lemon juice if desired. Serve hot."
-      ]
-    },
-    {
-      "day": "Thursday",
-      "date": "2026-10-22",
-      "name": "Korean Ground Beef and Rice Bowls",
-      "description": "Quick and flavorful ground beef simmered in a sweet and savory Korean-inspired sauce, served over fluffy rice with fresh, crisp vegetables for a satisfying bowl meal. Cook time: ~35 minutes.",
-      "prep_minutes": 15,
-      "cook_minutes": 20,
-      "servings": 4,
-      "ingredients": [
-        {
-          "name": "jasmine rice",
-          "amount": "1.5 cups, uncooked",
-          "in_pantry": false
-        },
-        {
-          "name": "ground beef",
-          "amount": "1 lb, lean",
-          "in_pantry": false
-        },
-        {
-          "name": "soy sauce",
-          "amount": "1/4 cup",
-          "in_pantry": true
-        },
-        {
-          "name": "brown sugar",
-          "amount": "2 tbsp",
-          "in_pantry": false
-        },
-        {
-          "name": "sesame oil",
-          "amount": "1 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "garlic powder",
-          "amount": "1 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "fresh ginger",
-          "amount": "1 tsp, grated",
-          "in_pantry": false
-        },
-        {
-          "name": "red pepper flakes",
-          "amount": "1/2 tsp (optional)",
-          "in_pantry": true
-        },
-        {
-          "name": "carrots",
-          "amount": "1 cup, shredded",
-          "in_pantry": false
-        },
-        {
-          "name": "cucumber",
-          "amount": "1/2 cup, thinly sliced",
-          "in_pantry": false
-        },
-        {
-          "name": "green onions",
-          "amount": "2, sliced",
-          "in_pantry": false
-        },
-        {
-          "name": "vegetable oil",
-          "amount": "1 tsp",
-          "in_pantry": true
-        }
-      ],
-      "instructions": [
-        "Step 1: Cook jasmine rice according to package directions. While rice cooks, prepare the sauce and beef.",
-        "Step 2: In a small bowl, whisk together soy sauce, brown sugar, sesame oil, garlic powder, grated ginger, and red pepper flakes (if using). Set aside.",
-        "Step 3: Heat vegetable oil in a large skillet or non-stick pan over medium-high heat. Add ground beef and cook, breaking it up with a spoon, until browned and cooked through, about 5-7 minutes. Drain any excess grease.",
-        "Step 4: Pour the prepared sauce over the cooked ground beef. Stir well to coat and simmer for 2-3 minutes, allowing the sauce to thicken slightly and flavor the beef.",
-        "Step 5: To assemble bowls, divide cooked rice among four serving bowls. Top each with a generous portion of the Korean ground beef. Garnish with shredded carrots, sliced cucumber, and sliced green onions. Serve immediately."
-      ]
-    },
-    {
-      "day": "Friday",
-      "date": "2026-10-23",
-      "name": "Oven-Baked Crispy Fish Sticks with Homemade Tartar Sauce and Sweet Potato Fries",
-      "description": "Golden, crispy fish sticks baked in the oven alongside sweet potato fries, served with a tangy homemade tartar sauce for a fun and easy family dinner. Cook time: ~35 minutes.",
-      "prep_minutes": 10,
       "cook_minutes": 25,
       "servings": 4,
       "ingredients": [
         {
-          "name": "frozen crispy fish sticks",
-          "amount": "16 oz package",
+          "name": "Boneless, skinless chicken breast",
+          "amount": "1.5 lbs",
           "in_pantry": false
         },
         {
-          "name": "sweet potatoes",
-          "amount": "2 large",
+          "name": "Broccoli florets",
+          "amount": "1 head",
           "in_pantry": false
         },
         {
-          "name": "olive oil",
-          "amount": "1 tbsp",
+          "name": "Jasmine rice",
+          "amount": "1 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "Soy sauce",
+          "amount": "1/4 cup",
           "in_pantry": true
         },
         {
-          "name": "paprika",
-          "amount": "1 tsp",
+          "name": "Sesame oil",
+          "amount": "1 tablespoon",
           "in_pantry": true
         },
         {
-          "name": "salt",
-          "amount": "1/2 tsp",
+          "name": "Honey",
+          "amount": "1/4 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "Minced garlic",
+          "amount": "2 cloves",
+          "in_pantry": false
+        },
+        {
+          "name": "Grated fresh ginger",
+          "amount": "1 tablespoon",
+          "in_pantry": false
+        },
+        {
+          "name": "Cornstarch",
+          "amount": "1 tablespoon",
+          "in_pantry": false
+        },
+        {
+          "name": "Sesame seeds",
+          "amount": "1 tablespoon",
+          "in_pantry": false
+        },
+        {
+          "name": "Rice vinegar",
+          "amount": "1 tablespoon",
+          "in_pantry": false
+        },
+        {
+          "name": "Vegetable oil",
+          "amount": "1 tablespoon",
           "in_pantry": true
         },
         {
-          "name": "black pepper",
-          "amount": "1/4 tsp",
+          "name": "Crushed red pepper flakes",
+          "amount": "1/2 teaspoon",
           "in_pantry": true
         },
         {
-          "name": "mayonnaise",
-          "amount": "1/2 cup",
-          "in_pantry": false
-        },
-        {
-          "name": "pickle relish",
-          "amount": "2 tbsp",
-          "in_pantry": false
-        },
-        {
-          "name": "lemon juice",
-          "amount": "1 tbsp",
-          "in_pantry": false
-        },
-        {
-          "name": "fresh dill",
-          "amount": "1 tsp, chopped",
-          "in_pantry": false
-        }
-      ],
-      "instructions": [
-        "Step 1: Preheat oven to 400\u00b0F (200\u00b0C). Line a large baking sheet with parchment paper.",
-        "Step 2: Wash and peel sweet potatoes, then cut them into 1/4-inch thick fries. In a large bowl, toss the sweet potato fries with olive oil, paprika, salt, and black pepper until evenly coated.",
-        "Step 3: Spread the sweet potato fries in a single layer on one half of the prepared baking sheet. Bake for 15 minutes.",
-        "Step 4: While fries bake, prepare the tartar sauce: In a small bowl, combine mayonnaise, pickle relish, lemon juice, and chopped fresh dill. Mix well and refrigerate until serving.",
-        "Step 5: After 15 minutes, remove the baking sheet from the oven. Add the frozen fish sticks to the other half of the baking sheet, ensuring they are in a single layer. Flip the sweet potato fries. Return to oven and bake for another 10-15 minutes, or until fish sticks are golden brown and crispy, and sweet potato fries are tender and slightly caramelized. Serve immediately with tartar sauce."
-      ]
-    },
-    {
-      "day": "Saturday",
-      "date": "2026-10-24",
-      "name": "Chicken and Veggie Quesadillas with Quick Guacamole",
-      "description": "Cheesy, savory quesadillas packed with seasoned chicken and saut\u00e9ed bell peppers, served with a simple homemade guacamole. Cook time: ~40 minutes.",
-      "prep_minutes": 20,
-      "cook_minutes": 20,
-      "servings": 4,
-      "ingredients": [
-        {
-          "name": "boneless, skinless chicken breasts",
-          "amount": "1 lb",
-          "in_pantry": false
-        },
-        {
-          "name": "olive oil",
-          "amount": "1 tbsp",
+          "name": "Salt",
+          "amount": "to taste",
           "in_pantry": true
         },
         {
-          "name": "mccormick taco seasoning mix",
-          "amount": "1 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "bell peppers",
-          "amount": "2, any color, sliced",
-          "in_pantry": false
-        },
-        {
-          "name": "onion",
-          "amount": "1/2 medium, sliced",
-          "in_pantry": false
-        },
-        {
-          "name": "flour tortillas",
-          "amount": "8 (8-inch)",
-          "in_pantry": false
-        },
-        {
-          "name": "shredded cheddar jack cheese",
-          "amount": "2 cups",
-          "in_pantry": false
-        },
-        {
-          "name": "avocados",
-          "amount": "2 ripe",
-          "in_pantry": false
-        },
-        {
-          "name": "lime",
-          "amount": "1 small",
-          "in_pantry": false
-        },
-        {
-          "name": "fresh cilantro",
-          "amount": "2 tbsp, chopped",
-          "in_pantry": false
-        },
-        {
-          "name": "salt",
+          "name": "Black pepper",
           "amount": "to taste",
           "in_pantry": true
         }
       ],
       "instructions": [
-        "Step 1: Slice chicken breasts into thin strips. Heat 1 tablespoon of olive oil in a large skillet over medium-high heat. Add chicken strips and taco seasoning; cook, stirring frequently, until chicken is cooked through and lightly browned, about 6-8 minutes. Remove chicken from skillet and set aside.",
-        "Step 2: Add sliced bell peppers and onion to the same skillet. Cook, stirring occasionally, until vegetables are tender-crisp, about 5-7 minutes. Remove vegetables from skillet and combine with the cooked chicken.",
-        "Step 3: While vegetables cook, prepare the guacamole: Mash avocados in a medium bowl. Squeeze in juice from half a lime, stir in chopped fresh cilantro, and season with salt to taste. Mix well.",
-        "Step 4: Wipe the skillet clean (or use a separate griddle). Heat over medium heat. Place one tortilla in the skillet. Sprinkle about 1/4 cup of cheese over one half of the tortilla, then add a portion of the chicken and veggie mixture over the cheese. Top with another sprinkle of cheese.",
-        "Step 5: Fold the empty half of the tortilla over the filling. Cook for 2-3 minutes per side, until golden brown and the cheese is melted. Repeat with remaining tortillas and filling. Slice quesadillas into wedges and serve immediately with quick guacamole."
+        "Cook jasmine rice according to package instructions. While rice cooks, preheat oven to 400\u00b0F (200\u00b0C). Toss broccoli florets with 1 tablespoon olive oil, salt, and pepper on a baking sheet; roast for 15-20 minutes until tender-crisp.",
+        "Cut chicken breast into 1-inch pieces. In a medium bowl, whisk together soy sauce, sesame oil, honey, minced garlic, grated ginger, cornstarch, rice vinegar, and red pepper flakes to make the sauce.",
+        "Heat 1 tablespoon vegetable oil in a large skillet or wok over medium-high heat. Add chicken pieces and cook for 5-7 minutes, stirring occasionally, until browned and cooked through. Remove chicken from skillet and set aside.",
+        "Pour the sauce into the same skillet and bring to a simmer over medium heat, stirring constantly, until thickened, about 2-3 minutes. Return cooked chicken to the skillet, tossing to coat evenly.",
+        "Serve the sticky sesame chicken immediately over steamed jasmine rice, garnished with sesame seeds, alongside the roasted broccoli."
       ]
     },
     {
-      "day": "Sunday",
-      "date": "2026-10-25",
-      "name": "Sheet Pan Italian Sausage and Pepper Hoagies",
-      "description": "Hearty Italian sausage links roasted with colorful bell peppers and onions, served in toasted hoagie rolls with marinara and melted provolone for a satisfying weekend meal with minimal cleanup. Cook time: ~45 minutes.",
-      "prep_minutes": 15,
-      "cook_minutes": 30,
+      "day": "Tuesday",
+      "date": "2026-10-27",
+      "name": "Quick Lemon Herb Salmon with Roasted Asparagus and Quinoa",
+      "description": "Pan-seared salmon fillets infused with lemon and herbs, served alongside tender roasted asparagus and fluffy quinoa, all prepared in under 30 minutes.",
+      "prep_minutes": 10,
+      "cook_minutes": 20,
       "servings": 4,
       "ingredients": [
         {
-          "name": "Italian sausage links",
-          "amount": "1.5 lbs",
-          "in_pantry": false
-        },
-        {
-          "name": "bell peppers",
-          "amount": "3, various colors, sliced",
-          "in_pantry": false
-        },
-        {
-          "name": "red onion",
-          "amount": "1 medium, sliced",
-          "in_pantry": false
-        },
-        {
-          "name": "olive oil",
-          "amount": "2 tbsp",
-          "in_pantry": true
-        },
-        {
-          "name": "garlic powder",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "kroger oregano leaves",
-          "amount": "1 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "salt",
-          "amount": "1/2 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "black pepper",
-          "amount": "1/4 tsp",
-          "in_pantry": true
-        },
-        {
-          "name": "marinara sauce",
-          "amount": "1/2 cup",
-          "in_pantry": false
-        },
-        {
-          "name": "hoagie rolls",
+          "name": "Salmon fillets (6 oz each)",
           "amount": "4",
           "in_pantry": false
         },
         {
-          "name": "provolone cheese",
-          "amount": "4 slices",
+          "name": "Asparagus",
+          "amount": "1 bunch",
           "in_pantry": false
+        },
+        {
+          "name": "Quinoa",
+          "amount": "1 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "Lemon",
+          "amount": "1",
+          "in_pantry": false
+        },
+        {
+          "name": "Minced garlic",
+          "amount": "1 clove",
+          "in_pantry": false
+        },
+        {
+          "name": "Fresh dill (chopped)",
+          "amount": "1 tablespoon",
+          "in_pantry": false
+        },
+        {
+          "name": "Fresh parsley (chopped)",
+          "amount": "1 tablespoon",
+          "in_pantry": false
+        },
+        {
+          "name": "Olive oil",
+          "amount": "3 tablespoons",
+          "in_pantry": true
+        },
+        {
+          "name": "Butter",
+          "amount": "1 tablespoon",
+          "in_pantry": true
+        },
+        {
+          "name": "Salt",
+          "amount": "to taste",
+          "in_pantry": true
+        },
+        {
+          "name": "Black pepper",
+          "amount": "to taste",
+          "in_pantry": true
         }
       ],
       "instructions": [
-        "Step 1: Preheat oven to 400\u00b0F (200\u00b0C). Line a large sheet pan with parchment paper.",
-        "Step 2: Slice bell peppers and red onion into thin strips. In a large bowl, toss the Italian sausage links, sliced peppers, and onion with olive oil, garlic powder, oregano, salt, and black pepper until well coated.",
-        "Step 3: Spread the sausage and vegetable mixture in a single layer on the prepared sheet pan. Ensure sausages are not touching for even browning.",
-        "Step 4: Roast for 20 minutes. Then, flip the sausages and stir the vegetables. Continue roasting for another 10-15 minutes, or until sausages are cooked through (internal temperature 160\u00b0F / 71\u00b0C) and vegetables are tender and slightly caramelized.",
-        "Step 5: Towards the end of cooking, lightly toast hoagie rolls if desired. Assemble the hoagies by placing a cooked sausage link into each roll, topping with a generous portion of roasted peppers and onions, a spoonful of marinara sauce, and a slice of provolone cheese. If desired, briefly return hoagies to the oven or broiler to melt the cheese. Serve hot."
+        "Cook quinoa according to package instructions. Preheat oven to 400\u00b0F (200\u00b0C). Trim the woody ends off the asparagus spears.",
+        "On a baking sheet, toss asparagus with 1 tablespoon olive oil, salt, and pepper. Roast for 10-12 minutes until tender-crisp.",
+        "Pat salmon fillets dry with paper towels. Season both sides with salt, pepper, minced garlic, dill, and parsley. Slice the lemon into thin rounds.",
+        "Heat 2 tablespoons olive oil and 1 tablespoon butter in a large skillet over medium-high heat. Once butter is melted and foamy, add salmon fillets skin-side down (if applicable). Place lemon slices on top of salmon. Cook for 4-6 minutes per side, depending on thickness, until salmon is cooked through and flakes easily.",
+        "Serve salmon immediately with roasted asparagus and quinoa."
+      ]
+    },
+    {
+      "day": "Wednesday",
+      "date": "2026-10-28",
+      "name": "One-Pan Beef and Bell Pepper Skillet with Rice",
+      "description": "A quick and flavorful skillet meal featuring lean ground beef, colorful bell peppers, and savory spices, served over steamed rice, ready in about 30 minutes.",
+      "prep_minutes": 10,
+      "cook_minutes": 20,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Lean ground beef",
+          "amount": "1.5 lbs",
+          "in_pantry": false
+        },
+        {
+          "name": "Mixed bell peppers (e.g., red, yellow, green)",
+          "amount": "3, sliced",
+          "in_pantry": false
+        },
+        {
+          "name": "Yellow onion",
+          "amount": "1, chopped",
+          "in_pantry": false
+        },
+        {
+          "name": "Minced garlic",
+          "amount": "2 cloves",
+          "in_pantry": false
+        },
+        {
+          "name": "Canned diced tomatoes",
+          "amount": "1 (14.5 oz) can, undrained",
+          "in_pantry": false
+        },
+        {
+          "name": "Beef broth",
+          "amount": "1 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "Cumin",
+          "amount": "1 teaspoon",
+          "in_pantry": true
+        },
+        {
+          "name": "Chili powder",
+          "amount": "1 teaspoon",
+          "in_pantry": true
+        },
+        {
+          "name": "Smoked paprika",
+          "amount": "1/2 teaspoon",
+          "in_pantry": true
+        },
+        {
+          "name": "Vegetable oil",
+          "amount": "1 tablespoon",
+          "in_pantry": true
+        },
+        {
+          "name": "Cooked jasmine rice",
+          "amount": "2 cups",
+          "in_pantry": false
+        },
+        {
+          "name": "Fresh cilantro (chopped, for garnish)",
+          "amount": "1/4 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "Salt",
+          "amount": "to taste",
+          "in_pantry": true
+        },
+        {
+          "name": "Black pepper",
+          "amount": "to taste",
+          "in_pantry": true
+        }
+      ],
+      "instructions": [
+        "Heat 1 tablespoon vegetable oil in a large skillet over medium-high heat. Add ground beef and cook, breaking it up with a spoon, until browned. Drain any excess fat.",
+        "Add chopped onion, sliced bell peppers, and minced garlic to the skillet. Cook for 5-7 minutes, stirring occasionally, until vegetables are slightly softened.",
+        "Stir in diced tomatoes (with their juice), beef broth, cumin, chili powder, and paprika. Bring the mixture to a simmer, then reduce heat to medium-low, cover, and cook for 10-15 minutes, allowing flavors to meld and vegetables to fully tenderize.",
+        "Uncover and cook for an additional 2-3 minutes if needed to reduce liquid slightly. Taste and adjust seasonings with salt and pepper as desired.",
+        "Serve the beef and bell pepper skillet over warm jasmine rice, garnished with fresh cilantro."
+      ]
+    },
+    {
+      "day": "Thursday",
+      "date": "2026-10-29",
+      "name": "Slow Cooker BBQ Pulled Pork Sandwiches with Creamy Coleslaw",
+      "description": "Tender, slow-cooked pork shoulder simmered in a tangy BBQ sauce, served on soft buns with a creamy homemade coleslaw, with minimal active cooking time.",
+      "prep_minutes": 15,
+      "cook_minutes": 420,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Boneless pork shoulder (pork butt)",
+          "amount": "2.5 lbs",
+          "in_pantry": false
+        },
+        {
+          "name": "Yellow onion",
+          "amount": "1, sliced",
+          "in_pantry": false
+        },
+        {
+          "name": "Minced garlic",
+          "amount": "3 cloves",
+          "in_pantry": false
+        },
+        {
+          "name": "BBQ sauce (your favorite)",
+          "amount": "1 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "Apple cider vinegar",
+          "amount": "1/4 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "Brown sugar",
+          "amount": "2 tablespoons",
+          "in_pantry": false
+        },
+        {
+          "name": "Mustard powder",
+          "amount": "1 teaspoon",
+          "in_pantry": true
+        },
+        {
+          "name": "Worcestershire sauce",
+          "amount": "1 tablespoon",
+          "in_pantry": false
+        },
+        {
+          "name": "Hot sauce",
+          "amount": "1/2 teaspoon (optional)",
+          "in_pantry": true
+        },
+        {
+          "name": "Hamburger buns",
+          "amount": "4",
+          "in_pantry": false
+        },
+        {
+          "name": "Coleslaw mix (bagged)",
+          "amount": "1 (14 oz) bag",
+          "in_pantry": false
+        },
+        {
+          "name": "Mayonnaise",
+          "amount": "1/2 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "Salt",
+          "amount": "to taste",
+          "in_pantry": true
+        },
+        {
+          "name": "Black pepper",
+          "amount": "to taste",
+          "in_pantry": true
+        }
+      ],
+      "instructions": [
+        "Season the pork shoulder generously with salt and pepper. Place sliced onion and minced garlic in the bottom of a 6-quart (or larger) slow cooker.",
+        "Place the seasoned pork shoulder on top of the onions and garlic. In a separate bowl, whisk together 1 cup BBQ sauce, apple cider vinegar, brown sugar, mustard powder, Worcestershire sauce, and hot sauce (if using). Pour the sauce over the pork.",
+        "Cover the slow cooker and cook on low for 6-8 hours, or on high for 3-4 hours, until the pork is fork-tender and easily shreds.",
+        "While pork cooks, prepare the coleslaw: In a medium bowl, combine coleslaw mix, mayonnaise, 2 tablespoons apple cider vinegar, 1 tablespoon brown sugar, and a pinch of salt and pepper. Mix well and refrigerate until serving.",
+        "Once pork is cooked, remove it from the slow cooker and shred it using two forks. Discard any large pieces of fat. Return shredded pork to the slow cooker and stir to combine with the cooking liquids and sauce. Serve the BBQ pulled pork warm on hamburger buns, topped with creamy coleslaw."
+      ]
+    },
+    {
+      "day": "Friday",
+      "date": "2026-10-30",
+      "name": "Sheet Pan Lemon Herb Chicken and Potatoes",
+      "description": "Chicken thighs and bite-sized potatoes roasted together with lemon, garlic, and savory herbs for a simple, flavorful meal with easy cleanup, ready in about 40 minutes.",
+      "prep_minutes": 15,
+      "cook_minutes": 25,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Boneless, skinless chicken thighs",
+          "amount": "1.5 lbs",
+          "in_pantry": false
+        },
+        {
+          "name": "Baby potatoes or Yukon Gold potatoes",
+          "amount": "1.5 lbs, quartered",
+          "in_pantry": false
+        },
+        {
+          "name": "Lemon",
+          "amount": "1, thinly sliced",
+          "in_pantry": false
+        },
+        {
+          "name": "Minced garlic",
+          "amount": "3 cloves",
+          "in_pantry": false
+        },
+        {
+          "name": "Dried rosemary",
+          "amount": "1 teaspoon",
+          "in_pantry": false
+        },
+        {
+          "name": "Dried thyme",
+          "amount": "1 teaspoon",
+          "in_pantry": false
+        },
+        {
+          "name": "Dried oregano",
+          "amount": "1 teaspoon",
+          "in_pantry": true
+        },
+        {
+          "name": "Olive oil",
+          "amount": "3 tablespoons",
+          "in_pantry": true
+        },
+        {
+          "name": "Fresh parsley (chopped, for garnish)",
+          "amount": "2 tablespoons",
+          "in_pantry": false
+        },
+        {
+          "name": "Salt",
+          "amount": "to taste",
+          "in_pantry": true
+        },
+        {
+          "name": "Black pepper",
+          "amount": "to taste",
+          "in_pantry": true
+        }
+      ],
+      "instructions": [
+        "Preheat oven to 425\u00b0F (220\u00b0C). Line a large baking sheet with parchment paper for easier cleanup.",
+        "In a large bowl, combine quartered potatoes with 2 tablespoons olive oil, minced garlic, dried rosemary, dried thyme, dried oregano, salt, and pepper. Toss to coat evenly.",
+        "Spread the seasoned potatoes in a single layer on one half of the prepared baking sheet. Roast for 15 minutes.",
+        "While potatoes roast, pat chicken thighs dry and season with salt and pepper. After 15 minutes, add chicken thighs and lemon slices to the other half of the baking sheet. Drizzle chicken with remaining 1 tablespoon olive oil.",
+        "Return to oven and roast for another 20-25 minutes, or until chicken is cooked through (internal temperature 165\u00b0F / 74\u00b0C) and potatoes are tender and golden. Garnish with fresh parsley before serving."
+      ]
+    },
+    {
+      "day": "Saturday",
+      "date": "2026-10-31",
+      "name": "Hearty Lentil Shepherd's Pie",
+      "description": "A comforting vegetarian shepherd's pie with a savory lentil and vegetable filling, topped with creamy mashed potatoes and baked until golden, ready in about 70 minutes.",
+      "prep_minutes": 25,
+      "cook_minutes": 45,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Brown or green lentils",
+          "amount": "1 cup, dry",
+          "in_pantry": false
+        },
+        {
+          "name": "Russet potatoes",
+          "amount": "2 lbs",
+          "in_pantry": false
+        },
+        {
+          "name": "Carrots",
+          "amount": "2 large, diced",
+          "in_pantry": false
+        },
+        {
+          "name": "Celery stalks",
+          "amount": "2, diced",
+          "in_pantry": false
+        },
+        {
+          "name": "Yellow onion",
+          "amount": "1, chopped",
+          "in_pantry": false
+        },
+        {
+          "name": "Minced garlic",
+          "amount": "3 cloves",
+          "in_pantry": false
+        },
+        {
+          "name": "Vegetable broth",
+          "amount": "2 cups",
+          "in_pantry": false
+        },
+        {
+          "name": "Tomato paste",
+          "amount": "2 tablespoons",
+          "in_pantry": false
+        },
+        {
+          "name": "Worcestershire sauce",
+          "amount": "1 tablespoon",
+          "in_pantry": false
+        },
+        {
+          "name": "Dried thyme",
+          "amount": "1 teaspoon",
+          "in_pantry": false
+        },
+        {
+          "name": "Dried rosemary",
+          "amount": "1 teaspoon",
+          "in_pantry": false
+        },
+        {
+          "name": "Frozen peas",
+          "amount": "1 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "Milk",
+          "amount": "1/2 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "Butter",
+          "amount": "2 tablespoons",
+          "in_pantry": true
+        },
+        {
+          "name": "Olive oil",
+          "amount": "2 tablespoons",
+          "in_pantry": true
+        },
+        {
+          "name": "Salt",
+          "amount": "to taste",
+          "in_pantry": true
+        },
+        {
+          "name": "Black pepper",
+          "amount": "to taste",
+          "in_pantry": true
+        }
+      ],
+      "instructions": [
+        "Peel and quarter potatoes; place in a large pot, cover with cold salted water, and bring to a boil. Cook for 15-20 minutes until fork-tender. Drain, then mash with butter and milk until smooth. Season with salt and pepper. Set aside.",
+        "While potatoes cook, rinse lentils. In a large pot or Dutch oven, heat 2 tablespoons olive oil over medium heat. Add chopped onion, carrots, and celery; cook for 5-7 minutes until softened. Add minced garlic, dried thyme, and dried rosemary; cook for 1 minute until fragrant.",
+        "Stir in tomato paste, lentils, vegetable broth, and Worcestershire sauce. Bring to a simmer, then reduce heat to low, cover, and cook for 20-25 minutes, or until lentils are tender. Stir in frozen peas and cook for 2-3 minutes until heated through. Taste and adjust seasonings.",
+        "Preheat oven to 375\u00b0F (190\u00b0C). Transfer the lentil mixture to an oven-safe baking dish (approx. 9x13 inch). Spread the mashed potatoes evenly over the top of the lentil mixture.",
+        "Bake for 25-30 minutes, or until the filling is bubbly and the mashed potato topping is golden brown. Let rest for 5 minutes before serving."
+      ]
+    },
+    {
+      "day": "Sunday",
+      "date": "2026-11-01",
+      "name": "Classic Meatloaf with Mashed Potatoes and Green Beans",
+      "description": "A classic, tender meatloaf topped with a tangy glaze, served with creamy mashed potatoes and crisp-tender green beans, a comforting meal ready in about 80 minutes.",
+      "prep_minutes": 20,
+      "cook_minutes": 60,
+      "servings": 4,
+      "ingredients": [
+        {
+          "name": "Lean ground beef",
+          "amount": "1.5 lbs",
+          "in_pantry": false
+        },
+        {
+          "name": "Plain breadcrumbs",
+          "amount": "1/2 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "Egg",
+          "amount": "1 large",
+          "in_pantry": false
+        },
+        {
+          "name": "Yellow onion (finely diced)",
+          "amount": "1/2 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "Milk",
+          "amount": "1/2 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "Ketchup",
+          "amount": "1/2 cup",
+          "in_pantry": false
+        },
+        {
+          "name": "Worcestershire sauce",
+          "amount": "1 tablespoon",
+          "in_pantry": false
+        },
+        {
+          "name": "Dijon mustard or yellow mustard",
+          "amount": "1 teaspoon",
+          "in_pantry": false
+        },
+        {
+          "name": "Garlic powder",
+          "amount": "1/2 teaspoon",
+          "in_pantry": true
+        },
+        {
+          "name": "Russet potatoes",
+          "amount": "1 lb",
+          "in_pantry": false
+        },
+        {
+          "name": "Green beans (fresh or frozen)",
+          "amount": "1 lb",
+          "in_pantry": false
+        },
+        {
+          "name": "Butter",
+          "amount": "2 tablespoons",
+          "in_pantry": true
+        },
+        {
+          "name": "Salt",
+          "amount": "to taste",
+          "in_pantry": true
+        },
+        {
+          "name": "Black pepper",
+          "amount": "to taste",
+          "in_pantry": true
+        }
+      ],
+      "instructions": [
+        "Preheat oven to 350\u00b0F (175\u00b0C). In a large bowl, combine ground beef, breadcrumbs, egg, finely diced onion, 1/4 cup milk, 1/4 cup ketchup, 1 teaspoon Worcestershire sauce, 1/4 teaspoon garlic powder, salt, and pepper. Mix until just combined, but do not overmix.",
+        "Shape the meat mixture into a loaf and place it in a loaf pan or on a foil-lined baking sheet. In a small bowl, whisk together remaining 1/4 cup ketchup, 1 teaspoon Worcestershire sauce, and mustard to create the glaze. Spread the glaze evenly over the top of the meatloaf.",
+        "Bake for 50-60 minutes, or until the internal temperature reaches 160\u00b0F (71\u00b0C). Let the meatloaf rest for 10 minutes before slicing.",
+        "While meatloaf bakes, prepare mashed potatoes: peel and quarter potatoes, boil until tender, then mash with 1/4 cup milk and 1 tablespoon butter, salt, and pepper. Steam or boil green beans until crisp-tender. Serve meatloaf slices with mashed potatoes and green beans."
       ]
     }
   ],
   "shopping_list": [
     {
-      "name": "boneless, skinless chicken breasts",
-      "amount": "2.5 lbs",
-      "for_meals": [
-        "Monday",
-        "Saturday"
-      ]
-    },
-    {
-      "name": "broccoli florets",
-      "amount": "4 cups",
+      "name": "Boneless, skinless chicken breast",
+      "amount": "1.5 lbs",
       "for_meals": [
         "Monday"
       ]
     },
     {
-      "name": "carrots",
-      "amount": "3 medium + 1 cup shredded",
+      "name": "Broccoli florets",
+      "amount": "1 head",
       "for_meals": [
-        "Monday",
-        "Thursday"
+        "Monday"
       ]
     },
     {
-      "name": "honey",
+      "name": "Jasmine rice",
+      "amount": "2 cups",
+      "for_meals": [
+        "Monday",
+        "Wednesday"
+      ]
+    },
+    {
+      "name": "Honey",
       "amount": "1/4 cup",
       "for_meals": [
         "Monday"
       ]
     },
     {
-      "name": "ground beef",
-      "amount": "2 lbs",
+      "name": "Minced garlic",
+      "amount": "1 head",
+      "for_meals": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    {
+      "name": "Fresh ginger",
+      "amount": "1 knob",
+      "for_meals": [
+        "Monday"
+      ]
+    },
+    {
+      "name": "Cornstarch",
+      "amount": "1 tablespoon",
+      "for_meals": [
+        "Monday"
+      ]
+    },
+    {
+      "name": "Sesame seeds",
+      "amount": "1 tablespoon",
+      "for_meals": [
+        "Monday"
+      ]
+    },
+    {
+      "name": "Rice vinegar",
+      "amount": "1 tablespoon",
+      "for_meals": [
+        "Monday"
+      ]
+    },
+    {
+      "name": "Salmon fillets",
+      "amount": "4 (6 oz each)",
+      "for_meals": [
+        "Tuesday"
+      ]
+    },
+    {
+      "name": "Asparagus",
+      "amount": "1 bunch",
+      "for_meals": [
+        "Tuesday"
+      ]
+    },
+    {
+      "name": "Quinoa",
+      "amount": "1 cup",
+      "for_meals": [
+        "Tuesday"
+      ]
+    },
+    {
+      "name": "Lemon",
+      "amount": "2",
       "for_meals": [
         "Tuesday",
+        "Friday"
+      ]
+    },
+    {
+      "name": "Fresh dill",
+      "amount": "1 tablespoon",
+      "for_meals": [
+        "Tuesday"
+      ]
+    },
+    {
+      "name": "Fresh parsley",
+      "amount": "1 bunch",
+      "for_meals": [
+        "Tuesday",
+        "Friday"
+      ]
+    },
+    {
+      "name": "Lean ground beef",
+      "amount": "3 lbs",
+      "for_meals": [
+        "Wednesday",
+        "Sunday"
+      ]
+    },
+    {
+      "name": "Mixed bell peppers",
+      "amount": "3",
+      "for_meals": [
+        "Wednesday"
+      ]
+    },
+    {
+      "name": "Yellow onion",
+      "amount": "3",
+      "for_meals": [
+        "Wednesday",
+        "Thursday",
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    {
+      "name": "Canned diced tomatoes",
+      "amount": "1 (14.5 oz) can",
+      "for_meals": [
+        "Wednesday"
+      ]
+    },
+    {
+      "name": "Beef broth",
+      "amount": "1 cup",
+      "for_meals": [
+        "Wednesday"
+      ]
+    },
+    {
+      "name": "Fresh cilantro",
+      "amount": "1 bunch",
+      "for_meals": [
+        "Wednesday"
+      ]
+    },
+    {
+      "name": "Boneless pork shoulder",
+      "amount": "2.5 lbs",
+      "for_meals": [
         "Thursday"
       ]
     },
     {
-      "name": "ground pork",
-      "amount": "0.5 lb",
+      "name": "BBQ sauce",
+      "amount": "1.5 cups",
       "for_meals": [
-        "Tuesday"
+        "Thursday"
       ]
     },
     {
-      "name": "breadcrumbs",
+      "name": "Apple cider vinegar",
+      "amount": "1/4 cup",
+      "for_meals": [
+        "Thursday"
+      ]
+    },
+    {
+      "name": "Brown sugar",
+      "amount": "1/4 cup",
+      "for_meals": [
+        "Thursday"
+      ]
+    },
+    {
+      "name": "Worcestershire sauce",
+      "amount": "2 tablespoons",
+      "for_meals": [
+        "Thursday",
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    {
+      "name": "Coleslaw mix (bagged)",
+      "amount": "1 (14 oz) bag",
+      "for_meals": [
+        "Thursday"
+      ]
+    },
+    {
+      "name": "Mayonnaise",
       "amount": "1/2 cup",
       "for_meals": [
-        "Tuesday"
+        "Thursday"
       ]
     },
     {
-      "name": "egg",
-      "amount": "1 large",
+      "name": "Hamburger buns",
+      "amount": "4",
       "for_meals": [
-        "Tuesday"
+        "Thursday"
       ]
     },
     {
-      "name": "onion",
-      "amount": "1/4 cup finely diced + 1/2 medium sliced",
+      "name": "Boneless, skinless chicken thighs",
+      "amount": "1.5 lbs",
       "for_meals": [
-        "Tuesday",
+        "Friday"
+      ]
+    },
+    {
+      "name": "Baby potatoes or Yukon Gold potatoes",
+      "amount": "1.5 lbs",
+      "for_meals": [
+        "Friday"
+      ]
+    },
+    {
+      "name": "Dried rosemary",
+      "amount": "1 teaspoon",
+      "for_meals": [
+        "Friday",
         "Saturday"
       ]
     },
     {
-      "name": "marinara sauce",
-      "amount": "24 oz jar + 1/2 cup",
+      "name": "Dried thyme",
+      "amount": "1 teaspoon",
       "for_meals": [
-        "Tuesday",
-        "Sunday"
+        "Friday",
+        "Saturday"
       ]
     },
     {
-      "name": "hoagie rolls",
-      "amount": "8",
+      "name": "Brown or green lentils",
+      "amount": "1 cup",
       "for_meals": [
-        "Tuesday",
-        "Sunday"
+        "Saturday"
       ]
     },
     {
-      "name": "mozzarella cheese",
-      "amount": "1 cup, shredded",
-      "for_meals": [
-        "Tuesday"
-      ]
-    },
-    {
-      "name": "linguine",
-      "amount": "12 oz",
-      "for_meals": [
-        "Wednesday"
-      ]
-    },
-    {
-      "name": "large shrimp",
-      "amount": "1.5 lbs, peeled and deveined",
-      "for_meals": [
-        "Wednesday"
-      ]
-    },
-    {
-      "name": "dry white wine",
-      "amount": "1/2 cup",
-      "for_meals": [
-        "Wednesday"
-      ]
-    },
-    {
-      "name": "lemon",
-      "amount": "2 medium",
-      "for_meals": [
-        "Wednesday",
-        "Friday"
-      ]
-    },
-    {
-      "name": "fresh parsley",
-      "amount": "1/4 cup, chopped",
-      "for_meals": [
-        "Wednesday"
-      ]
-    },
-    {
-      "name": "jasmine rice",
-      "amount": "1.5 cups, uncooked",
-      "for_meals": [
-        "Thursday"
-      ]
-    },
-    {
-      "name": "brown sugar",
-      "amount": "2 tbsp",
-      "for_meals": [
-        "Thursday"
-      ]
-    },
-    {
-      "name": "fresh ginger",
-      "amount": "1 tsp, grated",
-      "for_meals": [
-        "Thursday"
-      ]
-    },
-    {
-      "name": "cucumber",
-      "amount": "1/2 cup, thinly sliced",
-      "for_meals": [
-        "Thursday"
-      ]
-    },
-    {
-      "name": "green onions",
-      "amount": "2, sliced",
-      "for_meals": [
-        "Thursday"
-      ]
-    },
-    {
-      "name": "frozen crispy fish sticks",
-      "amount": "16 oz package",
-      "for_meals": [
-        "Friday"
-      ]
-    },
-    {
-      "name": "sweet potatoes",
-      "amount": "2 large",
-      "for_meals": [
-        "Friday"
-      ]
-    },
-    {
-      "name": "mayonnaise",
-      "amount": "1/2 cup",
-      "for_meals": [
-        "Friday"
-      ]
-    },
-    {
-      "name": "pickle relish",
-      "amount": "2 tbsp",
-      "for_meals": [
-        "Friday"
-      ]
-    },
-    {
-      "name": "fresh dill",
-      "amount": "1 tsp, chopped",
-      "for_meals": [
-        "Friday"
-      ]
-    },
-    {
-      "name": "bell peppers",
-      "amount": "5, various colors, sliced",
+      "name": "Russet potatoes",
+      "amount": "3 lbs",
       "for_meals": [
         "Saturday",
         "Sunday"
       ]
     },
     {
-      "name": "flour tortillas",
-      "amount": "8 (8-inch)",
+      "name": "Carrots",
+      "amount": "2 large",
       "for_meals": [
         "Saturday"
       ]
     },
     {
-      "name": "shredded cheddar jack cheese",
+      "name": "Celery stalks",
+      "amount": "2",
+      "for_meals": [
+        "Saturday"
+      ]
+    },
+    {
+      "name": "Vegetable broth",
       "amount": "2 cups",
       "for_meals": [
         "Saturday"
       ]
     },
     {
-      "name": "avocados",
-      "amount": "2 ripe",
+      "name": "Tomato paste",
+      "amount": "2 tablespoons",
       "for_meals": [
         "Saturday"
       ]
     },
     {
-      "name": "lime",
-      "amount": "1 small",
+      "name": "Frozen peas",
+      "amount": "1 cup",
       "for_meals": [
         "Saturday"
       ]
     },
     {
-      "name": "fresh cilantro",
-      "amount": "2 tbsp, chopped",
+      "name": "Milk",
+      "amount": "1 cup",
       "for_meals": [
-        "Saturday"
+        "Saturday",
+        "Sunday"
       ]
     },
     {
-      "name": "Italian sausage links",
-      "amount": "1.5 lbs",
+      "name": "Plain breadcrumbs",
+      "amount": "1/2 cup",
       "for_meals": [
         "Sunday"
       ]
     },
     {
-      "name": "red onion",
-      "amount": "1 medium, sliced",
+      "name": "Egg",
+      "amount": "1 large",
       "for_meals": [
         "Sunday"
       ]
     },
     {
-      "name": "provolone cheese",
-      "amount": "4 slices",
+      "name": "Ketchup",
+      "amount": "1/2 cup",
+      "for_meals": [
+        "Sunday"
+      ]
+    },
+    {
+      "name": "Dijon mustard or yellow mustard",
+      "amount": "1 teaspoon",
+      "for_meals": [
+        "Sunday"
+      ]
+    },
+    {
+      "name": "Green beans (fresh or frozen)",
+      "amount": "1 lb",
       "for_meals": [
         "Sunday"
       ]
